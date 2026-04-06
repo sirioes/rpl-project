@@ -1,0 +1,10 @@
+{
+    "user.login_welcome": "Welkom terug!",
+    "user.login_no_account": "Nog geen account?",
+    "user.login_register": "Registreren",
+    "user.login_button": "terug naar de website", 
+    "user.login_forgot_password": "Wachtwoord vergeten?", 
+    "user.login_sign_in": "Inloggen",
+    "user.placeholder_email": "E-mail",
+    "user.placeholder_password": "Wachtwoord"
+}

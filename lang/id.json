@@ -1,0 +1,10 @@
+{
+    "user.login_welcome": "Selamat Datang Kembali!",
+    "user.login_no_account": "Belum punya akun?",
+    "user.login_register": "Daftar",
+    "user.login_button": "kembali ke website", 
+    "user.login_forgot_password": "Lupa kata sandi?", 
+    "user.login_sign_in": "Masuk",
+    "user.placeholder_email": "Email",
+    "user.placeholder_password": "Kata Sandi"
+}

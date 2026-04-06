@@ -1,0 +1,10 @@
+{
+    "user.login_welcome": "Welcome Back!",
+    "user.login_no_account": "Don't have an account?",
+    "user.login_register": "Register",
+    "user.login_button": "back to website", 
+    "user.login_forgot_password": "Forgot password?", 
+    "user.login_sign_in": "Sign In",
+    "user.placeholder_email": "Email",
+    "user.placeholder_password": "Password"
+}
