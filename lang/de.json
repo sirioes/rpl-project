@@ -6,5 +6,26 @@
     "user.login_forgot_password": "Passwort vergessen?", 
     "user.login_sign_in": "Anmelden",
     "user.placeholder_email": "E-Mail",
-    "user.placeholder_password": "Passwort"
+    "user.placeholder_password": "Passwort",
+
+    "user.register_create": "Konto erstellen",
+    "user.register_confirmation": "Haben Sie bereits ein Konto?",
+    "user.register_login": "Anmelden",
+    "user.register_button": "zurück zur Website",
+    "user.register_agreement_account": "Ich stimme zu, ein Konto bei Mijn Amor Travel zu erstellen.",
+
+    "user.forgot_password_title": "Passwort vergessen",
+    "user.forgot_password_desc": "Passwort vergessen? Kein Problem. Teilen Sie uns einfach Ihre E-Mail-Adresse mit, und wir senden Ihnen einen Link zum Zurücksetzen des Passworts, mit dem Sie ein neues wählen können.",
+    "user.forgot_password_button": "Link zum Zurücksetzen senden",
+
+    "user.confirm_password_desc": "Dies ist ein geschützter Bereich der Anwendung. Bitte bestätigen Sie Ihr Passwort, bevor Sie fortfahren.",
+    "user.confirm_password_button": "Bestätigen",
+
+    "user.reset_password_button": "Passwort zurücksetzen",
+
+    "user.verify_email_desc": "Danke für Ihre Anmeldung! Bevor wir anfangen: Könnten Sie Ihre E-Mail-Adresse verifizieren, indem Sie auf den Link klicken, den wir Ihnen gerade geschickt haben? Falls Sie die E-Mail nicht erhalten haben, senden wir Ihnen gerne eine neue.",  
+    "user.verify_email_resend": "Ein neuer Bestätigungslink wurde an die E-Mail-Adresse gesendet, die Sie bei der Registrierung angegeben haben.",
+    "user.verify_email_button": "Bestätigungs-E-Mail erneut senden",
+    "user.verify_email_logout": "Abmelden"
+
 }

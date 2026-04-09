@@ -6,5 +6,26 @@
     "user.login_forgot_password": "Mot de passe oublié ?", 
     "user.login_sign_in": "Se connecter", 
     "user.placeholder_email": "E-mail",
-    "user.placeholder_password": "Mot de passe"
+    "user.placeholder_password": "Mot de passe",
+
+    "user.register_create": "Créer un compte",
+    "user.register_confirmation": "Vous avez déjà un compte ?",
+    "user.register_login": "Se connecter",
+    "user.register_button": "retour au site web",
+    "user.register_agreement_account": "J'accepte de créer un compte chez Mijn Amor Travel.",
+
+     "user.forgot_password_title": "Mot de passe oublié",
+    "user.forgot_password_desc": "Mot de passe oublié ? Pas de problème. Indiquez-nous votre adresse e-mail et nous vous enverrons un lien de réinitialisation qui vous permettra d'en choisir un nouveau.",
+    "user.forgot_password_button": "Envoyer le lien de réinitialisation", 
+
+    "user.confirm_password_desc": "Ceci est une zone sécurisée de l'application. Veuillez confirmer votre mot de passe avant de continuer.",
+    "user.confirm_password_button": "confirmer",
+
+    "user.reset_password_button": "Réinitialiser le mot de passe",
+
+    "user.verify_email_desc": "Merci de votre inscription ! Avant de commencer, pourriez-vous vérifier votre adresse e-mail en cliquant sur le lien que nous venons de vous envoyer ? Si vous n'avez pas reçu l'e-mail, nous vous en enverrons volontiers un autre.",
+    "user.verify_email_resend": "Un nouveau lien de vérification a été envoyé à l'adresse e-mail fournie lors de l'inscription.",
+    "user.verify_email_button": "Renvoyer l'e-mail de vérification",
+    "user.verify_email_logout": "Se déconnecter"
+
 }

@@ -6,5 +6,26 @@
     "user.login_forgot_password": "Lupa kata sandi?", 
     "user.login_sign_in": "Masuk",
     "user.placeholder_email": "Email",
-    "user.placeholder_password": "Kata Sandi"
+    "user.placeholder_password": "Kata Sandi",
+
+    "user.register_create": "Buat Akun",
+    "user.register_confirmation": "Sudah punya akun?",
+    "user.register_login": "Masuk",
+    "user.register_button": "kembali ke situs web",
+    "user.register_agreement_account": "Saya setuju untuk membuat akun di Mijn Amor Travel.",
+
+    "user.forgot_password_title": "Lupa Kata Sandi",
+    "user.forgot_password_desc": "Lupa kata sandi Anda? Tidak masalah. Cukup beri tahu kami alamat email Anda dan kami akan mengirimkan tautan pengaturan ulang kata sandi yang memungkinkan Anda memilih yang baru.",
+    "user.forgot_password_button": "Kirim Tautan Reset Kata Sandi",
+
+    "user.confirm_password_desc": "Ini adalah area aman aplikasi. Harap konfirmasi kata sandi Anda sebelum melanjutkan.",
+    "user.confirm_password_button": "Konfirmasi",
+
+    "user.reset_password_button": "Atur Ulang Kata Sandi",
+
+    "user.verify_email_desc": "Terima kasih telah mendaftar! Sebelum memulai, bisakah Anda memverifikasi alamat email Anda dengan mengklik tautan yang baru saja kami kirimkan ke email Anda? Jika Anda tidak menerima email tersebut, kami dengan senang hati akan mengirimkan yang baru.",  
+    "user.verify_email_resend": "Tautan verifikasi baru telah dikirim ke alamat email yang Anda berikan saat pendaftaran.",
+    "user.verify_email_button": "Kirim Ulang Email Verifikasi",
+    "user.verify_email_logout": "Keluar"
+
 }

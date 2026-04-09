@@ -6,5 +6,26 @@
     "user.login_forgot_password": "Wachtwoord vergeten?", 
     "user.login_sign_in": "Inloggen",
     "user.placeholder_email": "E-mail",
-    "user.placeholder_password": "Wachtwoord"
+    "user.placeholder_password": "Wachtwoord",
+
+    "user.register_create": "Account aanmaken",
+    "user.register_confirmation": "Heeft u al een account?",
+    "user.register_login": "Inloggen",
+    "user.register_button": "terug naar website",
+    "user.register_agreement_account": "Ik ga ermee akkoord om een account aan te maken bij Mijn Amor Travel.",
+    
+    "user.forgot_password_title": "Wachtwoord vergeten",
+    "user.forgot_password_desc": "Wachtwoord vergeten? Geen probleem. Laat ons uw e-mailadres weten en wij sturen u een link om uw wachtwoord opnieuw in te stellen, zodat u een nieuw wachtwoord kunt kiezen.",
+    "user.forgot_password_button": "Link voor wachtwoordherstel verzenden",
+
+    "user.confirm_password_desc": "Dit is een beveiligd gedeelte van de applicatie. Bevestig uw wachtwoord voordat u doorgaat.",
+    "user.confirm_password_button": "Bevestigen",
+
+    "user.reset_password_button": "Wachtwoord opnieuw instellen",
+
+    "user.verify_email_desc": "Bedankt voor uw aanmelding! Voordat we beginnen: kunt u uw e-mailadres verifiëren door op de link te klikken die we u zojuist hebben gestuurd? Als u de e-mail niet heeft ontvangen, sturen we u graag een nieuwe.",  
+    "user.verify_email_resend": "Er is een nieuwe verificatielink verzonden naar het e-mailadres dat u tijdens de registratie heeft opgegeven.",
+    "user.verify_email_button": "Verificatie-e-mail opnieuw verzenden",
+    "user.verify_email_logout": "Uitloggen"
+
 }
