@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+// Route untuk ganti bahasa (tidak perlu login)
 Route::get('lang/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'id', 'nl', 'de', 'fr'])) {
         session()->put('locale', $locale);
@@ -11,15 +12,21 @@ Route::get('lang/{locale}', function ($locale) {
 })->name('lang.switch');
 
 
-Route::get('/', function () {
-    return redirect()->route('login');
-});
+// --- SEMUA ROUTE DI BAWAH INI WAJIB LOGIN ---
+Route::middleware(['auth', 'verified'])->group(function () {
+    
+    // Homepage: Jika belum login, otomatis ditendang ke /login
+    // Jika sudah login, akan menampilkan view 'homepage'
+    Route::get('/', function () {
+        return view('homepage'); 
+    })->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    // Dashboard
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
-Route::middleware('auth')->group(function () {
+    // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
