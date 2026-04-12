@@ -26,6 +26,29 @@
     "user.verify_email_desc": "Bedankt voor uw aanmelding! Voordat we beginnen: kunt u uw e-mailadres verifiëren door op de link te klikken die we u zojuist hebben gestuurd? Als u de e-mail niet heeft ontvangen, sturen we u graag een nieuwe.",  
     "user.verify_email_resend": "Er is een nieuwe verificatielink verzonden naar het e-mailadres dat u tijdens de registratie heeft opgegeven.",
     "user.verify_email_button": "Verificatie-e-mail opnieuw verzenden",
-    "user.verify_email_logout": "Uitloggen"
+    "user.verify_email_logout": "Uitloggen", 
+
+    "hero.book_now": "Boek Nu",
+    "hero.travel_places": "Reisbestemmingen",
+    "hero.features": "Kenmerken",
+    "hero.desc": "Plaatsen die mensen graag <br/> bezoeken keer op keer",
+
+    "herabout.section": "#Over Ons",
+    "herabout.title": "Wij zijn een vertrouwd reisbureau dat zich toelegt op het bieden van onvergetelijke ervaringen.",
+    "herabout.descrip": "Verander uw reisdromen in naadloze realiteiten zonder een moment van zorg. Van de eerste vonk van inspiratie tot uw veilige terugkeer naar huis, begeleiden wij u door elke mijlpaal van uw reis. Onze missie is het leveren van op maat gemaakte, veilige en moeiteloze reiservaringen die zijn afgestemd op uw unieke wensen, zodat elke seconde gevuld is met verwondering en ontdekking",
+    "herabout.sectionB": "ONZE BESTEMMINGEN",
+    "herabout.desc1": "Ervaar het ultieme eilandparadijs. Van het serene spirituele hart van Ubud tot de levendige stranden van Seminyak, Bali biedt een perfecte mix van rijke cultuur, adembenemende landschappen en tropische rust",
+    "herabout.desc2": "Stap in het hart van geschiedenis en spiritualiteit. Bewonder de architectonische pracht van de Sint-Pietersbasiliek en de artistieke meesterwerken van de Vaticaanse Musea in de kleinste maar meest invloedrijke stadstaat ter wereld",
+    "herabout.desc3": "Ontdek de tijdloze charme van België, waar middeleeuwse architectuur samenkomt met chocolade van wereldklasse. Ontdek de historische pleinen van Brussel en de betoverende grachten van Brugge voor een onvergetelijke Europese ontsnapping",
+    "herabout.button": "Bekijk Meer",
+
+    "hero_youtube.text": "Verken de wereld door de ogen van onze levendige reisgemeenschap. We plannen niet alleen reizen, we organiseren ook levensveranderende avonturen die mensen samenbrengen. Bekijk onze nieuwste reizen en zie hoe we wereldwijde bestemmingen omzetten in gedeelde herinneringen. Je volgende geweldige verhaal begint hier.",
+    "hero_youtube.button": "BEKIJK MEER",
+
+    "hero_review.section": "#Beoordelingen",
+    "hero_review.title": "Uw Vertrouwde Partner in Reizen",
+
+    "hero_CTA.text": "Wacht niet langer! Begin vandaag nog aan uw <br className=\"hidden md:block\" /> avontuur en ontdek nieuwe ervaringen",
+    "hero_CTA.button": "Boek Nu"
 
 }

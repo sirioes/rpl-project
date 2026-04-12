@@ -14,11 +14,11 @@ Route::get('lang/{locale}', function ($locale) {
 
 // --- SEMUA ROUTE DI BAWAH INI WAJIB LOGIN ---
 Route::middleware(['auth', 'verified'])->group(function () {
-    
+
     // Homepage: Jika belum login, otomatis ditendang ke /login
     // Jika sudah login, akan menampilkan view 'homepage'
     Route::get('/', function () {
-        return view('homepage'); 
+        return view('front.homepage');
     })->name('home');
 
     // Dashboard
@@ -32,4 +32,4 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

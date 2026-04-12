@@ -26,6 +26,29 @@
     "user.verify_email_desc": "Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another.",  
     "user.verify_email_resend": "A new verification link has been sent to the email address you provided during registration.",
     "user.verify_email_button": "Resend Verification Email",
-    "user.verify_email_logout": "Log Out"
+    "user.verify_email_logout": "Log Out", 
+
+    "hero.book_now": "Book Now",
+    "hero.travel_places": "Travel Places",
+    "hero.features": "Features",
+    "hero.desc": "Places people love to visit <br/> more and more time",
+
+    "herabout.section": "#About Us",
+    "herabout.title": "We are a trusted travel agency dedicated to providing unforgettable experiences",
+    "herabout.descrip": "Transform your travel dreams into seamless realities without a moment’s worry. From the first spark of inspiration to your safe return home, we guide you through every milestone of your journey. Our mission is to deliver bespoke, secure, and effortless travel experiences tailored to your unique desires, ensuring every second is filled with wonder and discovery",
+    "herabout.sectionB": "OUR DESTINATION",
+    "herabout.desc1": "Experience the ultimate island paradise. From the serene spiritual heart of Ubud to the vibrant beaches of Seminyak, Bali offers a perfect blend of rich culture, breathtaking landscapes, and tropical tranquility",
+    "herabout.desc2": "Step into the heart of history and spirituality. Witness the architectural grandeur of St. Peter’s Basilica and the artistic masterpieces of the Vatican Museums in the world’s smallest yet most influential city-state",
+    "herabout.desc3": "Explore the timeless charm of Belgium, where medieval architecture meets world-class chocolate. Discover the historic squares of Brussels and the enchanting canals of Bruges for an unforgettable European escape",
+    "herabout.button": "View More",
+
+    "hero_youtube.text": "Explore the world through the eyes of our vibrant travel community. We don't just plan trips, we curate life changing adventures that bring people together. Watch our latest journeys unfold and see how we turn global destinations into shared memories. Your next great story starts here.",
+    "hero_youtube.button": "WATCH MORE",
+
+    "hero_review.section": "#Reviews",
+    "hero_review.title": "Your Trusted Partner In Travel",
+
+    "hero_CTA.text": "Don’t wait any longer! Start your adventure <br className=\"hidden md:block\" /> and explore new experience today",
+    "hero_CTA.button": "Book Now"
 
 }

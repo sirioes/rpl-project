@@ -26,6 +26,29 @@
     "user.verify_email_desc": "Danke für Ihre Anmeldung! Bevor wir anfangen: Könnten Sie Ihre E-Mail-Adresse verifizieren, indem Sie auf den Link klicken, den wir Ihnen gerade geschickt haben? Falls Sie die E-Mail nicht erhalten haben, senden wir Ihnen gerne eine neue.",  
     "user.verify_email_resend": "Ein neuer Bestätigungslink wurde an die E-Mail-Adresse gesendet, die Sie bei der Registrierung angegeben haben.",
     "user.verify_email_button": "Bestätigungs-E-Mail erneut senden",
-    "user.verify_email_logout": "Abmelden"
+    "user.verify_email_logout": "Abmelden", 
+
+    "hero.book_now": "Jetzt buchen",
+    "hero.travel_places": "Reiseziele",
+    "hero.features": "Highlights",
+    "hero.desc": "Orte, die man liebt und <br/> immer wieder besuchen möchte",
+
+    "herabout.section": "#Über uns",
+    "herabout.title": "Wir sind ein vertrauenswürdiges Reisebüro für unvergessliche Erlebnisse",
+    "herabout.descrip": "Verwandeln Sie Ihre Reiseträume in nahtlose Realität, ganz ohne Sorgen. Vom ersten Funken der Inspiration bis zu Ihrer sicheren Rückkehr begleiten wir Sie durch jeden Meilenstein Ihrer Reise. Unsere Mission ist es, maßgeschneiderte, sichere und mühelose Reiseerlebnisse zu bieten, die auf Ihre Wünsche zugeschnitten sind – damit jede Sekunde voller Wunder und Entdeckungen ist.",
+    "herabout.sectionB": "UNSERE REISEZIELE",
+    "herabout.desc1": "Erleben Sie das ultimative Inselparadies. Vom ruhigen, spirituellen Herzen Ubuds bis zu den lebhaften Stränden von Seminyak bietet Bali eine perfekte Mischung aus reicher Kultur, atemberaubenden Landschaften und tropischer Ruhe.",
+    "herabout.desc2": "Treten Sie ein in das Herz von Geschichte und Spiritualität. Bewundern Sie die architektonische Pracht des Petersdoms und die künstlerischen Meisterwerke der Vatikanischen Museen im kleinsten, aber einflussreichsten Stadtstaat der Welt.",
+    "herabout.desc3": "Entdecken Sie den zeitlosen Charme Belgiens, wo mittelalterliche Architektur auf erstklassige Schokolade trifft. Erkunden Sie die historischen Plätze von Brüssel und die bezaubernden Kanäle von Brügge für einen unvergesslichen europäischen Kurzurlaub.",
+    "herabout.button": "Mehr anzeigen", 
+
+    "hero_youtube.text": "Entdecken Sie die Welt durch die Augen unserer lebendigen Reise-Community. Wir planen nicht nur Reisen, wir kuratieren lebensverändernde Abenteuer, die Menschen zusammenbringen. Sehen Sie sich unsere neuesten Reisen an und erleben Sie, wie wir globale Ziele in gemeinsame Erinnerungen verwandeln. Ihre nächste große Geschichte beginnt hier.",
+    "hero_youtube.button": "MEHR ANSEHEN",
+
+    "hero_review.section": "#Bewertungen",
+    "hero_review.title": "Ihr vertrauenswürdiger Reisepartner",
+    
+    "hero_CTA.text": "Warten Sie nicht länger! Starten Sie Ihr Abenteuer <br className=\"hidden md:block\" /> und entdecken Sie noch heute neue Erlebnisse",
+    "hero_CTA.button": "Jetzt buchen"
 
 }

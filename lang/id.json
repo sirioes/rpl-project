@@ -26,6 +26,29 @@
     "user.verify_email_desc": "Terima kasih telah mendaftar! Sebelum memulai, bisakah Anda memverifikasi alamat email Anda dengan mengklik tautan yang baru saja kami kirimkan ke email Anda? Jika Anda tidak menerima email tersebut, kami dengan senang hati akan mengirimkan yang baru.",  
     "user.verify_email_resend": "Tautan verifikasi baru telah dikirim ke alamat email yang Anda berikan saat pendaftaran.",
     "user.verify_email_button": "Kirim Ulang Email Verifikasi",
-    "user.verify_email_logout": "Keluar"
+    "user.verify_email_logout": "Keluar", 
+
+    "hero.book_now": "Pesan Sekarang",
+    "hero.travel_places": "Tempat Wisata",
+    "hero.features": "Fitur",
+    "hero.desc": "Tempat yang orang suka <br/> kunjungi berkali-kali",
+
+    "herabout.section": "#Tentang Kami",
+    "herabout.title": "Kami adalah agen perjalanan terpercaya yang berdedikasi untuk memberikan pengalaman tak terlupakan",
+    "herabout.descrip": "Ubah impian perjalanan Anda menjadi kenyataan tanpa khawatir sejenak pun. Dari percikan inspirasi pertama hingga kembalinya Anda dengan selamat ke rumah, kami membimbing Anda melalui setiap tahap perjalanan Anda. Misi kami adalah memberikan pengalaman perjalanan yang disesuaikan, aman, dan mudah sesuai dengan keinginan unik Anda, memastikan setiap detik dipenuhi dengan keajaiban dan penemuan",
+    "herabout.sectionB": "TUJUAN KAMI",
+    "herabout.desc1": "Rasakan surga pulau yang tiada duanya. Dari hati spiritual Ubud yang tenang hingga pantai-pantai Seminyak yang semarak, Bali menawarkan perpaduan sempurna antara budaya kaya, pemandangan menakjubkan, dan ketenangan tropis",
+    "herabout.desc2": "Masuki jantung sejarah dan spiritualitas. Saksikan kemegahan arsitektur Basilika Santo Petrus dan karya seni utama Museum Vatikan di negara kota terkecil namun paling berpengaruh di dunia",
+    "herabout.desc3": "Jelajahi pesona abadi Belgia, tempat arsitektur abad pertengahan bertemu dengan cokelat kelas dunia. Temukan alun-alun bersejarah di Brussels dan kanal-kanal memikat di Bruges untuk pelarian Eropa yang tak terlupakan",
+    "herabout.button": "Lihat Lebih Banyak",
+
+    "hero_youtube.text": "Jelajahi dunia melalui mata komunitas perjalanan kami yang dinamis. Kami tidak hanya merencanakan perjalanan, kami mengkurasi petualangan yang mengubah hidup yang menyatukan orang-orang. Tonton perjalanan terbaru kami dan lihat bagaimana kami mengubah destinasi global menjadi kenangan bersama. Kisah hebat Anda berikutnya dimulai di sini.",
+    "hero_youtube.button": "TONTON LEBIH BANYAK",
+
+    "hero_review.section": "#Ulasan",
+    "hero_review.title": "Mitra Tepercaya Anda dalam Perjalanan",
+
+    "hero_CTA.text": "Jangan tunggu lagi! Mulailah petualangan Anda <br className=\"hidden md:block\" /> dan jelajahi pengalaman baru hari ini",
+    "hero_CTA.button": "Pesan Sekarang"
 
 }
