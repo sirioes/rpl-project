@@ -49,6 +49,11 @@
     "hero_review.title": "Your Trusted Partner In Travel",
 
     "hero_CTA.text": "Don’t wait any longer! Start your adventure <br className=\"hidden md:block\" /> and explore new experience today",
-    "hero_CTA.button": "Book Now"
+    "hero_CTA.button": "Book Now",
+
+    "product.title": "Product",
+    "no_product_title": "There is no product yet",
+    "no_product_desc": "We are currently preparing something special for you.",
+    "contact_us": "Contact Us"
 
 }

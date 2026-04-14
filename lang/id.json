@@ -49,6 +49,11 @@
     "hero_review.title": "Mitra Tepercaya Anda dalam Perjalanan",
 
     "hero_CTA.text": "Jangan tunggu lagi! Mulailah petualangan Anda <br className=\"hidden md:block\" /> dan jelajahi pengalaman baru hari ini",
-    "hero_CTA.button": "Pesan Sekarang"
+    "hero_CTA.button": "Pesan Sekarang",
+
+    "product.title": "Produk",
+    "no_product_title": "Belum ada produk",
+    "no_product_desc": "Kami sedang mempersiapkan sesuatu yang spesial untuk Anda.",
+    "contact_us": "Hubungi Kami"
 
 }

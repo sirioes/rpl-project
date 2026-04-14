@@ -49,6 +49,12 @@
     "hero_review.title": "Votre partenaire de confiance",
 
     "hero_CTA.text": "N'attendez plus ! Commencez votre aventure <br className=\"hidden md:block\" /> et vivez de nouvelles expériences dès aujourd'hui",
-    "hero_CTA.button": "Réserver maintenant"
+    "hero_CTA.button": "Réserver maintenant",
+
+    "product.title": "Nos Offres",
+    "no_product_title": "Il n'y a pas encore de produit",
+    "no_product_desc": "Nous préparons actuellement quelque chose de spécial pour vous.",
+    "contact_us": "Contactez-nous"
+
 
 }

@@ -49,6 +49,12 @@
     "hero_review.title": "Uw Vertrouwde Partner in Reizen",
 
     "hero_CTA.text": "Wacht niet langer! Begin vandaag nog aan uw <br className=\"hidden md:block\" /> avontuur en ontdek nieuwe ervaringen",
-    "hero_CTA.button": "Boek Nu"
+    "hero_CTA.button": "Boek Nu",
+
+    "product.title": "Producten",
+    "no_product_title": "Er zijn nog geen producten",
+    "no_product_desc": "We bereiden momenteel iets speciaals voor u voor.",
+    "contact_us": "Neem contact op"
+
 
 }

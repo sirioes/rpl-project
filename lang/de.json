@@ -49,6 +49,30 @@
     "hero_review.title": "Ihr vertrauenswürdiger Reisepartner",
     
     "hero_CTA.text": "Warten Sie nicht länger! Starten Sie Ihr Abenteuer <br className=\"hidden md:block\" /> und entdecken Sie noch heute neue Erlebnisse",
-    "hero_CTA.button": "Jetzt buchen"
+    "hero_CTA.button": "Jetzt buchen",
+
+    "about.title" : "Über uns",
+
+    "about_intro.title": "Vorstellung Ihrer vertrauenswürdigen Reiseagentur",
+    "about_intro.desc": "Bei Mjin Amor Travel glauben wir, dass Reisen mehr ist als nur der Besuch neuer Orte. Es geht um die Geschichten, die Sie sammeln, und die Erinnerungen, die für immer bleiben. Seit unserer Gründung im Jahr 2018 haben wir uns darauf spezialisiert, mehr als nur ein Dienstleister zu sein – wir sind Ihre engagierten Partner beim Entdecken. Unsere Mission ist es, die Brücke zwischen Ihren Träumen und der Realität zu schlagen, indem wir die atemberaubendsten verborgenen Schätze der Welt aufdecken, kuratiert für alle, die Authentizität suchen.",
+    "about_intro.bubble_one": "Sicheres Reisen",
+    "about_intro.bubble_desc_one": "Ihre Sicherheit ist unsere Priorität, mit geprüften Unterkünften.",
+    "about_intro.bubble_two": "Kuratierte Ziele",
+    "about_intro.bubble_desc_two": "Sorgfältig ausgewählte Routen und versteckte Orte.",
+    "about_intro.bubble_three": "Personalisierte Erfahrung",
+    "about_intro.bubble_desc_three": "Maßgeschneiderte Reiserouten, passend zu Ihrem Reisestil.",
+
+    "about_img.img_one": "Schaffen Sie unvergessliche Erinnerungen mit den Menschen, die Ihnen am wichtigsten sind.",
+    "about_img.img_two": "Entfliehen Sie dem Alltag und tauchen Sie in die Natur ein. Entdecken Sie verborgene Orte, die Ihre Seele beleben.",
+
+    "about_destination.section": "UNSERE REISEZIELE",
+    "about_destination.desc": "Entdecken Sie mit uns eine Welt atemberaubender Reiseziele. Von unberührten Stränden bis zu majestätischen Bergen sind unsere kuratierten Reiseerlebnisse darauf ausgelegt, zu inspirieren und zu fesseln. Entdecken Sie verborgene Schätze, tauchen Sie in diverse Kulturen ein und schaffen Sie unvergessliche Erinnerungen auf Ihrer Reise zu einigen der schönsten Orte der Erde. Ihr Abenteuer erwartet Sie!",
+
+    "product.title": "Angebote",
+    "no_product_title": "Noch keine Produkte verfügbar",
+    "no_product_desc": "Wir bereiten gerade etwas Besonderes für Sie vor.",
+    "contact_us": "Kontaktieren Sie uns"
+
+
 
 }

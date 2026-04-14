@@ -21,10 +21,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('front.homepage');
     })->name('home');
 
-    // Dashboard
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/products', function () {
+        return view('front.products');
+    })->name('product');
 
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
