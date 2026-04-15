@@ -13,11 +13,13 @@
 
 <body class="text-gray-800 antialiased flex flex-col min-h-screen bg-white">
 
+    <x-ui.navbar />
 
     <main class="grow">
         {{ $slot }}
     </main>
 
+    <x-ui.footer />
 
 </body>
 

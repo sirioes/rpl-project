@@ -1,4 +1,20 @@
 {
+    "nav.home": "ACCUEIL",
+    "nav.about": "À PROPOS",
+    "nav.product": "NOS OFFRES",
+    "nav.contact": "CONTACT",
+
+    "footer.about_us": "À propos",
+    "footer.products": "Nos Offres",
+    "footer.contact_us": "Contactez-nous",
+    "footer.track_records": "Références",
+    "footer.title": "Restez informés",
+    "footer.desc": "Abonnez-vous à notre newsletter pour recevoir des mises à jour et des annonces spéciales.",
+    "footer.send_message": "Envoyez-nous un message",
+    "footer.sign": "S'inscrire",
+    "footer.email_placeholder": "Votre adresse email",
+    "footer.name": "Votre nom",
+    
     "user.login_welcome": "Bienvenue de retour !",
     "user.login_no_account": "Vous n'avez pas de compte ?",
     "user.login_register": "S'inscrire",

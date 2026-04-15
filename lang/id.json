@@ -1,4 +1,20 @@
 {
+    "nav.home": "BERANDA",
+    "nav.about": "TENTANG",
+    "nav.product": "PRODUK",
+    "nav.contact": "KONTAK",
+
+    "footer.about_us": "Tentang Kami",
+    "footer.products": "Produk",
+    "footer.contact_us": "Hubungi Kami",
+    "footer.track_records": "Rekam Jejak",
+    "footer.title": "Dapatkan Pembaruan",
+    "footer.desc": "Berlangganan newsletter kami untuk menerima pembaruan dan pengumuman khusus.",
+    "footer.send_message": "Kirim Pesan Kepada Kami",
+    "footer.sign": "Daftar",
+    "footer.email_placeholder": "Alamat email Anda",
+    "footer.name": "Nama Anda",
+    
     "user.login_welcome": "Selamat Datang Kembali!",
     "user.login_no_account": "Belum punya akun?",
     "user.login_register": "Daftar",

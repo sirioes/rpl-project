@@ -47,3 +47,14 @@ body {
   @apply mt-8 md:mt-14;
 }
 
+.nav-ul {
+  @apply flex flex-col items-center gap-2 sm:flex-row md:gap-10 relative z-20 w-full;
+}
+
+.nav-li {
+  @apply text-neutral-200 hover:text-white font-semibold max-sm:w-full max-sm:rounded-md py-2 max-sm:px-2 text-center;
+}
+
+.nav-link {
+  @apply text-xl sm:text-lg md:text-base hover:text-white transition-colors block w-full;
+}

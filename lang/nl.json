@@ -1,4 +1,20 @@
 {
+    "nav.home": "HOME",
+    "nav.about": "OVER ONS",
+    "nav.product": "PRODUCTEN",
+    "nav.contact": "CONTACT",
+
+    "footer.about_us": "Over Ons",
+    "footer.products": "Producten",
+    "footer.contact_us": "Neem Contact Op",
+    "footer.track_records": "Track Records",
+    "footer.title": "Ontvang Updates",
+    "footer.desc": "Abonneer u op onze nieuwsbrief om updates en speciale aankondigingen te ontvangen.",
+    "footer.send_message": "Stuur Ons Een Bericht",
+    "footer.sign": "Aanmelden",
+    "footer.email_placeholder": "Uw e-mailadres",
+    "footer.name": "Uw naam",
+    
     "user.login_welcome": "Welkom terug!",
     "user.login_no_account": "Nog geen account?",
     "user.login_register": "Registreren",
