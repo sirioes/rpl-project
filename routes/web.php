@@ -21,6 +21,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('front.homepage');
     })->name('home');
 
+    Route::get('/about', function () {
+        return view('front.about');
+    })->name('about');
+
     Route::get('/products', function () {
         return view('front.products');
     })->name('product');

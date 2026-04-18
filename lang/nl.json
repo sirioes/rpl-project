@@ -67,10 +67,28 @@
     "hero_CTA.text": "Wacht niet langer! Begin vandaag nog aan uw <br className=\"hidden md:block\" /> avontuur en ontdek nieuwe ervaringen",
     "hero_CTA.button": "Boek Nu",
 
+    "about.title": "Over Ons",
+
+    "about_intro.title": "Introductie Tot Zeer Vertrouwd Tour-en Reisbureau",
+    "about_intro.desc": "Bij Mjin Amor Travel geloven we dat reizen meer is dan alleen het bezoeken van nieuwe locaties. Het gaat om de verhalen die je verzamelt en de herinneringen die voor altijd bij je blijven. Sinds onze oprichting in 2018 hebben we ons toegewijd aan meer zijn dan alleen een dienstverlener; wij zijn uw toegewijde partners in verkenning. Onze missie is om de kloof tussen uw dromen en de realiteit te overbruggen door de meest adembenemende verborgen juweeltjes van de wereld te onthullen, speciaal samengesteld voor degenen die op zoek zijn naar authenticiteit.",
+    "about_intro.bubble_one": "Veilig & Zeker Reizen",
+    "about_intro.bubble_desc_one": "Uw veiligheid is onze prioriteit, met geverifieerde accommodaties.",
+    "about_intro.bubble_two": "Gecurateerde Bestemmingen",
+    "about_intro.bubble_desc_two": "Zorgvuldig geselecteerde routes en verborgen plekjes.",
+    "about_intro.bubble_three": "Persoonlijke Ervaring",
+    "about_intro.bubble_desc_three": "Op maat gemaakte reisroutes ontworpen om bij uw reisstijl te passen.",
+
+    "about_img.img_one": "Creëer onvergetelijke herinneringen met de mensen die het meest voor je betekenen.",
+    "about_img.img_two": "Ontsnap aan het gewone en dompel jezelf onder in de natuur. Ontdek verborgen juweeltjes die je ziel verjongen.",
+
+    "about_destination.section": "ONZE BESTEMMINGEN",
+    "about_destination.desc": "Verken een wereld van adembenemende bestemmingen met ons. Van ongerepte stranden tot majestueuze bergen, onze samengestelde reiservaringen zijn ontworpen om te inspireren en te boeien. Ontdek verborgen juweeltjes, dompel jezelf onder in diverse culturen en creëer onvergetelijke herinneringen terwijl je reist naar enkele van de mooiste plekken op aarde. Je avontuur wacht!",
+    "about.destination_all_years": "Alle Jaren",
+    "about.destination_no_travel": "Geen reizen in het jaar",
+    "about.destination_try_another": "Probeer een ander jaar te selecteren of \"Alle Jaren\".", 
+
     "product.title": "Producten",
     "no_product_title": "Er zijn nog geen producten",
     "no_product_desc": "We bereiden momenteel iets speciaals voor u voor.",
     "contact_us": "Neem contact op"
-
-
 }

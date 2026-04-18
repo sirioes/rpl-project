@@ -67,6 +67,26 @@
     "hero_CTA.text": "N'attendez plus ! Commencez votre aventure <br className=\"hidden md:block\" /> et vivez de nouvelles expériences dès aujourd'hui",
     "hero_CTA.button": "Réserver maintenant",
 
+    "about.title": "À propos de nous",
+
+    "about_intro.title": "Présentation de votre agence de voyage de confiance",
+    "about_intro.desc": "Chez Mjin Amor Travel, nous croyons que voyager ne se limite pas à visiter de nouveaux lieux. Il s'agit des histoires que vous recueillez et des souvenirs qui restent gravés à jamais. Depuis notre création en 2018, nous nous engageons à être bien plus qu'un simple prestataire de services : nous sommes vos partenaires dévoués dans l'exploration. Notre mission est de combler le fossé entre vos rêves et la réalité en dévoilant les joyaux cachés les plus époustouflants du monde, sélectionnés spécifiquement pour ceux qui recherchent l'authenticité.",
+    "about_intro.bubble_one": "Voyage sûr et sécurisé",
+    "about_intro.bubble_desc_one": "Votre sécurité est notre priorité, avec des hébergements vérifiés.",
+    "about_intro.bubble_two": "Destinations sélectionnées",
+    "about_intro.bubble_desc_two": "Itinéraires soigneusement choisis et lieux secrets.",
+    "about_intro.bubble_three": "Expérience personnalisée",
+    "about_intro.bubble_desc_three": "Des itinéraires sur mesure conçus pour correspondre à votre style de voyage.",
+
+    "about_img.img_one": "Créez des souvenirs inoubliables avec ceux qui comptent le plus pour vous.",
+    "about_img.img_two": "Échappez à l'ordinaire et immergez-vous dans la nature. Découvrez des joyaux cachés qui ressourcent votre âme.",
+
+    "about_destination.section": "NOS DESTINATIONS",
+    "about_destination.desc": "Explorez un monde de destinations à couper le souffle avec nous. Des plages immaculées aux montagnes majestueuses, nos expériences de voyage sont conçues pour inspirer et captiver. Découvrez des trésors cachés, imprégnez-vous de cultures diverses et créez des souvenirs inoubliables en voyageant vers certains des plus beaux endroits de la Terre. Votre aventure vous attend !",
+    "about.destination_all_years": "Toutes les années",
+    "about.destination_no_travel": "Aucun voyage en",
+    "about.destination_try_another": "Essayez de sélectionner une autre année ou \"Toutes les années\".",
+    
     "product.title": "Nos Offres",
     "no_product_title": "Il n'y a pas encore de produit",
     "no_product_desc": "Nous préparons actuellement quelque chose de spécial pour vous.",

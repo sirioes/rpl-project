@@ -67,6 +67,26 @@
     "hero_CTA.text": "Jangan tunggu lagi! Mulailah petualangan Anda <br className=\"hidden md:block\" /> dan jelajahi pengalaman baru hari ini",
     "hero_CTA.button": "Pesan Sekarang",
 
+    "about.title": "Tentang Kami",
+
+    "about_intro.title": "Pengenalan Ke Agen Tur dan Perjalanan yang Sangat Terpercaya",
+    "about_intro.desc": "Di Mjin Amor Travel, kami percaya bahwa bepergian lebih dari sekadar mengunjungi lokasi baru. Ini tentang cerita yang Anda kumpulkan dan kenangan yang tetap bersama Anda selamanya. Sejak didirikan pada tahun 2018, kami telah mendedikasikan diri untuk menjadi lebih dari sekadar penyedia layanan; kami adalah mitra Anda dalam penjelajahan. Misi kami adalah menjembatani kesenjangan antara impian dan kenyataan Anda dengan mengungkap permata tersembunyi paling menakjubkan di dunia, yang dikurasi khusus untuk mereka yang mencari keaslian.",
+    "about_intro.bubble_one": "Perjalanan Aman & Terjamin",
+    "about_intro.bubble_desc_one": "Keamanan Anda adalah prioritas kami, dengan akomodasi yang terverifikasi.",
+    "about_intro.bubble_two": "Destinasi yang Dikurasi",
+    "about_intro.bubble_desc_two": "Rute dan tempat tersembunyi yang dipilih dengan cermat.",
+    "about_intro.bubble_three": "Pengalaman yang Dipersonalisasi",
+    "about_intro.bubble_desc_three": "Itinerary yang dibuat sesuai dengan gaya perjalanan Anda.",
+
+    "about_img.img_one": "Ciptakan kenangan tak terlupakan dengan orang-orang yang paling berarti.",
+    "about_img.img_two": "Melarikan diri dari yang biasa dan membenamkan diri dalam alam. Temukan permata tersembunyi yang menyegarkan jiwa Anda.",
+
+    "about_destination.section": "TUJUAN KAMI",
+    "about_destination.desc": "Jelajahi dunia destinasi yang menakjubkan bersama kami. Dari pantai yang masih asli hingga gunung yang megah, pengalaman perjalanan yang kami kurasi dirancang untuk menginspirasi dan memikat. Temukan permata tersembunyi, benamkan diri Anda dalam budaya yang beragam, dan ciptakan kenangan tak terlupakan saat Anda melakukan perjalanan ke beberapa tempat terindah di Bumi. Petualangan Anda menanti!",
+    "about.destination_all_years": "Semua Tahun",
+    "about.destination_no_travel": "Tidak ada perjalanan pada tahun",
+    "about.destination_try_another": "Coba pilih tahun lain atau \"Semua Tahun\".",
+
     "product.title": "Produk",
     "no_product_title": "Belum ada produk",
     "no_product_desc": "Kami sedang mempersiapkan sesuatu yang spesial untuk Anda.",

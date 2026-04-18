@@ -67,6 +67,26 @@
     "hero_CTA.text": "Don’t wait any longer! Start your adventure <br className=\"hidden md:block\" /> and explore new experience today",
     "hero_CTA.button": "Book Now",
 
+    "about.title": "About Us",
+
+    "about_intro.title": "Introduction To Very Trusted Tour And Travel Agency",
+    "about_intro.desc": "At Mjin Amor Travel, we believe that traveling is more than just visiting new locations. it is about the stories you collect and the memories that stay with you forever. Since our establishment in 2018, we have dedicated ourselves to being more than just a service provider we are your dedicated partners in exploration. Our mission is to bridge the gap between your dreams and reality by uncovering the world’s most breathtaking hidden gems, curated specifically for those who seek authenticity.",
+    "about_intro.bubble_one": "Safe & Secure Travel",
+    "about_intro.bubble_desc_one": "Your safety is our priority, with verified accommodations.",
+    "about_intro.bubble_two": "Curated Destinations",
+    "about_intro.bubble_desc_two": "Carefully selected routes and hidden spots.",
+    "about_intro.bubble_three": "Personalized Experience",
+    "about_intro.bubble_desc_three": "Tailor-made itineraries designed to match your travel style.",
+
+    "about_img.img_one": "Create unforgettable memories with the people who matter most.",
+    "about_img.img_two": "Escape the ordinary and immerse yourself in nature. Discover hidden gems that rejuvenate your soul.",
+
+    "about_destination.section": "OUR DESTINATIONS",
+    "about_destination.desc": "Explore a world of breathtaking destinations with us. From pristine beaches to majestic mountains, our curated travel experiences are designed to inspire and captivate. Discover hidden gems, immerse yourself in diverse cultures, and create unforgettable memories as you journey to some of the most beautiful places on Earth. Your adventure awaits!",
+    "about.destination_all_years": "All Years",
+    "about.destination_no_travel": "No travel in the year",
+    "about.destination_try_another": "Try selecting another year or \"All Years\".",
+
     "product.title": "Product",
     "no_product_title": "There is no product yet",
     "no_product_desc": "We are currently preparing something special for you.",
