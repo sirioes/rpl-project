@@ -34,7 +34,7 @@ class AuthenticatedSessionController extends Controller
         }
 
         // Jika bukan admin (user biasa), lempar ke halaman home
-        return redirect()->intended(route('homepage', absolute: false));
+        return redirect()->intended(route('home', absolute: false));
     }
 
     /**
