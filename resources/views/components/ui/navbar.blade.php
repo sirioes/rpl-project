@@ -22,7 +22,7 @@ $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $langu
             <nav class="hidden sm:flex">
                 <ul class="nav-ul">
                     <li class="nav-li"><a href="{{ route('home') }}" class="nav-a">{{ __('nav.home') }}</a></li>
-                    <li class="nav-li"><a href="#" class="nav-a">{{ __('nav.about') }}</a></li>
+                    <li class="nav-li"><a href="{{ route('about') }}" class="nav-a">{{ __('nav.about') }}</a></li>
                     <li class="nav-li"><a href="{{ route('product') }}" class="nav-a">{{ __('nav.product') }}</a></li>
                     <li class="nav-li"><a href="#" class="nav-a">{{ __('nav.contact') }}</a></li>
                 </ul>
@@ -57,17 +57,17 @@ $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $langu
                     <div class="relative" x-data="{ open: false }" @click.away="open = false">
                         <button @click="open = !open" class="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-blue-600 focus:outline-none transition">
                             @if(Auth::user()->role === 'admin')
-                                <a href="{{ route('admin.dashboard') }}" class="hover:opacity-80 transition">
-                            @else
+                            <a href="{{ route('admin.dashboard') }}" class="hover:opacity-80 transition">
+                                @else
                                 <a href="/profile" class="hover:opacity-80 transition">
-                            @endif
-                                <div>
-                                    <img src="{{ asset('img/navbar/profile.svg') }}" alt="Profile" class="w-5 h-5" />
-                                </div>
-                            </a>
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                            </svg>
+                                    @endif
+                                    <div>
+                                        <img src="{{ asset('img/navbar/profile.svg') }}" alt="Profile" class="w-5 h-5" />
+                                    </div>
+                                </a>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                                </svg>
                         </button>
 
                         <div x-show="open"
@@ -77,13 +77,13 @@ $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $langu
                             class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
 
                             @if(Auth::user()->role === 'admin')
-                                <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                    Admin Dashboard
-                                </a>
+                            <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Admin Dashboard
+                            </a>
                             @else
-                                <a href="/profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                    My Profile
-                                </a>
+                            <a href="/profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                My Profile
+                            </a>
                             @endif
 
                             <hr class="border-gray-100">
@@ -134,17 +134,17 @@ $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $langu
                     <div class="relative" x-data="{ open: false }" @click.away="open = false">
                         <button @click="open = !open" class="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-blue-600 focus:outline-none transition">
                             @if(Auth::user()->role === 'admin')
-                                <a href="{{ route('admin.dashboard') }}" class="hover:opacity-80 transition">
-                            @else
+                            <a href="{{ route('admin.dashboard') }}" class="hover:opacity-80 transition">
+                                @else
                                 <a href="/profile" class="hover:opacity-80 transition">
-                            @endif
-                                <div>
-                                    <img src="{{ asset('img/navbar/profile.svg') }}" alt="Profile" class="w-5 h-5" />
-                                </div>
-                            </a>
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                            </svg>
+                                    @endif
+                                    <div>
+                                        <img src="{{ asset('img/navbar/profile.svg') }}" alt="Profile" class="w-5 h-5" />
+                                    </div>
+                                </a>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                                </svg>
                         </button>
 
                         <div x-show="open"
@@ -154,13 +154,13 @@ $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $langu
                             class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
 
                             @if(Auth::user()->role === 'admin')
-                                <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                    Admin Dashboard
-                                </a>
+                            <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Admin Dashboard
+                            </a>
                             @else
-                                <a href="/profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                    My Profile
-                                </a>
+                            <a href="/profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                My Profile
+                            </a>
                             @endif
 
                             <hr class="border-gray-100">
@@ -193,7 +193,7 @@ $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $langu
         <nav class="pb-5">
             <ul class="nav-ul">
                 <li class="nav-li"><a href="{{ route('home') }}" class="nav-a">{{ __('nav.home') }}</a></li>
-                <li class="nav-li"><a href="#" class="nav-a">{{ __('nav.about') }}</a></li>
+                <li class="nav-li"><a href="{{ route('about') }}" class="nav-a">{{ __('nav.about') }}</a></li>
                 <li class="nav-li"><a href="{{ route('product') }}" class="nav-a">{{ __('nav.product') }}</a></li>
                 <li class="nav-li"><a href="#" class="nav-a">{{ __('nav.contact') }}</a></li>
             </ul>

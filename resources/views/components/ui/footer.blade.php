@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-5 lg:gap-8 items-center md:items-start">
             <div class="space-y-6 flex flex-col items-center md:items-start text-center md:text-left">
                 <nav class="flex flex-col space-y-3 text-lg font-medium">
-                    <a href="#" class="hover:opacity-80">{{ __('footer.about_us') }}</a>
+                    <a href="{{ route('about') }}" class="hover:opacity-80">{{ __('footer.about_us') }}</a>
                     <a href="{{ route('product') }}" class="hover:opacity-80">{{ __('footer.products') }}</a>
                     <a href="#" class="hover:opacity-80">{{ __('footer.contact_us') }}</a>
                     <a href="#" class="hover:opacity-80">{{ __('footer.track_records') }}</a>
