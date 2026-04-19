@@ -90,5 +90,19 @@
     "product.title": "Angebote",
     "no_product_title": "Noch keine Produkte verfügbar",
     "no_product_desc": "Wir bereiten gerade etwas Besonderes für Sie vor.",
-    "contact_us": "Kontaktieren Sie uns"
+    "contact_us": "Kontaktieren Sie uns",
+
+    "contact.title": "Kontakt",
+
+    "contact_form.title": "Senden Sie uns eine Nachricht",
+    "contact_form.desc": "Haben Sie Fragen zu unseren Reisen oder benötigen Sie eine individuelle Reiseroute? Senden Sie uns eine Nachricht und unser Team wird sich in Kürze bei Ihnen melden, um Ihren Traumurlaub zu planen.",
+    "contact_form.name": "Name",
+    "contact_form.email": "E-Mail",
+    "contact_form.message": "Nachricht",
+    "contact_form.send": "Nachricht senden",
+    "contact_form.help_center": "Hallo! Wir sind hier, um Ihnen zu helfen.",
+    "contact_form.hotline": "Hotline:",
+    "contact_form.sms": "SMS/WhatsApp:",
+    "contact_form.email_contact": "E-Mail:",
+    "contact_form.socials": "Verbinden Sie sich mit uns"
 }

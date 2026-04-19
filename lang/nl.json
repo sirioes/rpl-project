@@ -90,5 +90,19 @@
     "product.title": "Producten",
     "no_product_title": "Er zijn nog geen producten",
     "no_product_desc": "We bereiden momenteel iets speciaals voor u voor.",
-    "contact_us": "Neem contact op"
+    "contact_us": "Neem contact op",
+
+    "contact.title": "Neem Contact Op",
+
+    "contact_form.title": "Stuur ons een bericht",
+    "contact_form.desc": "Heeft u vragen over onze reizen of wilt u een reisschema op maat? Stuur ons een bericht en ons team neemt zo snel mogelijk contact met u op om uw droomvakantie te plannen.",
+    "contact_form.name": "Naam",
+    "contact_form.email": "E-mail",
+    "contact_form.message": "Bericht",
+    "contact_form.send": "Bericht Versturen",
+    "contact_form.help_center": "Hoi! Wij zijn hier om u te helpen.",
+    "contact_form.hotline": "Hotline:",
+    "contact_form.sms": "SMS/WhatsApp:",
+    "contact_form.email_contact": "E-mail:",
+    "contact_form.socials": "Neem contact op via"
 }

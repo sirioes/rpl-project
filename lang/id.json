@@ -90,6 +90,20 @@
     "product.title": "Produk",
     "no_product_title": "Belum ada produk",
     "no_product_desc": "Kami sedang mempersiapkan sesuatu yang spesial untuk Anda.",
-    "contact_us": "Hubungi Kami"
+    "contact_us": "Hubungi Kami",
+
+    "contact.title": "Hubungi Kami",
+
+    "contact_form.title": "Kirim pesan kepada kami",
+    "contact_form.desc": "Punya pertanyaan tentang perjalanan kami atau butuh rencana perjalanan khusus? Kirim pesan kepada kami, dan tim kami akan segera menghubungi Anda untuk membantu merencanakan liburan impian Anda.",
+    "contact_form.name": "Nama",
+    "contact_form.email": "Email",
+    "contact_form.message": "Pesan",
+    "contact_form.send": "Kirim Pesan",
+    "contact_form.help_center": "Hai! Kami di sini untuk membantu Anda.",
+    "contact_form.hotline": "Hotline:",
+    "contact_form.sms": "SMS/WhatsApp:",
+    "contact_form.email_contact": "Email:",
+    "contact_form.socials": "Hubungi kami melalui"
 
 }

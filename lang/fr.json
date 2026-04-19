@@ -90,7 +90,21 @@
     "product.title": "Nos Offres",
     "no_product_title": "Il n'y a pas encore de produit",
     "no_product_desc": "Nous préparons actuellement quelque chose de spécial pour vous.",
-    "contact_us": "Contactez-nous"
+    "contact_us": "Contactez-nous",
+     
+    "contact.title": "Contact",
+
+    "contact_form.title": "Envoyez-nous un message",
+    "contact_form.desc": "Vous avez des questions sur nos voyages ou besoin d'un itinéraire personnalisé ? Envoyez-nous un message et notre équipe vous répondra sous peu pour vous aider à planifier vos vacances de rêve.",
+    "contact_form.name": "Nom",
+    "contact_form.email": "E-mail",
+    "contact_form.message": "Message",
+    "contact_form.send": "Envoyer le message",
+    "contact_form.help_center": "Bonjour ! Nous sommes là pour vous aider.",
+    "contact_form.hotline": "Assistance :",
+    "contact_form.sms": "SMS/WhatsApp :",
+    "contact_form.email_contact": "E-mail :",
+    "contact_form.socials": "Suivez-nous"
 
 
 }

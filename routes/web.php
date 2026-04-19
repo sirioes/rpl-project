@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Admin\ProductController;
 
 // Route untuk ganti bahasa (tidak perlu login)
 Route::get('lang/{locale}', function ($locale) {
@@ -29,10 +31,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('front.products');
     })->name('product');
 
+
+    Route::get('/contact', function () {
+        return view('front.contact');
+    })->name('contact');
+
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 
 require __DIR__ . '/auth.php';

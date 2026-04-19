@@ -90,6 +90,20 @@
     "product.title": "Product",
     "no_product_title": "There is no product yet",
     "no_product_desc": "We are currently preparing something special for you.",
-    "contact_us": "Contact Us"
+    "contact_us": "Contact Us",
+
+    "contact.title": "Contact",
+
+    "contact_form.title": "Send us a message",
+    "contact_form.desc": "Have questions about our trips or need a custom itinerary? Send us a message, and our team will get back to you shortly to help plan your dream vacation.",
+    "contact_form.name": "Name",
+    "contact_form.email": "Email",
+    "contact_form.message": "Message",
+    "contact_form.send": "Send Message",
+    "contact_form.help_center": "Hi! We are here to help you.",
+    "contact_form.hotline": "Hotline:",
+    "contact_form.sms": "SMS/WhatsApp:",
+    "contact_form.email_contact": "Email:",
+    "contact_form.socials": "Contact with us"
 
 }
