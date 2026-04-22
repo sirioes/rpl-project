@@ -1,0 +1,109 @@
+{
+    "nav.home": "HOME",
+    "nav.about": "ABOUT",
+    "nav.product": "PRODUCT",
+    "nav.contact": "CONTACT",
+
+    "footer.about_us": "About Us",
+    "footer.products": "Products",
+    "footer.contact_us": "Contact Us",
+    "footer.track_records": "Track Records",
+    "footer.title": "Get Updates",
+    "footer.desc": "Subscribe to our newsletter to receive updates and special announcements.",
+    "footer.send_message": "Send Us A Message",
+    "footer.sign": "Sign Up",
+    "footer.email_placeholder": "Your email address",
+    "footer.name": "Your Name",
+    
+    "user.login_welcome": "Welcome Back!",
+    "user.login_no_account": "Don't have an account?",
+    "user.login_register": "Register",
+    "user.login_button": "back to website", 
+    "user.login_forgot_password": "Forgot password?", 
+    "user.login_sign_in": "Sign In",
+    "user.placeholder_email": "Email",
+    "user.placeholder_password": "Password",
+
+    "user.register_create": "Create Account",
+    "user.register_confirmation": "Already have an account?",
+    "user.register_login": "Log In",
+    "user.register_button": "back to website",
+    "user.register_agreement_account": "I agree to create an account with Mijn Amor Travel.",
+
+    "user.forgot_password_title": "Forgot Password",
+    "user.forgot_password_desc": "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.",
+    "user.forgot_password_button": "Email Password Reset Link",
+
+    "user.confirm_password_desc": "This is a secure area of the application. Please confirm your password before continuing.",
+    "user.confirm_password_button": "Confirm",
+
+    "user.reset_password_button": "Reset Password",
+
+    "user.verify_email_desc": "Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another.",  
+    "user.verify_email_resend": "A new verification link has been sent to the email address you provided during registration.",
+    "user.verify_email_button": "Resend Verification Email",
+    "user.verify_email_logout": "Log Out", 
+
+    "hero.book_now": "Book Now",
+    "hero.travel_places": "Travel Places",
+    "hero.features": "Features",
+    "hero.desc": "Places people love to visit <br/> more and more time",
+
+    "herabout.section": "#About Us",
+    "herabout.title": "We are a trusted travel agency dedicated to providing unforgettable experiences",
+    "herabout.descrip": "Transform your travel dreams into seamless realities without a moment’s worry. From the first spark of inspiration to your safe return home, we guide you through every milestone of your journey. Our mission is to deliver bespoke, secure, and effortless travel experiences tailored to your unique desires, ensuring every second is filled with wonder and discovery",
+    "herabout.sectionB": "OUR DESTINATION",
+    "herabout.desc1": "Experience the ultimate island paradise. From the serene spiritual heart of Ubud to the vibrant beaches of Seminyak, Bali offers a perfect blend of rich culture, breathtaking landscapes, and tropical tranquility",
+    "herabout.desc2": "Step into the heart of history and spirituality. Witness the architectural grandeur of St. Peter’s Basilica and the artistic masterpieces of the Vatican Museums in the world’s smallest yet most influential city-state",
+    "herabout.desc3": "Explore the timeless charm of Belgium, where medieval architecture meets world-class chocolate. Discover the historic squares of Brussels and the enchanting canals of Bruges for an unforgettable European escape",
+    "herabout.button": "View More",
+
+    "hero_youtube.text": "Explore the world through the eyes of our vibrant travel community. We don't just plan trips, we curate life changing adventures that bring people together. Watch our latest journeys unfold and see how we turn global destinations into shared memories. Your next great story starts here.",
+    "hero_youtube.button": "WATCH MORE",
+
+    "hero_review.section": "#Reviews",
+    "hero_review.title": "Your Trusted Partner In Travel",
+
+    "hero_CTA.text": "Don’t wait any longer! Start your adventure <br className=\"hidden md:block\" /> and explore new experience today",
+    "hero_CTA.button": "Book Now",
+
+    "about.title": "About Us",
+
+    "about_intro.title": "Introduction To Very Trusted Tour And Travel Agency",
+    "about_intro.desc": "At Mjin Amor Travel, we believe that traveling is more than just visiting new locations. it is about the stories you collect and the memories that stay with you forever. Since our establishment in 2018, we have dedicated ourselves to being more than just a service provider we are your dedicated partners in exploration. Our mission is to bridge the gap between your dreams and reality by uncovering the world’s most breathtaking hidden gems, curated specifically for those who seek authenticity.",
+    "about_intro.bubble_one": "Safe & Secure Travel",
+    "about_intro.bubble_desc_one": "Your safety is our priority, with verified accommodations.",
+    "about_intro.bubble_two": "Curated Destinations",
+    "about_intro.bubble_desc_two": "Carefully selected routes and hidden spots.",
+    "about_intro.bubble_three": "Personalized Experience",
+    "about_intro.bubble_desc_three": "Tailor-made itineraries designed to match your travel style.",
+
+    "about_img.img_one": "Create unforgettable memories with the people who matter most.",
+    "about_img.img_two": "Escape the ordinary and immerse yourself in nature. Discover hidden gems that rejuvenate your soul.",
+
+    "about_destination.section": "OUR DESTINATIONS",
+    "about_destination.desc": "Explore a world of breathtaking destinations with us. From pristine beaches to majestic mountains, our curated travel experiences are designed to inspire and captivate. Discover hidden gems, immerse yourself in diverse cultures, and create unforgettable memories as you journey to some of the most beautiful places on Earth. Your adventure awaits!",
+    "about.destination_all_years": "All Years",
+    "about.destination_no_travel": "No travel in the year",
+    "about.destination_try_another": "Try selecting another year or \"All Years\".",
+
+    "product.title": "Product",
+    "no_product_title": "There is no product yet",
+    "no_product_desc": "We are currently preparing something special for you.",
+    "contact_us": "Contact Us",
+
+    "contact.title": "Contact",
+
+    "contact_form.title": "Send us a message",
+    "contact_form.desc": "Have questions about our trips or need a custom itinerary? Send us a message, and our team will get back to you shortly to help plan your dream vacation.",
+    "contact_form.name": "Name",
+    "contact_form.email": "Email",
+    "contact_form.message": "Message",
+    "contact_form.send": "Send Message",
+    "contact_form.help_center": "Hi! We are here to help you.",
+    "contact_form.hotline": "Hotline:",
+    "contact_form.sms": "SMS/WhatsApp:",
+    "contact_form.email_contact": "Email:",
+    "contact_form.socials": "Contact with us"
+
+}
