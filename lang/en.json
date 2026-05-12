@@ -30,6 +30,11 @@
     "user.register_button": "back to website",
     "user.register_agreement_account": "I agree to create an account with Mijn Amor Travel.",
 
+    "admin.login_title": "Login",
+    "admin.login_message": "Welcome back! Please login your account!",
+    "admin.login_button": "Login",
+    "admin.login_back": "Back",
+
     "user.forgot_password_title": "Forgot Password",
     "user.forgot_password_desc": "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.",
     "user.forgot_password_button": "Email Password Reset Link",

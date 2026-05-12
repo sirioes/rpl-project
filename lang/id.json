@@ -30,6 +30,11 @@
     "user.register_button": "kembali ke situs web",
     "user.register_agreement_account": "Saya setuju untuk membuat akun di Mijn Amor Travel.",
 
+    "admin.login_title": "Masuk",
+    "admin.login_message": "Selamat datang kembali! Silakan masuk ke akun Anda!",
+    "admin.login_button": "Masuk",
+    "admin.login_back": "Kembali",
+
     "user.forgot_password_title": "Lupa Kata Sandi",
     "user.forgot_password_desc": "Lupa kata sandi Anda? Tidak masalah. Cukup beri tahu kami alamat email Anda dan kami akan mengirimkan tautan pengaturan ulang kata sandi yang memungkinkan Anda memilih yang baru.",
     "user.forgot_password_button": "Kirim Tautan Reset Kata Sandi",

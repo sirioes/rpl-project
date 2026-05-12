@@ -30,6 +30,11 @@
     "user.register_button": "zurück zur Website",
     "user.register_agreement_account": "Ich stimme zu, ein Konto bei Mijn Amor Travel zu erstellen.",
 
+    "admin.login_title": "Anmelden",
+    "admin.login_message": "Willkommen zurück! Bitte melden Sie sich an!",
+    "admin.login_button": "Anmelden",
+    "admin.login_back": "Zurück",
+
     "user.forgot_password_title": "Passwort vergessen",
     "user.forgot_password_desc": "Passwort vergessen? Kein Problem. Teilen Sie uns einfach Ihre E-Mail-Adresse mit, und wir senden Ihnen einen Link zum Zurücksetzen des Passworts, mit dem Sie ein neues wählen können.",
     "user.forgot_password_button": "Link zum Zurücksetzen senden",
@@ -105,4 +110,6 @@
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "E-Mail:",
     "contact_form.socials": "Verbinden Sie sich mit uns"
+
+
 }

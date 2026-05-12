@@ -29,6 +29,11 @@
     "user.register_login": "Inloggen",
     "user.register_button": "terug naar website",
     "user.register_agreement_account": "Ik ga ermee akkoord om een account aan te maken bij Mijn Amor Travel.",
+
+    "admin.login_title": "Inloggen",
+    "admin.login_message": "Welkom terug! Log in op uw account!",
+    "admin.login_button": "Inloggen",
+    "admin.login_back": "Terug",
     
     "user.forgot_password_title": "Wachtwoord vergeten",
     "user.forgot_password_desc": "Wachtwoord vergeten? Geen probleem. Laat ons uw e-mailadres weten en wij sturen u een link om uw wachtwoord opnieuw in te stellen, zodat u een nieuw wachtwoord kunt kiezen.",
