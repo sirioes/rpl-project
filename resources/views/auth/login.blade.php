@@ -14,7 +14,7 @@
                 </a>
 
                 <!-- Tombol Admin -->
-                <a href="" 
+                <a href="{{ route('admin.login') }}" 
                    class="px-6 py-2 text-sm font-bold rounded-full transition-all duration-300 {{ request()->routeIs('admin.login') ? 'bg-[#67a3bc] text-white shadow-md' : 'text-gray-500 hover:text-gray-800' }}">
                     Admin
                 </a>
