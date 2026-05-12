@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
@@ -12,6 +13,26 @@ Route::get('lang/{locale}', function ($locale) {
     }
     return redirect()->back();
 })->name('lang.switch');
+
+Route::get('/lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'id', 'nl', 'de', 'pt'])) {
+        session()->put('locale', $locale);
+    }
+
+    return redirect()->back();
+})->name('lang.switch');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [AdminAuthController::class, 'login'])->name('login.submit');
+    Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+});
+
+Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', function () {
+        return 'Berhasil login sebagai admin';
+    })->name('dashboard');
+});
 
 
 // --- SEMUA ROUTE DI BAWAH INI WAJIB LOGIN ---
