@@ -109,6 +109,17 @@
     "contact_form.hotline": "Hotline:",
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "Email:",
-    "contact_form.socials": "Contact with us"
+    "contact_form.socials": "Contact with us",
+
+    "admin.sidebar_Dashboard": "Dashboard",
+    "admin.sidebar_manage_product": "Manage Product",
+    "admin.sidebar_add_product": "Add Product",
+    "admin.sidebar_product_list": "Product List",
+    "admin.sidebar_track_record": "Track Record",
+    "admin.sidebar_add_track_record": "Add Track Record",
+    "admin.sidebar_track_reocrds": "Track Records",
+    "admin.sidebar_booking": "Booking List",
+    "admin.sidebar_message": "Message",
+    "admin.sidebar_manage_users": "Manage Users"
 
 }

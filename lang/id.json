@@ -109,6 +109,16 @@
     "contact_form.hotline": "Hotline:",
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "Email:",
-    "contact_form.socials": "Hubungi kami melalui"
+    "contact_form.socials": "Hubungi kami melalui",
 
+    "admin.sidebar_Dashboard": "Dashboard",
+    "admin.sidebar_manage_product": "Kelola Produk",
+    "admin.sidebar_add_product": "Tambah Produk",
+    "admin.sidebar_product_list": "Daftar Produk",
+    "admin.sidebar_track_record": "Rekam Jejak",
+    "admin.sidebar_add_track_record": "Tambah Rekam Jejak",
+    "admin.sidebar_track_reocrds": "Daftar Rekam Jejak",
+    "admin.sidebar_booking": "Daftar Pemesanan",
+    "admin.sidebar_message": "Pesan",
+    "admin.sidebar_manage_users": "Kelola Pengguna"
 }

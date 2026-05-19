@@ -109,5 +109,16 @@
     "contact_form.hotline": "Hotline:",
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "E-mail:",
-    "contact_form.socials": "Neem contact op via"
+    "contact_form.socials": "Neem contact op via",
+
+    "admin.sidebar_Dashboard": "Dashboard",
+    "admin.sidebar_manage_product": "Producten beheren",
+    "admin.sidebar_add_product": "Product toevoegen",
+    "admin.sidebar_product_list": "Productlijst",
+    "admin.sidebar_track_record": "Reishistorie",
+    "admin.sidebar_add_track_record": "Reishistorie toevoegen",
+    "admin.sidebar_track_reocrds": "Alle historie",
+    "admin.sidebar_booking": "Boekingslijst",
+    "admin.sidebar_message": "Berichten",
+    "admin.sidebar_manage_users": "Gebruikers Beheren"
 }

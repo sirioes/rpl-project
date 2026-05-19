@@ -109,7 +109,17 @@
     "contact_form.hotline": "Hotline:",
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "E-Mail:",
-    "contact_form.socials": "Verbinden Sie sich mit uns"
+    "contact_form.socials": "Verbinden Sie sich mit uns",
 
 
+    "admin.sidebar_Dashboard": "Dashboard",
+    "admin.sidebar_manage_product": "Produkte verwalten",
+    "admin.sidebar_add_product": "Produkt hinzufügen",
+    "admin.sidebar_product_list": "Produktliste",
+    "admin.sidebar_track_record": "Reisehistorie",
+    "admin.sidebar_add_track_record": "Eintrag hinzufügen",
+    "admin.sidebar_track_reocrds": "Alle Einträge",
+    "admin.sidebar_booking": "Buchungsliste",
+    "admin.sidebar_message": "Nachrichten",
+    "admin.sidebar_manage_users": "Benutzer Verwalten"
 }
