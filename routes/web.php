@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
@@ -8,7 +9,7 @@ use App\Http\Controllers\Admin\ProductController;
 
 // Route untuk ganti bahasa (tidak perlu login)
 Route::get('lang/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'id', 'nl', 'de', 'fr'])) {
+    if (in_array($locale, ['en', 'id', 'nl', 'de', 'pt'])) {
         session()->put('locale', $locale);
     }
     return redirect()->back();
@@ -29,9 +30,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', function () {
-        return 'Berhasil login sebagai admin';
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
 
