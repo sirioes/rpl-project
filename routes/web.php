@@ -7,14 +7,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\ProductController;
 
-// Route untuk ganti bahasa (tidak perlu login)
-Route::get('lang/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'id', 'nl', 'de', 'pt'])) {
-        session()->put('locale', $locale);
-    }
-    return redirect()->back();
-})->name('lang.switch');
-
 Route::get('/lang/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'id', 'nl', 'de', 'pt'])) {
         session()->put('locale', $locale);
@@ -31,6 +23,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::resource('products', ProductController::class);
+    Route::post('/products/{id}/publish', [ProductController::class, 'publish'])->name('products.publish');
+    Route::patch('/admin/products/{product}/toggle', [App\Http\Controllers\Admin\ProductController::class, 'togglePublish'])
+        ->name('products.toggle');
 });
 
 
