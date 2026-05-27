@@ -10,7 +10,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        [x-cloak] { display: none !important; }
+        [x-cloak] {
+            display: none !important;
+        }
     </style>
 </head>
 
@@ -18,34 +20,34 @@
 
     {{-- PAGE LOADER --}}
     <div id="page-loader"
-         x-show="isLoading"
-         x-transition.opacity.duration.500ms
-         style="display: none;"
-         class="fixed inset-0 z-9999 flex items-center justify-center bg-white/90">
+        x-show="isLoading"
+        x-transition.opacity.duration.500ms
+        style="display: none;"
+        class="fixed inset-0 z-9999 flex items-center justify-center bg-white/90">
         <div class="h-14 w-14 animate-spin rounded-full border-4 border-gray-200 border-t-blue-600"></div>
     </div>
 
     {{-- 1. LOGIKA PHP DITARUH DISINI (Setelah Body) --}}
     @php
-        $languages = [
-            ['code' => 'en', 'name' => 'EN', 'flag' => 'https://flagcdn.com/w40/us.png'],
-            ['code' => 'id', 'name' => 'ID', 'flag' => 'https://flagcdn.com/w40/id.png'],
-            ['code' => 'nl', 'name' => 'NL', 'flag' => 'https://flagcdn.com/w40/nl.png'],
-            ['code' => 'de', 'name' => 'DE', 'flag' => 'https://flagcdn.com/w40/de.png'],
-            ['code' => 'pt', 'name' => 'PT', 'flag' => 'https://flagcdn.com/w40/pt.png']
-        ];
-        $currentLocale = app()->getLocale();
-        $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $languages[0];
-        $unreadMessagesCount = 0;
-        $unpaidBookingsCount = 0;
+    $languages = [
+    ['code' => 'en', 'name' => 'EN', 'flag' => 'https://flagcdn.com/w40/us.png'],
+    ['code' => 'id', 'name' => 'ID', 'flag' => 'https://flagcdn.com/w40/id.png'],
+    ['code' => 'nl', 'name' => 'NL', 'flag' => 'https://flagcdn.com/w40/nl.png'],
+    ['code' => 'de', 'name' => 'DE', 'flag' => 'https://flagcdn.com/w40/de.png'],
+    ['code' => 'pt', 'name' => 'PT', 'flag' => 'https://flagcdn.com/w40/pt.png']
+    ];
+    $currentLocale = app()->getLocale();
+    $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $languages[0];
+    $unreadMessagesCount = 0;
+    $unpaidBookingsCount = 0;
     @endphp
 
     <div class="flex min-h-screen">
-        
-        <aside 
+
+        <aside
             :class="mobileOpen ? 'translate-x-0' : '-translate-x-full'"
             class="w-72 bg-[#0099FF] text-white flex flex-col fixed h-full shadow-xl z-50 transition-transform duration-300 lg:translate-x-0">
-            
+
             <div class="lg:hidden flex justify-end p-4">
                 <button @click="mobileOpen = false" class="text-white text-2xl">
                     <i class="fas fa-times"></i>
@@ -72,13 +74,13 @@
                     </button>
 
                     <div x-show="open" x-cloak class="mt-2 ml-10 space-y-2 border-l-2 border-white/30">
-                        <a href="#"
+                        <a href="{{ route('admin.products.create') }}"
                             class="relative flex items-center pl-6 py-2 text-sm hover:text-white/80">
                             <span class="absolute left-0 w-4 border-t-2 border-white/50"></span>
                             <span>{{__('admin.sidebar_add_product') }}</span>
                         </a>
 
-                        <a href="#"
+                        <a href="{{ route('admin.products.index') }}"
                             class="relative flex items-center pl-6 py-2 text-sm hover:text-white/80">
                             <span class="absolute left-0 w-4 border-t-2 border-white/50"></span>
                             <span>{{__('admin.sidebar_product_list') }}</span>
@@ -151,7 +153,7 @@
                 <div class="flex items-center gap-3">
 
                     <div class="relative" x-data="{ langOpen: false }" @click.away="langOpen = false">
-                        <button 
+                        <button
                             @click="langOpen = !langOpen"
                             class="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 px-2 py-1.5 rounded-lg transition-colors focus:outline-none">
                             <img src="{{ $currentLang['flag'] }}" alt="{{ $currentLang['name'] }}" class="w-5 h-3 object-cover rounded-sm shadow-sm" />
@@ -182,20 +184,20 @@
             </div>
 
             <div class="p-0">
-                {{ $slot }}
+                @yield('content')
             </div>
         </main>
     </div>
 
     <script>
-        (function () {
+        (function() {
             function showLoader() {
                 var loader = document.getElementById('page-loader');
                 if (loader) loader.style.display = 'flex';
             }
 
             // Tampilkan loader saat klik link navigasi
-            document.addEventListener('click', function (e) {
+            document.addEventListener('click', function(e) {
                 var link = e.target.closest('a[href]');
                 if (!link) return;
                 var href = link.getAttribute('href');
@@ -204,14 +206,14 @@
             });
 
             // Tampilkan loader saat submit form (hanya jika tidak dibatalkan via confirm dialog)
-            document.addEventListener('submit', function (e) {
+            document.addEventListener('submit', function(e) {
                 if (!e.defaultPrevented) {
                     showLoader();
                 }
             });
 
             // Sembunyikan loader jika browser restore halaman dari cache (tombol back/forward)
-            window.addEventListener('pageshow', function (e) {
+            window.addEventListener('pageshow', function(e) {
                 if (e.persisted) {
                     var loader = document.getElementById('page-loader');
                     if (loader) loader.style.display = 'none';
