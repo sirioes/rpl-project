@@ -151,5 +151,14 @@
     "admin.products_recent_empty": "Belum ada produk baru ditambahkan.",
     "admin.products_archived_title": "Produk Terbit & Diarsipkan",
     "admin.products_btn_unpublish": "Batalkan Terbit",
-    "admin.products_archived_empty": "Tidak ada produk terbit atau diarsipkan."
+    "admin.products_archived_empty": "Tidak ada produk terbit atau diarsipkan.", 
+
+    "user.product_trip": "Lokasi Keberangkatan:", 
+
+    "admin.product_edit_title": "Edit Produk",
+    "admin.product_edit_current_images": "Gambar Saat Ini",
+    "admin.product_edit_delete_image": "Hapus",
+    "admin.product_edit_img_hover_hint": "Arahkan kursor dan klik gambar untuk menandai hapus",
+    "admin.product_edit_add_images": "Tambah Gambar Baru",
+    "admin.product_edit_btn_save": "Simpan Perubahan"
 }

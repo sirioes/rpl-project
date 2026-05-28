@@ -151,5 +151,14 @@
     "admin.products_recent_empty": "Nog geen nieuwe producten toegevoegd.",
     "admin.products_archived_title": "Gepubliceerde & Gearchiveerde Producten",
     "admin.products_btn_unpublish": "Publicatie intrekken",
-    "admin.products_archived_empty": "Geen gepubliceerde of gearchiveerde producten gevonden."
+    "admin.products_archived_empty": "Geen gepubliceerde of gearchiveerde producten gevonden.", 
+
+    "user.product_trip": "Vertreklocaties:", 
+
+    "admin.product_edit_title": "Product Bewerken",
+    "admin.product_edit_current_images": "Huidige Afbeeldingen",
+    "admin.product_edit_delete_image": "Verwijderen",
+    "admin.product_edit_img_hover_hint": "Zweef over en klik op afbeelding om te markeren voor verwijdering",
+    "admin.product_edit_add_images": "Nieuwe Afbeeldingen Toevoegen",
+    "admin.product_edit_btn_save": "Wijzigingen Opslaan"
 }

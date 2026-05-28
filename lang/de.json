@@ -152,5 +152,14 @@
     "admin.products_recent_empty": "Noch keine neuen Produkte hinzugefügt.",
     "admin.products_archived_title": "Veröffentlichte & Archivierte Produkte",
     "admin.products_btn_unpublish": "Veröffentlichung aufheben",
-    "admin.products_archived_empty": "Keine veröffentlichten oder archivierten Produkte gefunden."
+    "admin.products_archived_empty": "Keine veröffentlichten oder archivierten Produkte gefunden.", 
+
+    "user.product_trip": "Abreiseorte:", 
+
+    "admin.product_edit_title": "Produkt Bearbeiten",
+    "admin.product_edit_current_images": "Aktuelle Bilder",
+    "admin.product_edit_delete_image": "Löschen",
+    "admin.product_edit_img_hover_hint": "Bild hovern und klicken um es zum Löschen zu markieren",
+    "admin.product_edit_add_images": "Neue Bilder hinzufügen",
+    "admin.product_edit_btn_save": "Änderungen Speichern"
 }

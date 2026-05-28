@@ -151,6 +151,15 @@
     "admin.products_recent_empty": "No new products added yet.",
     "admin.products_archived_title": "Published & Archived Products",
     "admin.products_btn_unpublish": "Unpublish",
-    "admin.products_archived_empty": "No published or archived products found."
+    "admin.products_archived_empty": "No published or archived products found.",
+
+    "user.product_trip": "Departure Locations:", 
+
+    "admin.product_edit_title": "Edit Product",
+    "admin.product_edit_current_images": "Current Images",
+    "admin.product_edit_delete_image": "Delete",
+    "admin.product_edit_img_hover_hint": "Hover and click image to mark for deletion",
+    "admin.product_edit_add_images": "Add New Images",
+    "admin.product_edit_btn_save": "Save Changes"
 
 }

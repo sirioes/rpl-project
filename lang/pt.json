@@ -135,5 +135,15 @@
     "admin.products_recent_empty": "Nenhum produto novo adicionado.",
     "admin.products_archived_title": "Produtos Publicados e Arquivados",
     "admin.products_btn_unpublish": "Despublicar",
-    "admin.products_archived_empty": "Nenhum produto publicado ou arquivado encontrado."
+    "admin.products_archived_empty": "Nenhum produto publicado ou arquivado encontrado.", 
+
+    "user.product_trip": "Locais de partida:", 
+
+    "admin.product_edit_title": "Editar Produto",
+    "admin.product_edit_current_images": "Imagens Atuais",
+    "admin.product_edit_delete_image": "Excluir",
+    "admin.product_edit_img_hover_hint": "Passe o mouse e clique na imagem para marcá-la para exclusão",
+    "admin.product_edit_add_images": "Adicionar Novas Imagens",
+    "admin.product_edit_btn_save": "Salvar Alterações"
+
 }
