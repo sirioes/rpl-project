@@ -3,7 +3,6 @@
     "nav.about": "OVER ONS",
     "nav.product": "PRODUCTEN",
     "nav.contact": "CONTACT",
-
     "footer.about_us": "Over Ons",
     "footer.products": "Producten",
     "footer.contact_us": "Neem Contact Op",
@@ -14,46 +13,37 @@
     "footer.sign": "Aanmelden",
     "footer.email_placeholder": "Uw e-mailadres",
     "footer.name": "Uw naam",
-    
     "user.login_welcome": "Welkom terug!",
     "user.login_no_account": "Nog geen account?",
     "user.login_register": "Registreren",
-    "user.login_button": "terug naar de website", 
-    "user.login_forgot_password": "Wachtwoord vergeten?", 
+    "user.login_button": "terug naar de website",
+    "user.login_forgot_password": "Wachtwoord vergeten?",
     "user.login_sign_in": "Inloggen",
     "user.placeholder_email": "E-mail",
     "user.placeholder_password": "Wachtwoord",
-
     "user.register_create": "Account aanmaken",
     "user.register_confirmation": "Heeft u al een account?",
     "user.register_login": "Inloggen",
     "user.register_button": "terug naar website",
     "user.register_agreement_account": "Ik ga ermee akkoord om een account aan te maken bij Mijn Amor Travel.",
-
     "admin.login_title": "Inloggen",
     "admin.login_message": "Welkom terug! Log in op uw account!",
     "admin.login_button": "Inloggen",
     "admin.login_back": "Terug",
-    
     "user.forgot_password_title": "Wachtwoord vergeten",
     "user.forgot_password_desc": "Wachtwoord vergeten? Geen probleem. Laat ons uw e-mailadres weten en wij sturen u een link om uw wachtwoord opnieuw in te stellen, zodat u een nieuw wachtwoord kunt kiezen.",
     "user.forgot_password_button": "Link voor wachtwoordherstel verzenden",
-
     "user.confirm_password_desc": "Dit is een beveiligd gedeelte van de applicatie. Bevestig uw wachtwoord voordat u doorgaat.",
     "user.confirm_password_button": "Bevestigen",
-
     "user.reset_password_button": "Wachtwoord opnieuw instellen",
-
-    "user.verify_email_desc": "Bedankt voor uw aanmelding! Voordat we beginnen: kunt u uw e-mailadres verifiëren door op de link te klikken die we u zojuist hebben gestuurd? Als u de e-mail niet heeft ontvangen, sturen we u graag een nieuwe.",  
+    "user.verify_email_desc": "Bedankt voor uw aanmelding! Voordat we beginnen: kunt u uw e-mailadres verifiëren door op de link te klikken die we u zojuist hebben gestuurd? Als u de e-mail niet heeft ontvangen, sturen we u graag een nieuwe.",
     "user.verify_email_resend": "Er is een nieuwe verificatielink verzonden naar het e-mailadres dat u tijdens de registratie heeft opgegeven.",
     "user.verify_email_button": "Verificatie-e-mail opnieuw verzenden",
-    "user.verify_email_logout": "Uitloggen", 
-
+    "user.verify_email_logout": "Uitloggen",
     "hero.book_now": "Boek Nu",
     "hero.travel_places": "Reisbestemmingen",
     "hero.features": "Kenmerken",
     "hero.desc": "Plaatsen die mensen graag <br/> bezoeken keer op keer",
-
     "herabout.section": "#Over Ons",
     "herabout.title": "Wij zijn een vertrouwd reisbureau dat zich toelegt op het bieden van onvergetelijke ervaringen.",
     "herabout.descrip": "Verander uw reisdromen in naadloze realiteiten zonder een moment van zorg. Van de eerste vonk van inspiratie tot uw veilige terugkeer naar huis, begeleiden wij u door elke mijlpaal van uw reis. Onze missie is het leveren van op maat gemaakte, veilige en moeiteloze reiservaringen die zijn afgestemd op uw unieke wensen, zodat elke seconde gevuld is met verwondering en ontdekking",
@@ -62,18 +52,13 @@
     "herabout.desc2": "Stap in het hart van geschiedenis en spiritualiteit. Bewonder de architectonische pracht van de Sint-Pietersbasiliek en de artistieke meesterwerken van de Vaticaanse Musea in de kleinste maar meest invloedrijke stadstaat ter wereld",
     "herabout.desc3": "Ontdek de tijdloze charme van België, waar middeleeuwse architectuur samenkomt met chocolade van wereldklasse. Ontdek de historische pleinen van Brussel en de betoverende grachten van Brugge voor een onvergetelijke Europese ontsnapping",
     "herabout.button": "Bekijk Meer",
-
     "hero_youtube.text": "Verken de wereld door de ogen van onze levendige reisgemeenschap. We plannen niet alleen reizen, we organiseren ook levensveranderende avonturen die mensen samenbrengen. Bekijk onze nieuwste reizen en zie hoe we wereldwijde bestemmingen omzetten in gedeelde herinneringen. Je volgende geweldige verhaal begint hier.",
     "hero_youtube.button": "BEKIJK MEER",
-
     "hero_review.section": "#Beoordelingen",
     "hero_review.title": "Uw Vertrouwde Partner in Reizen",
-
     "hero_CTA.text": "Wacht niet langer! Begin vandaag nog aan uw <br className=\"hidden md:block\" /> avontuur en ontdek nieuwe ervaringen",
     "hero_CTA.button": "Boek Nu",
-
     "about.title": "Over Ons",
-
     "about_intro.title": "Introductie Tot Zeer Vertrouwd Tour-en Reisbureau",
     "about_intro.desc": "Bij Mjin Amor Travel geloven we dat reizen meer is dan alleen het bezoeken van nieuwe locaties. Het gaat om de verhalen die je verzamelt en de herinneringen die voor altijd bij je blijven. Sinds onze oprichting in 2018 hebben we ons toegewijd aan meer zijn dan alleen een dienstverlener; wij zijn uw toegewijde partners in verkenning. Onze missie is om de kloof tussen uw dromen en de realiteit te overbruggen door de meest adembenemende verborgen juweeltjes van de wereld te onthullen, speciaal samengesteld voor degenen die op zoek zijn naar authenticiteit.",
     "about_intro.bubble_one": "Veilig & Zeker Reizen",
@@ -82,23 +67,18 @@
     "about_intro.bubble_desc_two": "Zorgvuldig geselecteerde routes en verborgen plekjes.",
     "about_intro.bubble_three": "Persoonlijke Ervaring",
     "about_intro.bubble_desc_three": "Op maat gemaakte reisroutes ontworpen om bij uw reisstijl te passen.",
-
     "about_img.img_one": "Creëer onvergetelijke herinneringen met de mensen die het meest voor je betekenen.",
     "about_img.img_two": "Ontsnap aan het gewone en dompel jezelf onder in de natuur. Ontdek verborgen juweeltjes die je ziel verjongen.",
-
     "about_destination.section": "ONZE BESTEMMINGEN",
     "about_destination.desc": "Verken een wereld van adembenemende bestemmingen met ons. Van ongerepte stranden tot majestueuze bergen, onze samengestelde reiservaringen zijn ontworpen om te inspireren en te boeien. Ontdek verborgen juweeltjes, dompel jezelf onder in diverse culturen en creëer onvergetelijke herinneringen terwijl je reist naar enkele van de mooiste plekken op aarde. Je avontuur wacht!",
     "about.destination_all_years": "Alle Jaren",
     "about.destination_no_travel": "Geen reizen in het jaar",
-    "about.destination_try_another": "Probeer een ander jaar te selecteren of \"Alle Jaren\".", 
-
+    "about.destination_try_another": "Probeer een ander jaar te selecteren of \"Alle Jaren\".",
     "product.title": "Producten",
     "no_product_title": "Er zijn nog geen producten",
     "no_product_desc": "We bereiden momenteel iets speciaals voor u voor.",
     "contact_us": "Neem contact op",
-
     "contact.title": "Neem Contact Op",
-
     "contact_form.title": "Stuur ons een bericht",
     "contact_form.desc": "Heeft u vragen over onze reizen of wilt u een reisschema op maat? Stuur ons een bericht en ons team neemt zo snel mogelijk contact met u op om uw droomvakantie te plannen.",
     "contact_form.name": "Naam",
@@ -110,7 +90,6 @@
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "E-mail:",
     "contact_form.socials": "Neem contact op via",
-
     "admin.sidebar_Dashboard": "Dashboard",
     "admin.sidebar_manage_product": "Producten beheren",
     "admin.sidebar_add_product": "Product toevoegen",
@@ -120,15 +99,14 @@
     "admin.sidebar_track_reocrds": "Alle historie",
     "admin.sidebar_booking": "Boekingslijst",
     "admin.sidebar_message": "Berichten",
-    "admin.sidebar_manage_users": "Gebruikers Beheren", 
-
+    "admin.sidebar_manage_users": "Gebruikers Beheren",
     "admin.product_create_title": "Nieuw Product",
     "admin.product_create_info_title": "Productinformatie",
     "admin.product_create_name_label": "Productnaam",
-    "admin.product_create_name_placeholder": "Bijv. Kerstmarkt Weekend...",  
+    "admin.product_create_name_placeholder": "Bijv. Kerstmarkt Weekend...",
     "admin.product_create_desc_label": "Productbeschrijving",
     "admin.product_create_desc_placeholder": "Uw tekst hier",
-    "admin.product_create_price_label": "Productprijs",   
+    "admin.product_create_price_label": "Productprijs",
     "admin.product_create_img_title": "Productafbeelding",
     "admin.product_create_btn_upload": "Uploaden",
     "admin.product_create_img_instr": "Kies afbeeldingen of sleep ze hierheen.",
@@ -151,14 +129,25 @@
     "admin.products_recent_empty": "Nog geen nieuwe producten toegevoegd.",
     "admin.products_archived_title": "Gepubliceerde & Gearchiveerde Producten",
     "admin.products_btn_unpublish": "Publicatie intrekken",
-    "admin.products_archived_empty": "Geen gepubliceerde of gearchiveerde producten gevonden.", 
-
-    "user.product_trip": "Vertreklocaties:", 
-
+    "admin.products_archived_empty": "Geen gepubliceerde of gearchiveerde producten gevonden.",
+    "user.product_trip": "Vertreklocaties:",
     "admin.product_edit_title": "Product Bewerken",
     "admin.product_edit_current_images": "Huidige Afbeeldingen",
     "admin.product_edit_delete_image": "Verwijderen",
     "admin.product_edit_img_hover_hint": "Zweef over en klik op afbeelding om te markeren voor verwijdering",
     "admin.product_edit_add_images": "Nieuwe Afbeeldingen Toevoegen",
-    "admin.product_edit_btn_save": "Wijzigingen Opslaan"
+    "admin.product_edit_btn_save": "Wijzigingen Opslaan",
+    "admin.users_title": "Gebruikers- en activiteitenlijst",
+    "admin.users_total": "Totaal:",
+    "admin.users_users": "Gebruikers",
+    "admin.users_table_user": "Gebruiker",
+    "admin.users_table_last_active": "Laatst Actief",
+    "admin.users_table_last_page": "Laatste Pagina",
+    "admin.users_mobile_page": "Pagina:",
+    "admin.users_table_ip": "IP-adres",
+    "admin.users_table_status": "Status",
+    "admin.users_status_undetected": "Nog niet gedetecteerd",
+    "admin.users_status_online": "Online",
+    "admin.users_status_offline": "Offline",
+    "admin.users_empty": "Nog geen gebruikersgegevens geregistreerd."
 }

@@ -3,7 +3,6 @@
     "nav.about": "ÜBER UNS",
     "nav.product": "ANGEBOTE",
     "nav.contact": "KONTAKT",
-    
     "footer.about_us": "Über uns",
     "footer.products": "Angebote",
     "footer.contact_us": "Kontakt",
@@ -14,46 +13,37 @@
     "footer.sign": "Anmelden",
     "footer.email_placeholder": "Ihre E-Mail-Adresse",
     "footer.name": "Ihr Name",
-
     "user.login_welcome": "Willkommen zurück!",
     "user.login_no_account": "Sie haben noch kein Konto?",
     "user.login_register": "Registrieren",
-    "user.login_button": "Zurück zur Website", 
-    "user.login_forgot_password": "Passwort vergessen?", 
+    "user.login_button": "Zurück zur Website",
+    "user.login_forgot_password": "Passwort vergessen?",
     "user.login_sign_in": "Anmelden",
     "user.placeholder_email": "E-Mail",
     "user.placeholder_password": "Passwort",
-
     "user.register_create": "Konto erstellen",
     "user.register_confirmation": "Haben Sie bereits ein Konto?",
     "user.register_login": "Anmelden",
     "user.register_button": "zurück zur Website",
     "user.register_agreement_account": "Ich stimme zu, ein Konto bei Mijn Amor Travel zu erstellen.",
-
     "admin.login_title": "Anmelden",
     "admin.login_message": "Willkommen zurück! Bitte melden Sie sich an!",
     "admin.login_button": "Anmelden",
     "admin.login_back": "Zurück",
-
     "user.forgot_password_title": "Passwort vergessen",
     "user.forgot_password_desc": "Passwort vergessen? Kein Problem. Teilen Sie uns einfach Ihre E-Mail-Adresse mit, und wir senden Ihnen einen Link zum Zurücksetzen des Passworts, mit dem Sie ein neues wählen können.",
     "user.forgot_password_button": "Link zum Zurücksetzen senden",
-
     "user.confirm_password_desc": "Dies ist ein geschützter Bereich der Anwendung. Bitte bestätigen Sie Ihr Passwort, bevor Sie fortfahren.",
     "user.confirm_password_button": "Bestätigen",
-
     "user.reset_password_button": "Passwort zurücksetzen",
-
-    "user.verify_email_desc": "Danke für Ihre Anmeldung! Bevor wir anfangen: Könnten Sie Ihre E-Mail-Adresse verifizieren, indem Sie auf den Link klicken, den wir Ihnen gerade geschickt haben? Falls Sie die E-Mail nicht erhalten haben, senden wir Ihnen gerne eine neue.",  
+    "user.verify_email_desc": "Danke für Ihre Anmeldung! Bevor wir anfangen: Könnten Sie Ihre E-Mail-Adresse verifizieren, indem Sie auf den Link klicken, den wir Ihnen gerade geschickt haben? Falls Sie die E-Mail nicht erhalten haben, senden wir Ihnen gerne eine neue.",
     "user.verify_email_resend": "Ein neuer Bestätigungslink wurde an die E-Mail-Adresse gesendet, die Sie bei der Registrierung angegeben haben.",
     "user.verify_email_button": "Bestätigungs-E-Mail erneut senden",
-    "user.verify_email_logout": "Abmelden", 
-
+    "user.verify_email_logout": "Abmelden",
     "hero.book_now": "Jetzt buchen",
     "hero.travel_places": "Reiseziele",
     "hero.features": "Highlights",
     "hero.desc": "Orte, die man liebt und <br/> immer wieder besuchen möchte",
-
     "herabout.section": "#Über uns",
     "herabout.title": "Wir sind ein vertrauenswürdiges Reisebüro für unvergessliche Erlebnisse",
     "herabout.descrip": "Verwandeln Sie Ihre Reiseträume in nahtlose Realität, ganz ohne Sorgen. Vom ersten Funken der Inspiration bis zu Ihrer sicheren Rückkehr begleiten wir Sie durch jeden Meilenstein Ihrer Reise. Unsere Mission ist es, maßgeschneiderte, sichere und mühelose Reiseerlebnisse zu bieten, die auf Ihre Wünsche zugeschnitten sind – damit jede Sekunde voller Wunder und Entdeckungen ist.",
@@ -61,19 +51,14 @@
     "herabout.desc1": "Erleben Sie das ultimative Inselparadies. Vom ruhigen, spirituellen Herzen Ubuds bis zu den lebhaften Stränden von Seminyak bietet Bali eine perfekte Mischung aus reicher Kultur, atemberaubenden Landschaften und tropischer Ruhe.",
     "herabout.desc2": "Treten Sie ein in das Herz von Geschichte und Spiritualität. Bewundern Sie die architektonische Pracht des Petersdoms und die künstlerischen Meisterwerke der Vatikanischen Museen im kleinsten, aber einflussreichsten Stadtstaat der Welt.",
     "herabout.desc3": "Entdecken Sie den zeitlosen Charme Belgiens, wo mittelalterliche Architektur auf erstklassige Schokolade trifft. Erkunden Sie die historischen Plätze von Brüssel und die bezaubernden Kanäle von Brügge für einen unvergesslichen europäischen Kurzurlaub.",
-    "herabout.button": "Mehr anzeigen", 
-
+    "herabout.button": "Mehr anzeigen",
     "hero_youtube.text": "Entdecken Sie die Welt durch die Augen unserer lebendigen Reise-Community. Wir planen nicht nur Reisen, wir kuratieren lebensverändernde Abenteuer, die Menschen zusammenbringen. Sehen Sie sich unsere neuesten Reisen an und erleben Sie, wie wir globale Ziele in gemeinsame Erinnerungen verwandeln. Ihre nächste große Geschichte beginnt hier.",
     "hero_youtube.button": "MEHR ANSEHEN",
-
     "hero_review.section": "#Bewertungen",
     "hero_review.title": "Ihr vertrauenswürdiger Reisepartner",
-    
     "hero_CTA.text": "Warten Sie nicht länger! Starten Sie Ihr Abenteuer <br className=\"hidden md:block\" /> und entdecken Sie noch heute neue Erlebnisse",
     "hero_CTA.button": "Jetzt buchen",
-
-    "about.title" : "Über uns",
-
+    "about.title": "Über uns",
     "about_intro.title": "Vorstellung Ihrer vertrauenswürdigen Reiseagentur",
     "about_intro.desc": "Bei Mjin Amor Travel glauben wir, dass Reisen mehr ist als nur der Besuch neuer Orte. Es geht um die Geschichten, die Sie sammeln, und die Erinnerungen, die für immer bleiben. Seit unserer Gründung im Jahr 2018 haben wir uns darauf spezialisiert, mehr als nur ein Dienstleister zu sein – wir sind Ihre engagierten Partner beim Entdecken. Unsere Mission ist es, die Brücke zwischen Ihren Träumen und der Realität zu schlagen, indem wir die atemberaubendsten verborgenen Schätze der Welt aufdecken, kuratiert für alle, die Authentizität suchen.",
     "about_intro.bubble_one": "Sicheres Reisen",
@@ -82,23 +67,18 @@
     "about_intro.bubble_desc_two": "Sorgfältig ausgewählte Routen und versteckte Orte.",
     "about_intro.bubble_three": "Personalisierte Erfahrung",
     "about_intro.bubble_desc_three": "Maßgeschneiderte Reiserouten, passend zu Ihrem Reisestil.",
-
     "about_img.img_one": "Schaffen Sie unvergessliche Erinnerungen mit den Menschen, die Ihnen am wichtigsten sind.",
     "about_img.img_two": "Entfliehen Sie dem Alltag und tauchen Sie in die Natur ein. Entdecken Sie verborgene Orte, die Ihre Seele beleben.",
-
     "about_destination.section": "UNSERE REISEZIELE",
     "about_destination.desc": "Entdecken Sie mit uns eine Welt atemberaubender Reiseziele. Von unberührten Stränden bis zu majestätischen Bergen sind unsere kuratierten Reiseerlebnisse darauf ausgelegt, zu inspirieren und zu fesseln. Entdecken Sie verborgene Schätze, tauchen Sie in diverse Kulturen ein und schaffen Sie unvergessliche Erinnerungen auf Ihrer Reise zu einigen der schönsten Orte der Erde. Ihr Abenteuer erwartet Sie!",
     "about.destination_all_years": "Alle Jahre",
     "about.destination_no_travel": "Keine Reisen im Jahr",
-    "about.destination_try_another": "Versuchen Sie, ein anderes Jahr oder \"Alle Jahre\" auszuwählen.", 
-    
+    "about.destination_try_another": "Versuchen Sie, ein anderes Jahr oder \"Alle Jahre\" auszuwählen.",
     "product.title": "Angebote",
     "no_product_title": "Noch keine Produkte verfügbar",
     "no_product_desc": "Wir bereiten gerade etwas Besonderes für Sie vor.",
     "contact_us": "Kontaktieren Sie uns",
-
     "contact.title": "Kontakt",
-
     "contact_form.title": "Senden Sie uns eine Nachricht",
     "contact_form.desc": "Haben Sie Fragen zu unseren Reisen oder benötigen Sie eine individuelle Reiseroute? Senden Sie uns eine Nachricht und unser Team wird sich in Kürze bei Ihnen melden, um Ihren Traumurlaub zu planen.",
     "contact_form.name": "Name",
@@ -110,8 +90,6 @@
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "E-Mail:",
     "contact_form.socials": "Verbinden Sie sich mit uns",
-
-
     "admin.sidebar_Dashboard": "Dashboard",
     "admin.sidebar_manage_product": "Produkte verwalten",
     "admin.sidebar_add_product": "Produkt hinzufügen",
@@ -121,15 +99,14 @@
     "admin.sidebar_track_reocrds": "Alle Einträge",
     "admin.sidebar_booking": "Buchungsliste",
     "admin.sidebar_message": "Nachrichten",
-    "admin.sidebar_manage_users": "Benutzer Verwalten", 
-
+    "admin.sidebar_manage_users": "Benutzer Verwalten",
     "admin.product_create_title": "Neues Produkt",
     "admin.product_create_info_title": "Produktinformationen",
     "admin.product_create_name_label": "Produktname",
-    "admin.product_create_name_placeholder": "z.B. Weihnachtsmarkt-Wochenende...",  
+    "admin.product_create_name_placeholder": "z.B. Weihnachtsmarkt-Wochenende...",
     "admin.product_create_desc_label": "Produktbeschreibung",
     "admin.product_create_desc_placeholder": "Ihr Text hier",
-    "admin.product_create_price_label": "Produktpreis",   
+    "admin.product_create_price_label": "Produktpreis",
     "admin.product_create_img_title": "Produktbild",
     "admin.product_create_btn_upload": "Hochladen",
     "admin.product_create_img_instr": "Bilder auswählen oder hierher ziehen.",
@@ -152,14 +129,25 @@
     "admin.products_recent_empty": "Noch keine neuen Produkte hinzugefügt.",
     "admin.products_archived_title": "Veröffentlichte & Archivierte Produkte",
     "admin.products_btn_unpublish": "Veröffentlichung aufheben",
-    "admin.products_archived_empty": "Keine veröffentlichten oder archivierten Produkte gefunden.", 
-
-    "user.product_trip": "Abreiseorte:", 
-
+    "admin.products_archived_empty": "Keine veröffentlichten oder archivierten Produkte gefunden.",
+    "user.product_trip": "Abreiseorte:",
     "admin.product_edit_title": "Produkt Bearbeiten",
     "admin.product_edit_current_images": "Aktuelle Bilder",
     "admin.product_edit_delete_image": "Löschen",
     "admin.product_edit_img_hover_hint": "Bild hovern und klicken um es zum Löschen zu markieren",
     "admin.product_edit_add_images": "Neue Bilder hinzufügen",
-    "admin.product_edit_btn_save": "Änderungen Speichern"
+    "admin.product_edit_btn_save": "Änderungen Speichern",
+    "admin.users_title": "Benutzer- & Aktivitätsliste",
+    "admin.users_total": "Gesamt:",
+    "admin.users_users": "Benutzer",
+    "admin.users_table_user": "Benutzer",
+    "admin.users_table_last_active": "Zuletzt aktiv",
+    "admin.users_table_last_page": "Letzte Seite",
+    "admin.users_mobile_page": "Seite:",
+    "admin.users_table_ip": "IP-Adresse",
+    "admin.users_table_status": "Status",
+    "admin.users_status_undetected": "Noch nicht erkannt",
+    "admin.users_status_online": "Online",
+    "admin.users_status_offline": "Offline",
+    "admin.users_empty": "Noch keine Benutzerdaten aufgezeichnet."
 }
