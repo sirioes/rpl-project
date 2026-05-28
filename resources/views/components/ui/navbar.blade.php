@@ -23,7 +23,7 @@ $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $langu
                 <ul class="nav-ul">
                     <li class="nav-li"><a href="{{ route('home') }}" class="nav-a">{{ __('nav.home') }}</a></li>
                     <li class="nav-li"><a href="{{ route('about') }}" class="nav-a">{{ __('nav.about') }}</a></li>
-                    <li class="nav-li"><a href="{{ route('product') }}" class="nav-a">{{ __('nav.product') }}</a></li>
+                    <li class="nav-li"><a href="{{ route('products') }}" class="nav-a">{{ __('nav.product') }}</a></li>
                     <li class="nav-li"><a href="{{ route('contact') }}" class="nav-a">{{ __('nav.contact') }}</a></li>
                 </ul>
             </nav>
@@ -194,7 +194,7 @@ $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $langu
             <ul class="nav-ul">
                 <li class="nav-li"><a href="{{ route('home') }}" class="nav-a">{{ __('nav.home') }}</a></li>
                 <li class="nav-li"><a href="{{ route('about') }}" class="nav-a">{{ __('nav.about') }}</a></li>
-                <li class="nav-li"><a href="{{ route('product') }}" class="nav-a">{{ __('nav.product') }}</a></li>
+                <li class="nav-li"><a href="{{ route('products') }}" class="nav-a">{{ __('nav.product') }}</a></li>
                 <li class="nav-li"><a href="#" class="nav-a">{{ __('nav.contact') }}</a></li>
             </ul>
         </nav>
