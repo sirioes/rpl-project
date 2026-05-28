@@ -58,7 +58,48 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Booking
+    Route::get('/profile/booking', function () {
+        $activeBookings = auth()->user()
+            ->bookings()
+            ->with(['product', 'participants'])
+            ->where('status', 'paid')
+            ->latest()
+            ->get();
+
+        $unpaidBookings = auth()->user()
+            ->bookings()
+            ->with('product')
+            ->where('status', 'unpaid')
+            ->latest()
+            ->get();
+
+        return view('profile.booking', compact('activeBookings', 'unpaidBookings'));
+    })->name('profile.booking');
+
+    Route::post('/profile/booking/{booking}/repay', [App\Http\Controllers\CheckoutController::class, 'repay'])->name('profile.booking.repay');
+
+    Route::delete('/profile/booking/{booking}/cancel', function (\App\Models\Booking $booking) {
+        if ($booking->user_id !== auth()->id()) {
+            abort(403);
+        }
+        if ($booking->status !== 'unpaid') {
+            return back()->withErrors(['error' => 'Only unpaid bookings can be cancelled.']);
+        }
+        $booking->delete();
+        return back()->with('success', 'Booking has been cancelled successfully.');
+    })->name('profile.booking.cancel');
+
+    // Checkout
+    Route::get('/checkout/{product}/details', [App\Http\Controllers\CheckoutController::class, 'details'])->name('checkout.details');
+    Route::post('/checkout/{product}', [App\Http\Controllers\CheckoutController::class, 'process'])->name('checkout.process');
+    Route::get('/checkout/success', [App\Http\Controllers\CheckoutController::class, 'success'])->name('checkout.success');
+    Route::get('/checkout/cancel', [App\Http\Controllers\CheckoutController::class, 'cancel'])->name('checkout.cancel');
 });
+
+// Stripe Webhook
+Route::post('/stripe/webhook', [App\Http\Controllers\StripeWebhookController::class, 'handle'])->name('stripe.webhook');
 
 
 require __DIR__ . '/auth.php';
