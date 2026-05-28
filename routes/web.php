@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\UserController;
 
 Route::get('/lang/{locale}', function ($locale) {
@@ -29,6 +30,8 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function ()
     Route::post('/products/{id}/publish', [ProductController::class, 'publish'])->name('products.publish');
     Route::patch('/admin/products/{product}/toggle', [App\Http\Controllers\Admin\ProductController::class, 'togglePublish'])
         ->name('products.toggle');
+
+    Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
 });
 
 
