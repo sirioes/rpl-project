@@ -123,8 +123,8 @@
                     <span class="font-medium">{{ __('admin.sidebar_booking') }}</span>
                 </a>
 
-                <a href="#"
-                    class="flex items-center px-6 py-3 rounded-full transition-all hover:bg-white/10">
+                <a href="{{ route('admin.users.index') }}"
+                    class="flex items-center px-6 py-3 rounded-full transition-all {{ request()->routeIs('admin.users.*') ? 'bg-white text-[#0099FF] shadow-lg' : 'hover:bg-white/10' }}">
                     <i class="fas fa-users w-6 mr-4"></i>
                     <span class="font-medium">{{ __('admin.sidebar_manage_users') }}</span>
                 </a>
