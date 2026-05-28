@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\SetLocale;
+use App\Http\Middleware\TrackUserActivity;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -16,6 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
     // Tambahkan baris ini di dalam group web
         $middleware->web(append: [
             \App\Http\Middleware\SetLocale::class,
+            TrackUserActivity::class,
             ]);
         $middleware->alias([
         'admin' => AdminMiddleware::class,
