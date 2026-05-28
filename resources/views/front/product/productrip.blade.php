@@ -61,17 +61,17 @@
                         <div class="flex flex-wrap items-center gap-3 mb-6">
                             @if($trip->departure_date)
                             <div class="bg-blue-50 text-[#0099FF] px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2">
-                                <i class="far fa-calendar-alt"></i>
+                                <i class="far fa-calendar-alt"></i> 
                                 {{ \Carbon\Carbon::parse($trip->departure_date)->format('d M Y, H:i') }}
                             </div>
                             @endif
 
                             <div class="bg-orange-50 text-orange-600 px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2">
-                                <i class="fas fa-ticket-alt"></i>
+                                <i class="fas fa-ticket-alt"></i> 
                                 @if($trip->ticket_quota > 0)
-                                {{ $trip->ticket_quota }} Tickets Left
+                                    {{ $trip->ticket_quota }} Tickets Left
                                 @else
-                                Sold Out
+                                    Sold Out
                                 @endif
                             </div>
                         </div>
@@ -87,6 +87,39 @@
                             </div>
                         </div>
                     </div>
+
+                    {{-- BAGIAN BAWAH: FORM PEMESANAN --}}
+                    <div class="mt-8 pt-6 border-t border-gray-100">
+                        @if($trip->isExpired())
+                            {{-- Jika Sudah Expired --}}
+                            <button disabled class="w-full bg-red-100 text-red-400 text-lg font-bold py-4 px-6 rounded-xl cursor-not-allowed flex justify-center items-center gap-2">
+                                <i class="fas fa-calendar-times"></i> Trip Expired
+                            </button>
+                        @elseif($trip->ticket_quota > 0)
+                            {{-- Form akan menembak ke route checkout nantinya --}}
+                            <form action="{{ route('checkout.details', $trip->id) }}" method="GET" class="flex flex-col sm:flex-row gap-4">
+
+                                {{-- Input Jumlah Tiket --}}
+                                <div class="flex items-center justify-between sm:justify-start border-2 border-gray-200 rounded-xl px-4 py-2 bg-gray-50 focus-within:border-[#10435E] transition-colors">
+                                    <span class="text-[#10435E] text-lg mr-3" title="Number of People"><i class="fas fa-user-friends"></i></span>
+                                    <input type="number" name="quantity" min="1" max="{{ $trip->ticket_quota }}" value="1" required
+                                           class="w-16 bg-transparent border-none focus:ring-0 text-center font-bold text-xl p-0 text-[#10435E]">
+                                </div>
+
+                                {{-- Tombol Book Now --}}
+                                <button type="submit" class="flex-1 bg-[#10435E] text-white text-lg font-bold py-4 px-6 rounded-xl shadow-md hover:bg-[#0d364b] transition-colors duration-300 flex justify-center items-center gap-3">
+                                    <span>Book Now</span>
+                                    <span class="text-white/30">|</span>
+                                    <span>€ {{ number_format($trip['product_price'], 2) }} <span class="text-sm font-normal">/ea</span></span>
+                                </button>
+                            </form>
+                        @else
+                            {{-- Jika Kuota Habis --}}
+                            <button disabled class="w-full bg-gray-200 text-gray-500 text-lg font-bold py-4 px-6 rounded-xl cursor-not-allowed flex justify-center items-center gap-2">
+                                <i class="fas fa-times-circle"></i> Fully Booked
+                            </button>
+                        @endif
+                    </div>
                 </div>
 
             </div>
@@ -100,7 +133,7 @@
             </div>
             <h3 class="text-xl font-bold text-gray-800 mb-2">{{ __('no_product_title') }}</h3>
             <p class="text-gray-500 mb-8">{{ __('no_product_desc') }}</p>
-
+            
             <a href="/contact" class="inline-block bg-[#10435E] text-white font-bold py-3 px-8 rounded-xl hover:bg-[#0d364b] transition-colors">
                 {{ __('contact_us') }}
             </a>
