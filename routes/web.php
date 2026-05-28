@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\UserController;
 
 Route::get('/lang/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'id', 'nl', 'de', 'pt'])) {
@@ -44,10 +45,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('front.about');
     })->name('about');
 
-    Route::get('/products', function () {
-        return view('front.products');
-    })->name('product');
-
+    Route::get('/products', [UserController::class, 'index'])->name('products');
 
     Route::get('/contact', function () {
         return view('front.contact');
