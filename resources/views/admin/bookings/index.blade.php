@@ -1,4 +1,6 @@
-<x-admin-layout>
+@extends('layouts.admin')
+
+@section('content')
 
     {{-- HEADER --}}
     <div class="bg-white py-6 md:py-9 px-4 md:px-8 shadow-md border-b border-gray-100 mb-8 flex justify-between items-center">
@@ -226,4 +228,4 @@
         </div>
     </div>
 
-</x-admin-layout>
+@endsection

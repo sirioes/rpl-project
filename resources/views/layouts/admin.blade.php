@@ -115,8 +115,8 @@
                     <span class="font-medium">{{__('admin.sidebar_message') }}</span>
                 </a>
 
-                <a href="#"
-                    class="flex items-center px-6 py-3 rounded-full transition-all hover:bg-white/10">
+                <a href="{{ route('admin.bookings.index') }}"
+                    class="flex items-center px-6 py-3 rounded-full transition-all {{ request()->routeIs('admin.bookings.*') ? 'bg-white text-[#0099FF] shadow-lg' : 'hover:bg-white/10' }}">
                     <div class="relative">
                         <i class="fas fa-ticket w-6 mr-4"></i>
                     </div>

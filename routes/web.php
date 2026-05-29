@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
+use App\Http\Controllers\Admin\BookingController as AdminBookingController;
 use App\Http\Controllers\UserController;
 
 Route::get('/lang/{locale}', function ($locale) {
@@ -32,6 +33,10 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function ()
         ->name('products.toggle');
 
     Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
+
+    Route::get('/bookings', [AdminBookingController::class, 'index'])->name('bookings.index');
+    Route::patch('/bookings/{booking}', [AdminBookingController::class, 'update'])->name('bookings.update');
+    Route::delete('/bookings/{booking}', [AdminBookingController::class, 'destroy'])->name('bookings.destroy');
 });
 
 
