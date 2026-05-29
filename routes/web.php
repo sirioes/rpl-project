@@ -4,11 +4,12 @@ use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Admin\BookingController as AdminBookingController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Admin\MessageController;                                                                                                                                                    
+use App\Http\Controllers\ContactController;          
 
 Route::get('/lang/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'id', 'nl', 'de', 'pt'])) {
@@ -33,6 +34,9 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function ()
         ->name('products.toggle');
 
     Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
+
+    Route::resource('messages', MessageController::class);                                                                                                                                                 
+    Route::post('/messages/{id}/mark-as-read', [MessageController::class, 'markAsRead'])->name('messages.read');
 
     Route::get('/bookings', [AdminBookingController::class, 'index'])->name('bookings.index');
     Route::patch('/bookings/{booking}', [AdminBookingController::class, 'update'])->name('bookings.update');
@@ -102,6 +106,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/checkout/success', [App\Http\Controllers\CheckoutController::class, 'success'])->name('checkout.success');
     Route::get('/checkout/cancel', [App\Http\Controllers\CheckoutController::class, 'cancel'])->name('checkout.cancel');
 });
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');    
+
+
 
 // Stripe Webhook
 Route::post('/stripe/webhook', [App\Http\Controllers\StripeWebhookController::class, 'handle'])->name('stripe.webhook');
