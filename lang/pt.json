@@ -3,6 +3,7 @@
     "nav.about": "À PROPOS",
     "nav.product": "NOS OFFRES",
     "nav.contact": "CONTACT",
+
     "footer.about_us": "À propos",
     "footer.products": "Nos Offres",
     "footer.contact_us": "Contactez-nous",
@@ -13,6 +14,7 @@
     "footer.sign": "S'inscrire",
     "footer.email_placeholder": "Votre adresse email",
     "footer.name": "Votre nom",
+
     "user.login_welcome": "Bienvenue de retour !",
     "user.login_no_account": "Vous n'avez pas de compte ?",
     "user.login_register": "S'inscrire",
@@ -36,6 +38,7 @@
     "user.verify_email_resend": "Un nouveau lien de vérification a été envoyé à l'adresse e-mail fournie lors de l'inscription.",
     "user.verify_email_button": "Renvoyer l'e-mail de vérification",
     "user.verify_email_logout": "Se déconnecter",
+
     "hero.book_now": "Réserver maintenant",
     "hero.travel_places": "Destinations",
     "hero.features": "Points forts",
@@ -54,6 +57,7 @@
     "hero_review.title": "Votre partenaire de confiance",
     "hero_CTA.text": "N'attendez plus ! Commencez votre aventure <br className=\"hidden md:block\" /> et vivez de nouvelles expériences dès aujourd'hui",
     "hero_CTA.button": "Réserver maintenant",
+
     "about.title": "À propos de nous",
     "about_intro.title": "Présentation de votre agence de voyage de confiance",
     "about_intro.desc": "Chez Mjin Amor Travel, nous croyons que voyager ne se limite pas à visiter de nouveaux lieux. Il s'agit des histoires que vous recueillez et des souvenirs qui restent gravés à jamais. Depuis notre création en 2018, nous nous engageons à être bien plus qu'un simple prestataire de services : nous sommes vos partenaires dévoués dans l'exploration. Notre mission est de combler le fossé entre vos rêves et la réalité en dévoilant les joyaux cachés les plus époustouflants du monde, sélectionnés spécifiquement pour ceux qui recherchent l'authenticité.",
@@ -70,9 +74,11 @@
     "about.destination_all_years": "Toutes les années",
     "about.destination_no_travel": "Aucun voyage en",
     "about.destination_try_another": "Essayez de sélectionner une autre année ou \"Toutes les années\".",
+
     "product.title": "Nos Offres",
     "no_product_title": "Il n'y a pas encore de produit",
     "no_product_desc": "Nous préparons actuellement quelque chose de spécial pour vous.",
+
     "contact_us": "Contactez-nous",
     "contact.title": "Contact",
     "contact_form.title": "Envoyez-nous un message",
@@ -86,6 +92,7 @@
     "contact_form.sms": "SMS/WhatsApp :",
     "contact_form.email_contact": "E-mail :",
     "contact_form.socials": "Suivez-nous",
+
     "admin.product_create_title": "Novo Produto",
     "admin.product_create_info_title": "Informações do Produto",
     "admin.product_create_name_label": "Nome do Produto",
@@ -136,6 +143,7 @@
     "admin.users_status_online": "Online",
     "admin.users_status_offline": "Offline",
     "admin.users_empty": "Nenhum dado de usuário registrado.",
+
     "checkout.fix_errors": "Por favor, corrija os seguintes erros:",
     "checkout.contact_info": "Informações de Contato",
     "checkout.booking_updates_prompt": "Para onde devemos enviar suas atualizações de reserva?",
@@ -150,6 +158,7 @@
     "checkout.child_category": "Criança (Menos de 12 anos)",
     "checkout.total_amount": "Valor Total a Pagar",
     "checkout.continue_payment": "Continuar para o Pagamento",
+    
     "user.booking_title": "Reserva",
     "user.booking_tickets": "E-tickets ativos",
     "user.booking_back_button": "voltar ao site",

@@ -3,6 +3,7 @@
     "nav.about": "TENTANG",
     "nav.product": "PRODUK",
     "nav.contact": "KONTAK",
+
     "footer.about_us": "Tentang Kami",
     "footer.products": "Produk",
     "footer.contact_us": "Hubungi Kami",
@@ -13,6 +14,7 @@
     "footer.sign": "Daftar",
     "footer.email_placeholder": "Alamat email Anda",
     "footer.name": "Nama Anda",
+
     "user.login_welcome": "Selamat Datang Kembali!",
     "user.login_no_account": "Belum punya akun?",
     "user.login_register": "Daftar",
@@ -26,10 +28,12 @@
     "user.register_login": "Masuk",
     "user.register_button": "kembali ke situs web",
     "user.register_agreement_account": "Saya setuju untuk membuat akun di Mijn Amor Travel.",
+
     "admin.login_title": "Masuk",
     "admin.login_message": "Selamat datang kembali! Silakan masuk ke akun Anda!",
     "admin.login_button": "Masuk",
     "admin.login_back": "Kembali",
+
     "user.forgot_password_title": "Lupa Kata Sandi",
     "user.forgot_password_desc": "Lupa kata sandi Anda? Tidak masalah. Cukup beri tahu kami alamat email Anda dan kami akan mengirimkan tautan pengaturan ulang kata sandi yang memungkinkan Anda memilih yang baru.",
     "user.forgot_password_button": "Kirim Tautan Reset Kata Sandi",
@@ -40,6 +44,7 @@
     "user.verify_email_resend": "Tautan verifikasi baru telah dikirim ke alamat email yang Anda berikan saat pendaftaran.",
     "user.verify_email_button": "Kirim Ulang Email Verifikasi",
     "user.verify_email_logout": "Keluar",
+
     "hero.book_now": "Pesan Sekarang",
     "hero.travel_places": "Tempat Wisata",
     "hero.features": "Fitur",
@@ -58,6 +63,7 @@
     "hero_review.title": "Mitra Tepercaya Anda dalam Perjalanan",
     "hero_CTA.text": "Jangan tunggu lagi! Mulailah petualangan Anda <br className=\"hidden md:block\" /> dan jelajahi pengalaman baru hari ini",
     "hero_CTA.button": "Pesan Sekarang",
+
     "about.title": "Tentang Kami",
     "about_intro.title": "Pengenalan Ke Agen Tur dan Perjalanan yang Sangat Terpercaya",
     "about_intro.desc": "Di Mjin Amor Travel, kami percaya bahwa bepergian lebih dari sekadar mengunjungi lokasi baru. Ini tentang cerita yang Anda kumpulkan dan kenangan yang tetap bersama Anda selamanya. Sejak didirikan pada tahun 2018, kami telah mendedikasikan diri untuk menjadi lebih dari sekadar penyedia layanan; kami adalah mitra Anda dalam penjelajahan. Misi kami adalah menjembatani kesenjangan antara impian dan kenyataan Anda dengan mengungkap permata tersembunyi paling menakjubkan di dunia, yang dikurasi khusus untuk mereka yang mencari keaslian.",
@@ -74,9 +80,11 @@
     "about.destination_all_years": "Semua Tahun",
     "about.destination_no_travel": "Tidak ada perjalanan pada tahun",
     "about.destination_try_another": "Coba pilih tahun lain atau \"Semua Tahun\".",
+
     "product.title": "Produk",
     "no_product_title": "Belum ada produk",
     "no_product_desc": "Kami sedang mempersiapkan sesuatu yang spesial untuk Anda.",
+
     "contact_us": "Hubungi Kami",
     "contact.title": "Hubungi Kami",
     "contact_form.title": "Kirim pesan kepada kami",
@@ -90,6 +98,7 @@
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "Email:",
     "contact_form.socials": "Hubungi kami melalui",
+
     "admin.sidebar_Dashboard": "Dashboard",
     "admin.sidebar_manage_product": "Kelola Produk",
     "admin.sidebar_add_product": "Tambah Produk",
@@ -150,6 +159,7 @@
     "admin.users_status_online": "Online",
     "admin.users_status_offline": "Offline",
     "admin.users_empty": "Belum ada data pengguna yang tercatat.",
+
     "checkout.fix_errors": "Harap perbaiki kesalahan berikut:",
     "checkout.contact_info": "Informasi Kontak",
     "checkout.booking_updates_prompt": "Ke mana kami harus mengirimkan pembaruan pesanan Anda?",
@@ -164,6 +174,7 @@
     "checkout.child_category": "Anak-anak (Di bawah 12 tahun)",
     "checkout.total_amount": "Total Pembayaran",
     "checkout.continue_payment": "Lanjutkan ke Pembayaran",
+    
     "user.booking_title": "Pemesanan",
     "user.booking_tickets": "E-tiket Aktif",
     "user.booking_back_button": "kembali ke website",

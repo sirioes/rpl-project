@@ -3,6 +3,7 @@
     "nav.about": "ABOUT",
     "nav.product": "PRODUCT",
     "nav.contact": "CONTACT",
+
     "footer.about_us": "About Us",
     "footer.products": "Products",
     "footer.contact_us": "Contact Us",
@@ -13,6 +14,7 @@
     "footer.sign": "Sign Up",
     "footer.email_placeholder": "Your email address",
     "footer.name": "Your Name",
+
     "user.login_welcome": "Welcome Back!",
     "user.login_no_account": "Don't have an account?",
     "user.login_register": "Register",
@@ -26,10 +28,12 @@
     "user.register_login": "Log In",
     "user.register_button": "back to website",
     "user.register_agreement_account": "I agree to create an account with Mijn Amor Travel.",
+
     "admin.login_title": "Login",
     "admin.login_message": "Welcome back! Please login your account!",
     "admin.login_button": "Login",
     "admin.login_back": "Back",
+
     "user.forgot_password_title": "Forgot Password",
     "user.forgot_password_desc": "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.",
     "user.forgot_password_button": "Email Password Reset Link",
@@ -40,6 +44,7 @@
     "user.verify_email_resend": "A new verification link has been sent to the email address you provided during registration.",
     "user.verify_email_button": "Resend Verification Email",
     "user.verify_email_logout": "Log Out",
+
     "hero.book_now": "Book Now",
     "hero.travel_places": "Travel Places",
     "hero.features": "Features",
@@ -58,6 +63,7 @@
     "hero_review.title": "Your Trusted Partner In Travel",
     "hero_CTA.text": "Don’t wait any longer! Start your adventure <br className=\"hidden md:block\" /> and explore new experience today",
     "hero_CTA.button": "Book Now",
+
     "about.title": "About Us",
     "about_intro.title": "Introduction To Very Trusted Tour And Travel Agency",
     "about_intro.desc": "At Mjin Amor Travel, we believe that traveling is more than just visiting new locations. it is about the stories you collect and the memories that stay with you forever. Since our establishment in 2018, we have dedicated ourselves to being more than just a service provider we are your dedicated partners in exploration. Our mission is to bridge the gap between your dreams and reality by uncovering the world’s most breathtaking hidden gems, curated specifically for those who seek authenticity.",
@@ -74,9 +80,11 @@
     "about.destination_all_years": "All Years",
     "about.destination_no_travel": "No travel in the year",
     "about.destination_try_another": "Try selecting another year or \"All Years\".",
+
     "product.title": "Product",
     "no_product_title": "There is no product yet",
     "no_product_desc": "We are currently preparing something special for you.",
+
     "contact_us": "Contact Us",
     "contact.title": "Contact",
     "contact_form.title": "Send us a message",
@@ -90,6 +98,7 @@
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "Email:",
     "contact_form.socials": "Contact with us",
+
     "admin.sidebar_Dashboard": "Dashboard",
     "admin.sidebar_manage_product": "Manage Product",
     "admin.sidebar_add_product": "Add Product",
@@ -150,6 +159,7 @@
     "admin.users_status_online": "Online",
     "admin.users_status_offline": "Offline",
     "admin.users_empty": "No user data recorded yet.",
+
     "checkout.fix_errors": "Please fix the following errors:",
     "checkout.contact_info": "Contact Information",
     "checkout.booking_updates_prompt": "Where should we send your booking updates?",
@@ -164,6 +174,7 @@
     "checkout.child_category": "Child (Under 12 years)",
     "checkout.total_amount": "Total Amount to Pay",
     "checkout.continue_payment": "Continue to Payment",
+    
     "user.booking_title": "Booking",
     "user.booking_tickets": "Active E-tickets",
     "user.booking_back_button": "back to website",

@@ -3,6 +3,7 @@
     "nav.about": "OVER ONS",
     "nav.product": "PRODUCTEN",
     "nav.contact": "CONTACT",
+
     "footer.about_us": "Over Ons",
     "footer.products": "Producten",
     "footer.contact_us": "Neem Contact Op",
@@ -13,6 +14,7 @@
     "footer.sign": "Aanmelden",
     "footer.email_placeholder": "Uw e-mailadres",
     "footer.name": "Uw naam",
+
     "user.login_welcome": "Welkom terug!",
     "user.login_no_account": "Nog geen account?",
     "user.login_register": "Registreren",
@@ -26,10 +28,12 @@
     "user.register_login": "Inloggen",
     "user.register_button": "terug naar website",
     "user.register_agreement_account": "Ik ga ermee akkoord om een account aan te maken bij Mijn Amor Travel.",
+
     "admin.login_title": "Inloggen",
     "admin.login_message": "Welkom terug! Log in op uw account!",
     "admin.login_button": "Inloggen",
     "admin.login_back": "Terug",
+
     "user.forgot_password_title": "Wachtwoord vergeten",
     "user.forgot_password_desc": "Wachtwoord vergeten? Geen probleem. Laat ons uw e-mailadres weten en wij sturen u een link om uw wachtwoord opnieuw in te stellen, zodat u een nieuw wachtwoord kunt kiezen.",
     "user.forgot_password_button": "Link voor wachtwoordherstel verzenden",
@@ -40,6 +44,7 @@
     "user.verify_email_resend": "Er is een nieuwe verificatielink verzonden naar het e-mailadres dat u tijdens de registratie heeft opgegeven.",
     "user.verify_email_button": "Verificatie-e-mail opnieuw verzenden",
     "user.verify_email_logout": "Uitloggen",
+
     "hero.book_now": "Boek Nu",
     "hero.travel_places": "Reisbestemmingen",
     "hero.features": "Kenmerken",
@@ -58,6 +63,7 @@
     "hero_review.title": "Uw Vertrouwde Partner in Reizen",
     "hero_CTA.text": "Wacht niet langer! Begin vandaag nog aan uw <br className=\"hidden md:block\" /> avontuur en ontdek nieuwe ervaringen",
     "hero_CTA.button": "Boek Nu",
+
     "about.title": "Over Ons",
     "about_intro.title": "Introductie Tot Zeer Vertrouwd Tour-en Reisbureau",
     "about_intro.desc": "Bij Mjin Amor Travel geloven we dat reizen meer is dan alleen het bezoeken van nieuwe locaties. Het gaat om de verhalen die je verzamelt en de herinneringen die voor altijd bij je blijven. Sinds onze oprichting in 2018 hebben we ons toegewijd aan meer zijn dan alleen een dienstverlener; wij zijn uw toegewijde partners in verkenning. Onze missie is om de kloof tussen uw dromen en de realiteit te overbruggen door de meest adembenemende verborgen juweeltjes van de wereld te onthullen, speciaal samengesteld voor degenen die op zoek zijn naar authenticiteit.",
@@ -74,9 +80,11 @@
     "about.destination_all_years": "Alle Jaren",
     "about.destination_no_travel": "Geen reizen in het jaar",
     "about.destination_try_another": "Probeer een ander jaar te selecteren of \"Alle Jaren\".",
+
     "product.title": "Producten",
     "no_product_title": "Er zijn nog geen producten",
     "no_product_desc": "We bereiden momenteel iets speciaals voor u voor.",
+
     "contact_us": "Neem contact op",
     "contact.title": "Neem Contact Op",
     "contact_form.title": "Stuur ons een bericht",
@@ -90,6 +98,7 @@
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "E-mail:",
     "contact_form.socials": "Neem contact op via",
+
     "admin.sidebar_Dashboard": "Dashboard",
     "admin.sidebar_manage_product": "Producten beheren",
     "admin.sidebar_add_product": "Product toevoegen",
@@ -150,6 +159,7 @@
     "admin.users_status_online": "Online",
     "admin.users_status_offline": "Offline",
     "admin.users_empty": "Nog geen gebruikersgegevens geregistreerd.",
+
     "checkout.fix_errors": "Los de volgende fouten op:",
     "checkout.contact_info": "Contactgegevens",
     "checkout.booking_updates_prompt": "Waar moeten we uw boekingsupdates naartoe sturen?",
@@ -164,6 +174,7 @@
     "checkout.child_category": "Kind (Jonger dan 12 jaar)",
     "checkout.total_amount": "Totaal te Betalen Bedrag",
     "checkout.continue_payment": "Doorgaan naar Betaling",
+    
     "user.booking_title": "Boeking",
     "user.booking_tickets": "Actieve E-tickets",
     "user.booking_back_button": "terug naar de website",

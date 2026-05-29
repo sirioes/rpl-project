@@ -3,6 +3,7 @@
     "nav.about": "ÜBER UNS",
     "nav.product": "ANGEBOTE",
     "nav.contact": "KONTAKT",
+
     "footer.about_us": "Über uns",
     "footer.products": "Angebote",
     "footer.contact_us": "Kontakt",
@@ -13,23 +14,28 @@
     "footer.sign": "Anmelden",
     "footer.email_placeholder": "Ihre E-Mail-Adresse",
     "footer.name": "Ihr Name",
+
     "user.login_welcome": "Willkommen zurück!",
     "user.login_no_account": "Sie haben noch kein Konto?",
     "user.login_register": "Registrieren",
     "user.login_button": "Zurück zur Website",
     "user.login_forgot_password": "Passwort vergessen?",
     "user.login_sign_in": "Anmelden",
+
     "user.placeholder_email": "E-Mail",
     "user.placeholder_password": "Passwort",
+
     "user.register_create": "Konto erstellen",
     "user.register_confirmation": "Haben Sie bereits ein Konto?",
     "user.register_login": "Anmelden",
     "user.register_button": "zurück zur Website",
     "user.register_agreement_account": "Ich stimme zu, ein Konto bei Mijn Amor Travel zu erstellen.",
+
     "admin.login_title": "Anmelden",
     "admin.login_message": "Willkommen zurück! Bitte melden Sie sich an!",
     "admin.login_button": "Anmelden",
     "admin.login_back": "Zurück",
+
     "user.forgot_password_title": "Passwort vergessen",
     "user.forgot_password_desc": "Passwort vergessen? Kein Problem. Teilen Sie uns einfach Ihre E-Mail-Adresse mit, und wir senden Ihnen einen Link zum Zurücksetzen des Passworts, mit dem Sie ein neues wählen können.",
     "user.forgot_password_button": "Link zum Zurücksetzen senden",
@@ -40,10 +46,12 @@
     "user.verify_email_resend": "Ein neuer Bestätigungslink wurde an die E-Mail-Adresse gesendet, die Sie bei der Registrierung angegeben haben.",
     "user.verify_email_button": "Bestätigungs-E-Mail erneut senden",
     "user.verify_email_logout": "Abmelden",
+
     "hero.book_now": "Jetzt buchen",
     "hero.travel_places": "Reiseziele",
     "hero.features": "Highlights",
     "hero.desc": "Orte, die man liebt und <br/> immer wieder besuchen möchte",
+
     "herabout.section": "#Über uns",
     "herabout.title": "Wir sind ein vertrauenswürdiges Reisebüro für unvergessliche Erlebnisse",
     "herabout.descrip": "Verwandeln Sie Ihre Reiseträume in nahtlose Realität, ganz ohne Sorgen. Vom ersten Funken der Inspiration bis zu Ihrer sicheren Rückkehr begleiten wir Sie durch jeden Meilenstein Ihrer Reise. Unsere Mission ist es, maßgeschneiderte, sichere und mühelose Reiseerlebnisse zu bieten, die auf Ihre Wünsche zugeschnitten sind – damit jede Sekunde voller Wunder und Entdeckungen ist.",
@@ -58,6 +66,7 @@
     "hero_review.title": "Ihr vertrauenswürdiger Reisepartner",
     "hero_CTA.text": "Warten Sie nicht länger! Starten Sie Ihr Abenteuer <br className=\"hidden md:block\" /> und entdecken Sie noch heute neue Erlebnisse",
     "hero_CTA.button": "Jetzt buchen",
+
     "about.title": "Über uns",
     "about_intro.title": "Vorstellung Ihrer vertrauenswürdigen Reiseagentur",
     "about_intro.desc": "Bei Mjin Amor Travel glauben wir, dass Reisen mehr ist als nur der Besuch neuer Orte. Es geht um die Geschichten, die Sie sammeln, und die Erinnerungen, die für immer bleiben. Seit unserer Gründung im Jahr 2018 haben wir uns darauf spezialisiert, mehr als nur ein Dienstleister zu sein – wir sind Ihre engagierten Partner beim Entdecken. Unsere Mission ist es, die Brücke zwischen Ihren Träumen und der Realität zu schlagen, indem wir die atemberaubendsten verborgenen Schätze der Welt aufdecken, kuratiert für alle, die Authentizität suchen.",
@@ -75,8 +84,10 @@
     "about.destination_no_travel": "Keine Reisen im Jahr",
     "about.destination_try_another": "Versuchen Sie, ein anderes Jahr oder \"Alle Jahre\" auszuwählen.",
     "product.title": "Angebote",
+
     "no_product_title": "Noch keine Produkte verfügbar",
     "no_product_desc": "Wir bereiten gerade etwas Besonderes für Sie vor.",
+
     "contact_us": "Kontaktieren Sie uns",
     "contact.title": "Kontakt",
     "contact_form.title": "Senden Sie uns eine Nachricht",
@@ -90,6 +101,7 @@
     "contact_form.sms": "SMS/WhatsApp:",
     "contact_form.email_contact": "E-Mail:",
     "contact_form.socials": "Verbinden Sie sich mit uns",
+
     "admin.sidebar_Dashboard": "Dashboard",
     "admin.sidebar_manage_product": "Produkte verwalten",
     "admin.sidebar_add_product": "Produkt hinzufügen",
@@ -150,6 +162,7 @@
     "admin.users_status_online": "Online",
     "admin.users_status_offline": "Offline",
     "admin.users_empty": "Noch keine Benutzerdaten aufgezeichnet.",
+
     "checkout.fix_errors": "Bitte beheben Sie die folgenden Fehler:",
     "checkout.contact_info": "Kontaktinformationen",
     "checkout.booking_updates_prompt": "Wohin sollen wir Ihre Buchungsupdates senden?",
@@ -164,6 +177,7 @@
     "checkout.child_category": "Kind (Unter 12 Jahren)",
     "checkout.total_amount": "Zahlungsbetrag",
     "checkout.continue_payment": "Weiter zur Zahlung",
+
     "user.booking_title": "Buchung",
     "user.booking_tickets": "Aktive E-Tickets",
     "user.booking_back_button": "Zurück zur Website",
@@ -173,10 +187,12 @@
     "user.booking_list": "Bestellliste",
     "user.booking_no_purchase": "Keine",
     "user.booking_no_purchase2": "Käufe gefunden.",
+
     "user.sidebar": "Profilmenü",
     "user.sidebar.my_booking": "Meine Buchungen",
     "user.sidebar.my_account": "Mein Konto",
     "user.sidebar.logout": "Abmelden",
+
     "user.booking_pending_payment": "Ausstehende Zahlung",
     "user.booking_status_unpaid": "UNBEZAHLT",
     "user.booking_status_paid": "BEZAHLT",
@@ -187,11 +203,13 @@
     "user.booking_passenger_list": "Passagierliste",
     "user.booking_tickets_suffix": "Tickets",
     "user.booking_total": "Gesamt:",
+
     "user.edit_title": "Profil",
     "user.edit_setting": "Einstellungen",
     "user.edit_account_info": "Kontoinformationen",
     "user.edit_pass_security": "Passwort & Sicherheit",
     "user.edit_back_button": "Zurück zur Website",
+
     "user.update.profile_error": "Fehler bei der Profilaktualisierung",
     "user.update.profile_section": "Persönliche Daten",
     "user.update.profile_fullname": "Vollständiger Name",
@@ -217,6 +235,7 @@
     "user.update.password_confirm": "Passwort bestätigen",
     "user.update.password_save": "Speichern",
     "user.update.password_saved": "Passwort erfolgreich aktualisiert.",
+    
     "user.delete_account": "Konto löschen",
     "user.delete_account_desc": "Sobald Ihr Konto gelöscht ist, können Sie Ihr Konto oder Ihre Daten nicht wiederherstellen.",
     "user.delete_account_button": "Konto löschen",
