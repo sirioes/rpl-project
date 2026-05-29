@@ -263,5 +263,17 @@
     "admin.booking_delete_confirm": "Are you sure you want to delete booking :ref?",
     "admin.booking_delete": "Delete Booking",
     "admin.booking_mobile_price": "Total Price",
-    "admin.booking_not_found": "No bookings found."
+    "admin.booking_not_found": "No bookings found.",
+
+    "admin.message_title": "Messages",
+    "admin.message_table_from": "From",
+    "admin.message_table_email": "Email",
+    "admin.message_table_received": "Received At",
+    "admin.message_table_action": "Action",
+    "admin.message_btn_view": "View",
+    "admin.message_btn_all": "All",
+    "admin.message_alert_delete": "Are you sure you want to delete this message?",
+    "admin.message_empty": "No incoming messages yet.",
+    "admin.message_detail_label": "Message:",
+    "admin.message_detail_sent": "Sent on:"
 }

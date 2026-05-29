@@ -263,5 +263,18 @@
     "admin.booking_delete_confirm": "Weet u zeker dat u boeking :ref wilt verwijderen?",
     "admin.booking_delete": "Boeking Verwijderen",
     "admin.booking_mobile_price": "Totaalprijs",
-    "admin.booking_not_found": "Geen boekingen gevonden."
+    "admin.booking_not_found": "Geen boekingen gevonden.",
+
+    "admin.message_title": "Berichten",
+    "admin.message_table_from": "Van",
+    "admin.message_table_email": "E-mail",
+    "admin.message_table_received": "Ontvangen op",
+    "admin.message_table_action": "Actie",
+    "admin.message_btn_view": "Bekijk",
+    "admin.message_btn_all": "Alles",
+    "admin.message_alert_delete": "Weet u zeker dat u dit bericht wilt verwijderen?",
+    "admin.message_empty": "Nog geen berichten.",
+    "admin.message_detail_label": "Bericht:",
+    "admin.message_detail_sent": "Verzonden op:"
+
 }

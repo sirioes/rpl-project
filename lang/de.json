@@ -271,5 +271,17 @@
     "admin.booking_delete_confirm": "Möchten Sie die Buchung :ref wirklich löschen?",
     "admin.booking_delete": "Buchung löschen",
     "admin.booking_mobile_price": "Gesamtpreis",
-    "admin.booking_not_found": "Keine Buchungen gefunden."
+    "admin.booking_not_found": "Keine Buchungen gefunden.",
+    
+    "admin.message_title": "Nachrichten",
+    "admin.message_table_from": "Von",
+    "admin.message_table_email": "E-Mail",
+    "admin.message_table_received": "Erhalten am",
+    "admin.message_table_action": "Aktion",
+    "admin.message_btn_view": "Ansehen",
+    "admin.message_btn_all": "Alle",
+    "admin.message_alert_delete": "Sind Sie sicher, dass Sie diese Nachricht löschen möchten?",
+    "admin.message_empty": "Keine eingehenden Nachrichten.",
+    "admin.message_detail_label": "Nachricht:",
+    "admin.message_detail_sent": "Gesendet am:"
 }

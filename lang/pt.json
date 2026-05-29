@@ -249,5 +249,18 @@
     "admin.booking_delete_confirm": "Tem certeza que deseja excluir a reserva :ref?",
     "admin.booking_delete": "Excluir Reserva",
     "admin.booking_mobile_price": "Preço Total",
-    "admin.booking_not_found": "Nenhuma reserva encontrada."
+    "admin.booking_not_found": "Nenhuma reserva encontrada.",
+
+    "admin.message_title": "Mensagens",
+    "admin.message_table_from": "De",
+    "admin.message_table_email": "E-mail",
+    "admin.message_table_received": "Recebido em",
+    "admin.message_table_action": "Ação",
+    "admin.message_btn_view": "Ver",
+    "admin.message_btn_all": "Todos",
+    "admin.message_alert_delete": "Tem certeza que deseja excluir esta mensagem?",
+    "admin.message_empty": "Nenhuma mensagem por enquanto.",
+    "admin.message_detail_label": "Mensagem:",
+    "admin.message_detail_sent": "Enviado em:"
+
 }

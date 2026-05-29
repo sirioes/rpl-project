@@ -263,5 +263,17 @@
     "admin.booking_delete_confirm": "Apakah Anda yakin ingin menghapus booking :ref?",
     "admin.booking_delete": "Hapus Booking",
     "admin.booking_mobile_price": "Total Harga",
-    "admin.booking_not_found": "Tidak ada booking ditemukan."
+    "admin.booking_not_found": "Tidak ada booking ditemukan.",
+
+    "admin.message_title": "Pesan",
+    "admin.message_table_from": "Dari",
+    "admin.message_table_email": "Email",
+    "admin.message_table_received": "Diterima Pada",
+    "admin.message_table_action": "Aksi",
+    "admin.message_btn_view": "Lihat",
+    "admin.message_btn_all": "Semua",
+    "admin.message_alert_delete": "Apakah Anda yakin ingin menghapus pesan ini?",
+    "admin.message_empty": "Belum ada pesan masuk.",
+    "admin.message_detail_label": "Pesan:",
+    "admin.message_detail_sent": "Dikirim pada:"
 }
