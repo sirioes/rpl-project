@@ -15,7 +15,8 @@
                 {{ __('contact_form.desc') }}
             </p>
 
-            <form class="space-y-6">
+            <form action="{{ route('contact.store') }}" method="POST" class="space-y-6">
+                @csrf {{-- WAJIB ADA: Tiket keamanan Laravel --}}
 
                 <div>
                     <label class="block text-black font-bold mb-2">{{ __('contact_form.name') }}</label>

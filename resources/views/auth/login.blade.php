@@ -14,7 +14,7 @@
                 </a>
 
                 <!-- Tombol Admin -->
-                <a href="" 
+                <a href="{{ route('admin.login') }}" 
                    class="px-6 py-2 text-sm font-bold rounded-full transition-all duration-300 {{ request()->routeIs('admin.login') ? 'bg-[#67a3bc] text-white shadow-md' : 'text-gray-500 hover:text-gray-800' }}">
                     Admin
                 </a>
@@ -47,7 +47,7 @@
                         ['code' => 'id', 'name' => 'ID', 'flag' => 'https://flagcdn.com/w40/id.png'],
                         ['code' => 'nl', 'name' => 'NL', 'flag' => 'https://flagcdn.com/w40/nl.png'],
                         ['code' => 'de', 'name' => 'DE', 'flag' => 'https://flagcdn.com/w40/de.png'],
-                        ['code' => 'fr', 'name' => 'FR', 'flag' => 'https://flagcdn.com/w40/fr.png']
+                        ['code' => 'pt', 'name' => 'PT', 'flag' => 'https://flagcdn.com/w40/pt.png']
                     ];
                     $currentLocale = app()->getLocale();
                     $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $languages[0];
