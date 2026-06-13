@@ -322,5 +322,8 @@
     "admin.product_whatsapp_label": "Link Grup WhatsApp",
     "admin.product_whatsapp_placeholder": "https://chat.whatsapp.com/...",
     "admin.product_whatsapp_hint": "Opsional. Pelanggan akan melihat link ini setelah pembayaran berhasil.",
-    "user.booking_join_whatsapp": "Gabung Grup WhatsApp"
+    "user.booking_join_whatsapp": "Gabung Grup WhatsApp",
+    "user.verify_email_verified": "Terverifikasi",
+    "user.verify_email_not_verified": "Belum Terverifikasi",
+    "user.verify_email_sending": "Mengirim..."
 }

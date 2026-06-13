@@ -322,5 +322,8 @@
     "admin.product_whatsapp_label": "WhatsApp Groepslink",
     "admin.product_whatsapp_placeholder": "https://chat.whatsapp.com/...",
     "admin.product_whatsapp_hint": "Optioneel. Klanten zien deze link na succesvolle betaling.",
-    "user.booking_join_whatsapp": "WhatsApp-groep deelnemen"
+    "user.booking_join_whatsapp": "WhatsApp-groep deelnemen",
+    "user.verify_email_verified": "Geverifieerd",
+    "user.verify_email_not_verified": "Niet geverifieerd",
+    "user.verify_email_sending": "Verzenden..."
 }
