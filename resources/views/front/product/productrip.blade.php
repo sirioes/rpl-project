@@ -5,7 +5,7 @@
         <div class="bg-white border border-gray-300 rounded-[20px] p-6 md:p-14 shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
 
             <h2 class="text-2xl md:text-3xl font-extrabold text-black text-center mb-8">
-                {{ $trip->product_name }}
+                {{ $trip->translate('product_name') }}
             </h2>
 
             <div class="flex flex-col lg:flex-row gap-8">
@@ -77,7 +77,7 @@
                         </div>
 
                         <p class="text-gray-700 text-justify leading-relaxed mb-6">
-                            {{ $trip['product_description'] }}
+                            {{ $trip->translate('product_description') }}
                         </p>
 
                         <div class="mb-4">

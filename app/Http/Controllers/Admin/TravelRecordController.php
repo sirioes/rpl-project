@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\TrackRecord;
 use App\Models\TrackRecordItem;
+use App\Services\DeepLService;
 use App\Services\ImageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -46,7 +47,22 @@ class TravelRecordController extends Controller
 
         $imageService = new ImageService();
 
-        DB::transaction(function () use ($request, $imageService) {
+        $deepL = new DeepLService();
+
+        $recordTranslations = $deepL->translateAll([
+            'city_name'   => $request->city_name,
+            'description' => $request->description,
+        ]);
+
+        $itemTranslations = [];
+        foreach ($request->items as $i => $item) {
+            $itemTranslations[$i] = $deepL->translateAll([
+                'title'       => $item['title'],
+                'description' => $item['description'],
+            ]);
+        }
+
+        DB::transaction(function () use ($request, $imageService, $recordTranslations, $itemTranslations) {
 
             $bannerPath = $imageService->store($request->file('banner_image'), 'travel-records/banners', 1600);
 
@@ -56,9 +72,10 @@ class TravelRecordController extends Controller
                 'year'         => $request->year,
                 'banner_image' => $bannerPath,
                 'slug'         => Str::slug($request->city_name . '-' . $request->year . '-' . Str::random(5)),
+                'translations' => $recordTranslations ?: null,
             ]);
 
-            foreach ($request->items as $item) {
+            foreach ($request->items as $i => $item) {
                 $itemImagePath = $imageService->store($item['image'], 'travel-records/items', 900);
 
                 TrackRecordItem::create([
@@ -66,6 +83,7 @@ class TravelRecordController extends Controller
                     'title'           => $item['title'],
                     'description'     => $item['description'],
                     'image'           => $itemImagePath,
+                    'translations'    => $itemTranslations[$i] ?: null,
                 ]);
             }
         });
@@ -100,7 +118,22 @@ class TravelRecordController extends Controller
             'items.*.image'         => 'nullable|image|mimes:svg,png,jpg|max:10480',
         ]);
 
-        \DB::transaction(function () use ($request, $record) {
+        $deepL = new DeepLService();
+
+        $recordTranslations = $deepL->translateAll([
+            'city_name'   => $request->city_name,
+            'description' => $request->description,
+        ]);
+
+        $itemTranslations = [];
+        foreach ($request->items as $i => $item) {
+            $itemTranslations[$i] = $deepL->translateAll([
+                'title'       => $item['title'],
+                'description' => $item['description'],
+            ]);
+        }
+
+        \DB::transaction(function () use ($request, $record, $recordTranslations, $itemTranslations) {
 
             $existingImages = $record->items->pluck('image')->filter()->toArray();
 
@@ -122,9 +155,10 @@ class TravelRecordController extends Controller
             }
 
             $dataToUpdate = [
-                'city_name' => $request->city_name,
-                'description' => $request->description,
-                'year' => $request->year,
+                'city_name'    => $request->city_name,
+                'description'  => $request->description,
+                'year'         => $request->year,
+                'translations' => $recordTranslations ?: $record->translations,
             ];
 
             if ($record->city_name != $request->city_name || $record->year != $request->year) {
@@ -152,9 +186,10 @@ class TravelRecordController extends Controller
 
                 \App\Models\TrackRecordItem::create([
                     'track_record_id' => $record->id,
-                    'title' => $itemData['title'],
-                    'description' => $itemData['description'],
-                    'image' => $imagePath,
+                    'title'           => $itemData['title'],
+                    'description'     => $itemData['description'],
+                    'image'           => $imagePath,
+                    'translations'    => $itemTranslations[$index] ?? null,
                 ]);
             }
         });

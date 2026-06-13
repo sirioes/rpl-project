@@ -9,7 +9,7 @@
         <div class="relative z-10 text-center px-4 w-full">
             {{-- Scale font size strictly to fit 320px screens --}}
             <h1 class="text-5xl sm:text-7xl md:text-9xl lg:text-[180px] font-sail text-white drop-shadow-2xl leading-none">
-                {{ $record->city_name }}
+                {{ $record->translate('city_name') }}
             </h1>
         </div>
     </header>
@@ -29,10 +29,10 @@
                     {{-- Text Side --}}
                     <div class="w-full md:w-1/2">
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
-                            {{ $item->title }}
+                            {{ $item->translate('title') }}
                         </h2>
                         <p class="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed md:leading-loose text-justify">
-                            {{ $item->description }}
+                            {{ $item->translate('description') }}
                         </p>
                     </div>
                 </div>
