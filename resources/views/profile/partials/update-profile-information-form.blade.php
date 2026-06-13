@@ -104,14 +104,47 @@ $months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Augu
 
 <div class="bg-white border border-gray-200 rounded-xl p-6">
     <h3 class="text-lg font-bold text-gray-900 mb-4">{{ __('user.update.profile_section2') }}</h3>
-    <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-gray-100">
-        <span class="font-bold text-gray-900">{{ __('user.update.profile_section2_list') }}</span>
-        <span class="text-gray-900 font-semibold">{{ $user->email }}</span>
+
+    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-100">
+        <div class="flex items-center gap-3">
+            <span class="font-bold text-gray-900">{{ __('user.update.profile_section2_list') }}</span>
+            <span class="text-gray-900 font-semibold">{{ $user->email }}</span>
+        </div>
+
+        @if ($user->hasVerifiedEmail())
+            <span class="flex items-center gap-1.5 bg-green-100 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full">
+                <i class="fas fa-check-circle"></i> {{ __('user.verify_email_verified') }}
+            </span>
+        @else
+            <span class="flex items-center gap-1.5 bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1.5 rounded-full">
+                <i class="fas fa-exclamation-circle"></i> {{ __('user.verify_email_not_verified') }}
+            </span>
+        @endif
     </div>
 
-    <!-- @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
-        <div class="mt-2 text-sm text-red-500">
-            {{ __('Your email address is unverified.') }}
+    @if (!$user->hasVerifiedEmail())
+        <div class="mt-4 p-4 bg-orange-50 border border-orange-200 rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <p class="text-sm text-orange-700">{{ __('user.verify_email_desc') }}</p>
+
+            <form method="POST" action="{{ route('verification.send') }}" x-data="{ loading: false }" @submit="loading = true">
+                @csrf
+                <button type="submit"
+                    :disabled="loading"
+                    class="shrink-0 bg-[#0099FF] text-white text-sm font-bold py-2 px-5 rounded-lg transition duration-300 whitespace-nowrap flex items-center gap-2"
+                    :class="loading ? 'opacity-60 cursor-not-allowed' : 'hover:bg-blue-600'">
+                    <svg x-show="loading" class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                    </svg>
+                    <span x-text="loading ? '{{ __('user.verify_email_sending') }}' : '{{ __('user.verify_email_button') }}'"></span>
+                </button>
+            </form>
         </div>
-    @endif -->
+
+        @if (session('status') == 'verification-link-sent')
+            <p class="mt-3 flex items-center gap-2 text-sm text-green-600 font-semibold">
+                <i class="fas fa-check-circle"></i> {{ __('user.verify_email_resend') }}
+            </p>
+        @endif
+    @endif
 </div>

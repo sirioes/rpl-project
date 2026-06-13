@@ -5,8 +5,8 @@
                 <nav class="flex flex-col space-y-3 text-lg font-medium">
                     <a href="{{ route('about') }}" class="hover:opacity-80">{{ __('footer.about_us') }}</a>
                     <a href="{{ route('products') }}" class="hover:opacity-80">{{ __('footer.products') }}</a>
-                    <a href="#" class="hover:opacity-80">{{ __('footer.contact_us') }}</a>
-                    <a href="#" class="hover:opacity-80">{{ __('footer.track_records') }}</a>
+                    <a href="{{ route('contact') }}" class="hover:opacity-80">{{ __('footer.contact_us') }}</a>
+                    <a href="{{ route('about') }}" class="hover:opacity-80">{{ __('footer.track_records') }}</a>
                 </nav>
 
                 <div class="flex space-x-4 pt-4">
@@ -50,7 +50,7 @@
             </div>
 
             <div class="flex flex-col items-center md:items-end text-center md:text-right space-y-4">
-                <a href="#" class="flex items-center gap-2 text-lg font-medium hover:opacity-80">
+                <a href="{{ route('contact') }}" class="flex items-center gap-2 text-lg font-medium hover:opacity-80">
                     {{ __('footer.send_message') }} <span>→</span>
                 </a>
                 <p class="text-2xl font-semibold">(010) 5036014</p>
