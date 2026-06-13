@@ -318,5 +318,9 @@
     "admin.dashboard_booking_ref": "Ref Pemesanan",
     "admin.dashboard_booking_tour": "Tur",
     "admin.dashboard_booking_date": "Tanggal",
-    "admin.dashboard_booking_empty": "Belum ada pemesanan."
+    "admin.dashboard_booking_empty": "Belum ada pemesanan.",
+    "admin.product_whatsapp_label": "Link Grup WhatsApp",
+    "admin.product_whatsapp_placeholder": "https://chat.whatsapp.com/...",
+    "admin.product_whatsapp_hint": "Opsional. Pelanggan akan melihat link ini setelah pembayaran berhasil.",
+    "user.booking_join_whatsapp": "Gabung Grup WhatsApp"
 }

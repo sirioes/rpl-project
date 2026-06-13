@@ -318,5 +318,9 @@
     "admin.dashboard_booking_ref": "Booking Ref",
     "admin.dashboard_booking_tour": "Tour",
     "admin.dashboard_booking_date": "Date",
-    "admin.dashboard_booking_empty": "No bookings yet."
+    "admin.dashboard_booking_empty": "No bookings yet.",
+    "admin.product_whatsapp_label": "WhatsApp Group Link",
+    "admin.product_whatsapp_placeholder": "https://chat.whatsapp.com/...",
+    "admin.product_whatsapp_hint": "Optional. Customers will see this link after successful payment.",
+    "user.booking_join_whatsapp": "Join WhatsApp Group"
 }

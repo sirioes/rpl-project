@@ -182,6 +182,17 @@ $currentLang = collect($languages)->firstWhere('code', $currentLocale) ?: $langu
                                         </div>
                                     </div>
                                 </div>
+
+                                {{-- TOMBOL WHATSAPP GROUP --}}
+                                @if($booking->product->whatsapp_link)
+                                <div class="px-6 pb-2">
+                                    <a href="{{ $booking->product->whatsapp_link }}" target="_blank"
+                                        class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white px-5 py-2.5 rounded-xl text-sm font-bold transition duration-200">
+                                        <i class="fab fa-whatsapp text-lg"></i>
+                                        {{ __('user.booking_join_whatsapp') }}
+                                    </a>
+                                </div>
+                                @endif
                             </div>
 
                             {{-- TOMBOL EXPAND PESERTA --}}

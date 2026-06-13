@@ -318,5 +318,9 @@
     "admin.dashboard_booking_tour": "Tour",
     "admin.dashboard_booking_date": "Data",
     "admin.dashboard_booking_empty": "Nenhuma reserva por enquanto.",
-    "admin.sidebar_manage_users": "Gerenciar Usuários"
+    "admin.sidebar_manage_users": "Gerenciar Usuários",
+    "admin.product_whatsapp_label": "Link do Grupo WhatsApp",
+    "admin.product_whatsapp_placeholder": "https://chat.whatsapp.com/...",
+    "admin.product_whatsapp_hint": "Opcional. Os clientes verão este link após o pagamento bem-sucedido.",
+    "user.booking_join_whatsapp": "Entrar no Grupo WhatsApp"
 }
