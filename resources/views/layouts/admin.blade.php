@@ -96,13 +96,13 @@
                         <i class="fas fa-chevron-down text-xs transition-transform" :class="open ? 'rotate-180' : ''"></i>
                     </button>
                     <div x-show="open" class="ml-12 mt-2 border-l-2 border-white/50 space-y-2 pb-2">
-                        <a href="#" class="relative flex items-center pl-6 py-2 text-sm hover:text-white/80">
+                        <a href="{{ route('admin.travel-records.create') }}" class="relative flex items-center pl-6 py-2 text-sm hover:text-white/80">
                             <span class="absolute left-0 w-4 border-t-2 border-white/50"></span>
-                            <span>{{__('admin.sidebar_add_track_record') }}</span>
+                            <span class="{{ request()->routeIs('admin.travel-records.create') ? 'font-bold border-b-2 border-white' : '' }}">{{__('admin.sidebar_add_track_record') }}</span>
                         </a>
-                        <a href="#" class="relative flex items-center pl-6 py-2 text-sm hover:text-white/80">
+                        <a href="{{ route('admin.travel-records.index') }}" class="relative flex items-center pl-6 py-2 text-sm hover:text-white/80">
                             <span class="absolute left-0 w-4 border-t-2 border-white/50"></span>
-                            <span>{{__('admin.sidebar_track_reocrds') }}</span>
+                            <span class="{{ request()->routeIs('admin.travel-records.index') ? 'font-bold border-b-2 border-white' : '' }}">{{__('admin.sidebar_track_reocrds') }}</span>
                         </a>
                     </div>
                 </div>
@@ -114,9 +114,9 @@
                     <div class="relative">
                         <i class="fas fa-envelope w-6 mr-4"></i>
                         @if($unreadMessagesCount > 0)
-                            <span id="sidebar-badge" class="absolute -top-1 right-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-md border-2 border-[#0099FF]">
-                                {{ $unreadMessagesCount }}
-                            </span>
+                        <span id="sidebar-badge" class="absolute -top-1 right-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-md border-2 border-[#0099FF]">
+                            {{ $unreadMessagesCount }}
+                        </span>
                         @endif
                     </div>
 
