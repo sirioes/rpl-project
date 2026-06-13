@@ -16,7 +16,7 @@
                     <img src="{{ asset('img/homepage/assets/MijnAmorText.svg') }}" alt="" class="w-100 md:w-170" />
                     <img src="{{ asset('img/homepage/assets/TravelText.svg') }}" alt="" class="w-70 md:w-95" />
 
-                    <a href="#">
+                    <a href="{{ route('products') }}">
                         <button class="bg-[#0F4464] text-white text-[14px] md:text-[18px] font-semibold py-3 px-10 rounded-full md:mt-12 mt-6 hover:underline">
                             {{ __('hero.book_now') }}
                         </button>
