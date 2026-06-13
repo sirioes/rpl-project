@@ -275,6 +275,41 @@
     "admin.message_alert_delete": "Weet u zeker dat u dit bericht wilt verwijderen?",
     "admin.message_empty": "Nog geen berichten.",
     "admin.message_detail_label": "Bericht:",
-    "admin.message_detail_sent": "Verzonden op:"
+    "admin.message_detail_sent": "Verzonden op:", 
+
+    "admin.track_record_create_title": "Nieuwe Reishistorie",
+    "admin.track_record_alert_error": "Er is iets misgegaan!",
+    "admin.track_record_city_label": "Stad",
+    "admin.track_record_city_placeholder": "Stadsnaam...",
+    "admin.track_record_desc_label": "Beschrijving",
+    "admin.track_record_desc_placeholder": "Schrijf de hoofdbeschrijving hier...",
+    "admin.track_record_btn_upload": "Uploaden",
+    "admin.track_record_img_instr": "Kies afbeeldingen of sleep ze hierheen.",
+    "admin.track_record_img_hint": "SVG / PNG / JPG. Max 2 MB.",
+    "admin.track_record_year_placeholder": "Selecteer jaar",
+    "admin.track_record_btn_publish": "Publiceren",
+    "admin.track_record_btn_discard": "Annuleren",
+    "admin.track_record_confirm_discard": "Wijzigingen annuleren?",
+    "admin.track_record_additional_title": "Extra Info",
+    "admin.track_record_btn_add_desc": "Beschrijving toevoegen",
+    "admin.track_record_item_title": "Titel",
+    "admin.track_record_item_title_ph": "Titel...",
+    "admin.track_record_item_desc_ph": "Uw tekst hier",
+
+    "admin.track_record_edit_title": "Reishistorie bewerken",
+    "admin.track_record_btn_change_banner": "Banner wijzigen",
+    "admin.track_record_banner_hint": "Klik om de huidige banner te vervangen.",
+    "admin.track_record_btn_update": "Wijzigingen opslaan",
+    "admin.track_record_btn_cancel": "Annuleren",
+    "admin.track_record_extra_title": "Extra Inhoud",
+
+    "admin.track_record_index_title": "Reishistorie",
+    "admin.track_record_recent_title": "Recent toegevoegd",
+    "admin.track_record_filter_all_years": "Alle jaren",
+    "admin.track_record_tooltip_add": "Nieuwe toevoegen",
+    "admin.track_record_btn_view": "Bekijken",
+    "admin.track_record_confirm_delete": "Weet u zeker dat u deze gegevens wilt verwijderen?",
+    "admin.track_record_empty_state": "Nog geen reishistorie.",
+    "admin.track_record_btn_create_new": "+ Nieuwe maken"
 
 }

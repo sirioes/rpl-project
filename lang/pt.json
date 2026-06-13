@@ -261,6 +261,41 @@
     "admin.message_alert_delete": "Tem certeza que deseja excluir esta mensagem?",
     "admin.message_empty": "Nenhuma mensagem por enquanto.",
     "admin.message_detail_label": "Mensagem:",
-    "admin.message_detail_sent": "Enviado em:"
+    "admin.message_detail_sent": "Enviado em:", 
+
+    "admin.track_record_create_title": "Novo Histórico",
+    "admin.track_record_alert_error": "Ocorreu um erro!",
+    "admin.track_record_city_label": "Cidade",
+    "admin.track_record_city_placeholder": "Nome da cidade...",
+    "admin.track_record_desc_label": "Descrição",
+    "admin.track_record_desc_placeholder": "Escreva a descrição principal aqui...",
+    "admin.track_record_btn_upload": "Enviar",
+    "admin.track_record_img_instr": "Escolha imagens ou arraste e solte aqui.",
+    "admin.track_record_img_hint": "SVG / PNG / JPG. Máx 2 MB.",
+    "admin.track_record_year_placeholder": "Selecionar ano",
+    "admin.track_record_btn_publish": "Publicar",
+    "admin.track_record_btn_discard": "Cancelar",
+    "admin.track_record_confirm_discard": "Cancelar alterações?",
+    "admin.track_record_additional_title": "Informações Adicionais",
+    "admin.track_record_btn_add_desc": "Adicionar descrição",
+    "admin.track_record_item_title": "Título",
+    "admin.track_record_item_title_ph": "Título...",
+    "admin.track_record_item_desc_ph": "Seu texto aqui",
+
+    "admin.track_record_edit_title": "Editar Histórico",
+    "admin.track_record_btn_change_banner": "Alterar Banner",
+    "admin.track_record_banner_hint": "Clique para substituir o banner atual.",
+    "admin.track_record_btn_update": "Atualizar",
+    "admin.track_record_btn_cancel": "Cancelar",
+    "admin.track_record_extra_title": "Conteúdo Adicional",
+
+    "admin.track_record_index_title": "Histórico de Viagens",
+    "admin.track_record_recent_title": "Adicionados Recentemente",
+    "admin.track_record_filter_all_years": "Todos os anos",
+    "admin.track_record_tooltip_add": "Adicionar novo",
+    "admin.track_record_btn_view": "Ver",
+    "admin.track_record_confirm_delete": "Tem certeza que deseja excluir estes dados?",
+    "admin.track_record_empty_state": "Nenhum histórico por enquanto.",
+    "admin.track_record_btn_create_new": "+ Criar novo"
 
 }
