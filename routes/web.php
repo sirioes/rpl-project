@@ -48,7 +48,7 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function ()
 
 
 // --- SEMUA ROUTE DI BAWAH INI WAJIB LOGIN ---
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth'])->group(function () {
 
     // Homepage: Jika belum login, otomatis ditendang ke /login
     // Jika sudah login, akan menampilkan view 'homepage'
