@@ -121,7 +121,7 @@ $secondRow = array_slice($reviews, 5, 5);
                 {!! __('hero_CTA.text') !!}
             </h2>
 
-            <a href="#">
+            <a href="{{ route('products') }}">
                 <button class="bg-[#6EB1C9] hover:bg-[#5da0b8] text-white text-base md:text-lg lg:text-xl font-semibold py-3 px-8 md:py-4 md:px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
                     {{ __('hero_CTA.button') }}
                 </button>

@@ -176,6 +176,17 @@
                             </p>
                         </div>
 
+                        <div class="mt-6">
+                            <label class="block text-sm font-semibold mb-2">{{ __('admin.product_whatsapp_label') }}</label>
+                            <div class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 focus-within:border-[#25D366] transition">
+                                <i class="fab fa-whatsapp text-[#25D366] text-xl"></i>
+                                <input type="url" name="whatsapp_link" value="{{ old('whatsapp_link') }}"
+                                    placeholder="{{ __('admin.product_whatsapp_placeholder') }}"
+                                    class="flex-1 bg-transparent border-none focus:ring-0 text-sm text-gray-700 p-0" />
+                            </div>
+                            <p class="text-[10px] text-gray-400 italic mt-1">{{ __('admin.product_whatsapp_hint') }}</p>
+                        </div>
+
                         <div class="flex flex-col-reverse md:flex-row justify-end gap-4 mt-10">
                             <a href="{{ route('admin.products.index') }}" class="bg-[#C54242] text-white px-10 py-3 rounded-xl font-bold hover:bg-[#B14141] transition flex items-center justify-center text-center">
                                 {{ __('admin.product_create_btn_discard') }}

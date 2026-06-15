@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Services\DeepLService;
 use App\Services\ImageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -28,8 +29,9 @@ class ProductController extends Controller
             'ticket_quota' => 'required|integer|min:1',
             'departure_date' => 'required|date|after:today', 
             'departure_locations' => 'nullable|string',
-            'product_image' => 'required|array',
-            'product_image.*' => 'image|mimes:jpeg,png,jpg,svg|max:2048' 
+            'product_image'   => 'required|array',
+            'product_image.*' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
+            'whatsapp_link'   => 'nullable|url',
         ]);
 
         try {
@@ -41,15 +43,23 @@ class ProductController extends Controller
                 }
             }
 
+            $translations = (new DeepLService())->translateAll([
+                'product_name'        => $validated['product_name'],
+                'product_description' => $validated['product_description'] ?? '',
+                'departure_locations' => strip_tags($validated['departure_locations'] ?? ''),
+            ]);
+
             Product::create([
-                'product_name' => $validated['product_name'],
+                'product_name'        => $validated['product_name'],
                 'product_description' => $validated['product_description'] ?? null,
-                'product_price' => $validated['product_price'],
-                'ticket_quota' => $validated['ticket_quota'],
-                'departure_date' => $validated['departure_date'],
+                'product_price'       => $validated['product_price'],
+                'ticket_quota'        => $validated['ticket_quota'],
+                'departure_date'      => $validated['departure_date'],
                 'departure_locations' => $validated['departure_locations'] ?? null,
-                'product_image' => $imagePaths,
-                'is_published' => false,
+                'product_image'       => $imagePaths,
+                'is_published'        => false,
+                'translations'        => $translations ?: null,
+                'whatsapp_link'       => $validated['whatsapp_link'] ?? null,
             ]);
 
             return redirect()->route('admin.products.index')
@@ -87,6 +97,7 @@ class ProductController extends Controller
             'departure_locations' => 'nullable|string',
             'product_image.*'     => 'image|mimes:jpeg,png,jpg,svg|max:2048',
             'delete_images'       => 'nullable|array',
+            'whatsapp_link'       => 'nullable|url',
         ]);
 
         try {
@@ -109,6 +120,12 @@ class ProductController extends Controller
                 }
             }
 
+            $translations = (new DeepLService())->translateAll([
+                'product_name'        => $validated['product_name'],
+                'product_description' => $validated['product_description'] ?? '',
+                'departure_locations' => strip_tags($validated['departure_locations'] ?? ''),
+            ]);
+
             $product->update([
                 'product_name'        => $validated['product_name'],
                 'product_description' => $validated['product_description'] ?? null,
@@ -117,6 +134,8 @@ class ProductController extends Controller
                 'departure_date'      => $validated['departure_date'],
                 'departure_locations' => $validated['departure_locations'] ?? null,
                 'product_image'       => $existingImages,
+                'translations'        => $translations ?: $product->translations,
+                'whatsapp_link'       => $validated['whatsapp_link'] ?? $product->whatsapp_link,
             ]);
 
             return redirect()->route('admin.products.index')

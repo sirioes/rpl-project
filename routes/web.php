@@ -8,8 +8,9 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Admin\BookingController as AdminBookingController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\Admin\MessageController;                                                                                                                                                    
-use App\Http\Controllers\ContactController;          
+use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Admin\TravelRecordController;
 
 Route::get('/lang/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'id', 'nl', 'de', 'pt'])) {
@@ -33,9 +34,11 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function ()
     Route::patch('/admin/products/{product}/toggle', [App\Http\Controllers\Admin\ProductController::class, 'togglePublish'])
         ->name('products.toggle');
 
+    Route::resource('travel-records', TravelRecordController::class)->except('show');
+
     Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
 
-    Route::resource('messages', MessageController::class);                                                                                                                                                 
+    Route::resource('messages', MessageController::class);
     Route::post('/messages/{id}/mark-as-read', [MessageController::class, 'markAsRead'])->name('messages.read');
 
     Route::get('/bookings', [AdminBookingController::class, 'index'])->name('bookings.index');
@@ -45,7 +48,7 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function ()
 
 
 // --- SEMUA ROUTE DI BAWAH INI WAJIB LOGIN ---
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth'])->group(function () {
 
     // Homepage: Jika belum login, otomatis ditendang ke /login
     // Jika sudah login, akan menampilkan view 'homepage'
@@ -53,15 +56,44 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('front.homepage');
     })->name('home');
 
-    Route::get('/about', function () {
-        return view('front.about');
-    })->name('about');
-
     Route::get('/products', [UserController::class, 'index'])->name('products');
 
     Route::get('/contact', function () {
         return view('front.contact');
     })->name('contact');
+
+    //Track Record
+    Route::get('/about', function (\Illuminate\Http\Request $request) {
+
+        // 1. Logika Penentuan Tahun Terpilih
+        if ($request->has('year')) {
+            $selectedYear = $request->year;
+        } else {
+            $selectedYear = 2025; //
+        }
+
+        // 2. Query Data
+        $query = App\Models\TrackRecord::query();
+
+        if ($selectedYear) {
+            $query->where('year', $selectedYear);
+        }
+
+        $trackRecords = $query->latest()->get();
+
+        // 3. Generate List Tahun
+        $availableYears = range(date('Y'), 2018);
+
+        // Kirim variable 'selectedYear' ke view biar UI tau lagi nampilin tahun berapa
+        return view('front.about', compact('trackRecords', 'availableYears', 'selectedYear'));
+    })->name('about');
+
+    Route::get('/track-record/{slug}', function ($slug) {
+
+        $record = App\Models\TrackRecord::with('items')->where('slug', $slug)->firstOrFail();
+
+        return view('front.show', compact('record'));
+    })->name('track-record.show');
 
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -107,12 +139,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/checkout/cancel', [App\Http\Controllers\CheckoutController::class, 'cancel'])->name('checkout.cancel');
 });
 
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');    
-
-
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 // Stripe Webhook
 Route::post('/stripe/webhook', [App\Http\Controllers\StripeWebhookController::class, 'handle'])->name('stripe.webhook');
-
 
 require __DIR__ . '/auth.php';

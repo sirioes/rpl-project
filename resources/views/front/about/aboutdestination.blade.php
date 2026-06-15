@@ -48,11 +48,11 @@
                 </div>
                 <div class="px-5 md:px-6 pt-5 grow flex flex-col">
                     <div class="flex justify-between items-start mb-2">
-                        <h2 class="font-bold text-xl md:text-2xl text-black">{{ $record->city_name }}</h2>
+                        <h2 class="font-bold text-xl md:text-2xl text-black">{{ $record->translate('city_name') }}</h2>
                         <span class="text-xs font-bold text-[#123E5E] bg-blue-50 px-2 py-1 rounded">{{ $record->year }}</span>
                     </div>
                     <p class="text-gray-600 text-sm mb-4 leading-relaxed grow">
-                        {{ Str::limit($record->description, 120) }}
+                        {{ Str::limit($record->translate('description'), 120) }}
                     </p>
                     <div class="mt-auto">
                         <a href="{{ route('track-record.show', $record->slug) }}" class="block w-full sm:w-auto">
