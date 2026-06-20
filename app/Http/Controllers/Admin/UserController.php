@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
-use Illuminate\Http\Request;
+use App\Services\UserService;
 
 class UserController extends Controller
 {
+    public function __construct(private readonly UserService $userService) {}
+
     public function index()
     {
-        $users = User::latest()->paginate(10);
+        $users = $this->userService->getPaginatedUsers(10);
 
         return view('admin.users.index', compact('users'));
     }
