@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\BookingConfirmationMail;
+use App\Events\BookingPaid;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 use Stripe\Stripe;
 use Stripe\Webhook;
 
@@ -44,11 +43,8 @@ class StripeWebhookController extends Controller
         $booking->update(['status' => 'paid']);
         $booking->product->decrement('ticket_quota', $booking->quantity);
 
-        try {
-            Mail::to($booking->contact_email)->send(new BookingConfirmationMail($booking));
-        } catch (\Exception $e) {
-            Log::error('Failed to send booking confirmation email via webhook: ' . $e->getMessage());
-        }
+        // Observer Pattern: fire event, listener SendBookingConfirmationMail otomatis handle email
+        BookingPaid::dispatch($booking);
 
         Log::info("Booking {$booking->booking_reference} marked as paid via webhook.");
     }
