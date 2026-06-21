@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\BookingConfirmationMail;
+use App\Events\BookingPaid;
 use App\Models\Booking;
 use App\Models\Product;
 use App\Services\CheckoutService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 use Stripe\Checkout\Session;
 use Stripe\Stripe;
 
@@ -100,6 +99,8 @@ class CheckoutController extends Controller
             abort(404);
         }
 
+            // Observer Pattern: fire event, listener SendBookingConfirmationMail otomatis handle email
+            BookingPaid::dispatch($booking);
         if ($booking->wasChanged('status')) {
             try {
                 Mail::to($booking->contact_email)->send(new BookingConfirmationMail($booking));
