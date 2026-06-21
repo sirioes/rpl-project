@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\Contracts\UserRepositoryInterface;
+use App\Repositories\Eloquent\EloquentUserRepository;
 use App\Repositories\Contracts\BookingRepositoryInterface;
 use App\Repositories\Eloquent\EloquentBookingRepository;
 use Illuminate\Support\Facades\Blade;
@@ -11,6 +13,7 @@ class AppServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
+        $this->app->bind(UserRepositoryInterface::class, EloquentUserRepository::class);
         $this->app->bind(BookingRepositoryInterface::class, EloquentBookingRepository::class);
     }
 
