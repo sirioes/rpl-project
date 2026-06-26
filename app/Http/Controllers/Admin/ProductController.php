@@ -4,14 +4,20 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Repositories\Contracts\ProductRepositoryInterface;
 use App\Services\DeepLService;
 use App\Services\ImageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
+    public function __construct(
+        private readonly ProductRepositoryInterface $productRepository,
+        private readonly ImageService $imageService,
+        private readonly DeepLService $deepLService,
+    ) {}
+
     public function create()
     {
         return view('admin.manage-product.add-product');
@@ -23,33 +29,32 @@ class ProductController extends Controller
         Log::info('Has File:', ['has_file' => $request->hasFile('product_image')]);
 
         $validated = $request->validate([
-            'product_name' => 'required|string|max:255',
+            'product_name'        => 'required|string|max:255',
             'product_description' => 'nullable|string',
-            'product_price' => 'required|numeric|min:0',
-            'ticket_quota' => 'required|integer|min:1',
-            'departure_date' => 'required|date|after:today', 
+            'product_price'       => 'required|numeric|min:0',
+            'ticket_quota'        => 'required|integer|min:1',
+            'departure_date'      => 'required|date|after:today',
             'departure_locations' => 'nullable|string',
-            'product_image'   => 'required|array',
-            'product_image.*' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
-            'whatsapp_link'   => 'nullable|url',
+            'product_image'       => 'required|array',
+            'product_image.*'     => 'image|mimes:jpeg,png,jpg,svg|max:2048',
+            'whatsapp_link'       => 'nullable|url',
         ]);
 
         try {
-            $imageService = new ImageService();
             $imagePaths = [];
             if ($request->hasFile('product_image')) {
                 foreach ($request->file('product_image') as $file) {
-                    $imagePaths[] = $imageService->store($file, 'products');
+                    $imagePaths[] = $this->imageService->store($file, 'products');
                 }
             }
 
-            $translations = (new DeepLService())->translateAll([
+            $translations = $this->deepLService->translateAll([
                 'product_name'        => $validated['product_name'],
                 'product_description' => $validated['product_description'] ?? '',
                 'departure_locations' => strip_tags($validated['departure_locations'] ?? ''),
             ]);
 
-            Product::create([
+            $this->productRepository->create([
                 'product_name'        => $validated['product_name'],
                 'product_description' => $validated['product_description'] ?? null,
                 'product_price'       => $validated['product_price'],
@@ -72,11 +77,11 @@ class ProductController extends Controller
 
     public function index()
     {
-        $recentlyAdded = Product::where('is_published', false)->latest()->get();
-        $archived = Product::where('is_published', true)->latest()->get();
+        $recentlyAdded = $this->productRepository->getUnpublished();
+        $archived      = $this->productRepository->getPublished();
         Log::info('Products count:', [
             'recently_added' => $recentlyAdded->count(),
-            'archived' => $archived->count()
+            'archived'       => $archived->count(),
         ]);
         return view('admin.manage-product.product-list', compact('recentlyAdded', 'archived'));
     }
@@ -101,32 +106,29 @@ class ProductController extends Controller
         ]);
 
         try {
-            $imageService   = new ImageService();
             $existingImages = $product->product_image ?? [];
 
-            // Hapus gambar yang dicentang untuk dihapus
             if ($request->has('delete_images')) {
                 foreach ($request->delete_images as $imagePath) {
-                    $imageService->delete($imagePath);
+                    $this->imageService->delete($imagePath);
                     $existingImages = array_filter($existingImages, fn($img) => $img !== $imagePath);
                 }
                 $existingImages = array_values($existingImages);
             }
 
-            // Upload + kompresi gambar baru
             if ($request->hasFile('product_image')) {
                 foreach ($request->file('product_image') as $file) {
-                    $existingImages[] = $imageService->store($file, 'products');
+                    $existingImages[] = $this->imageService->store($file, 'products');
                 }
             }
 
-            $translations = (new DeepLService())->translateAll([
+            $translations = $this->deepLService->translateAll([
                 'product_name'        => $validated['product_name'],
                 'product_description' => $validated['product_description'] ?? '',
                 'departure_locations' => strip_tags($validated['departure_locations'] ?? ''),
             ]);
 
-            $product->update([
+            $this->productRepository->update($product, [
                 'product_name'        => $validated['product_name'],
                 'product_description' => $validated['product_description'] ?? null,
                 'product_price'       => $validated['product_price'],
@@ -140,7 +142,6 @@ class ProductController extends Controller
 
             return redirect()->route('admin.products.index')
                 ->with('success', 'Product updated successfully!');
-
         } catch (\Exception $e) {
             Log::error('Error updating product:', ['error' => $e->getMessage()]);
             return back()->withErrors(['error' => 'Gagal: ' . $e->getMessage()])->withInput();
@@ -149,32 +150,37 @@ class ProductController extends Controller
 
     public function publish($id)
     {
-        $product = Product::findOrFail($id);
-        $product->update(['is_published' => true]);
+        $product = $this->productRepository->findById($id);
+        abort_if(!$product, 404);
+
+        $this->productRepository->update($product, ['is_published' => true]);
         return back()->with('success', 'Produk berhasil dipublish!');
     }
 
     public function togglePublish(Product $product)
     {
-        $product->is_published = !$product->is_published;
-        $product->save();
+        $this->productRepository->togglePublish($product);
         return back()->with('success', 'Status produk berhasil diperbarui!');
     }
 
     public function destroy($id)
     {
         try {
-            $product = \App\Models\Product::findOrFail($id);
-            $product->delete();
+            $product = $this->productRepository->findById($id);
+            if (!$product) {
+                return response()->json(['success' => false, 'message' => 'Product not found'], 404);
+            }
+
+            $this->productRepository->delete($product);
 
             return response()->json([
                 'success' => true,
-                'message' => 'The product has been successfully deleted'
+                'message' => 'The product has been successfully deleted',
             ]);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to delete product' . $e->getMessage()
+                'message' => 'Failed to delete product: ' . $e->getMessage(),
             ], 500);
         }
     }
