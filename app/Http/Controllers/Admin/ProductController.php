@@ -29,15 +29,15 @@ class ProductController extends Controller
         Log::info('Has File:', ['has_file' => $request->hasFile('product_image')]);
 
         $validated = $request->validate([
-            'product_name'        => 'required|string|max:255',
+            'product_name' => 'required|string|max:255',
             'product_description' => 'nullable|string',
-            'product_price'       => 'required|numeric|min:0',
-            'ticket_quota'        => 'required|integer|min:1',
-            'departure_date'      => 'required|date|after:today',
+            'product_price' => 'required|numeric|min:0',
+            'ticket_quota' => 'required|integer|min:1',
+            'departure_date' => 'required|date|after:today',
             'departure_locations' => 'nullable|string',
-            'product_image'       => 'required|array',
-            'product_image.*'     => 'image|mimes:jpeg,png,jpg,svg|max:2048',
-            'whatsapp_link'       => 'nullable|url',
+            'product_image' => 'required|array',
+            'product_image.*' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
+            'whatsapp_link' => 'nullable|url',
         ]);
 
         try {
@@ -49,40 +49,42 @@ class ProductController extends Controller
             }
 
             $translations = $this->deepLService->translateAll([
-                'product_name'        => $validated['product_name'],
+                'product_name' => $validated['product_name'],
                 'product_description' => $validated['product_description'] ?? '',
                 'departure_locations' => strip_tags($validated['departure_locations'] ?? ''),
             ]);
 
             $this->productRepository->create([
-                'product_name'        => $validated['product_name'],
+                'product_name' => $validated['product_name'],
                 'product_description' => $validated['product_description'] ?? null,
-                'product_price'       => $validated['product_price'],
-                'ticket_quota'        => $validated['ticket_quota'],
-                'departure_date'      => $validated['departure_date'],
+                'product_price' => $validated['product_price'],
+                'ticket_quota' => $validated['ticket_quota'],
+                'departure_date' => $validated['departure_date'],
                 'departure_locations' => $validated['departure_locations'] ?? null,
-                'product_image'       => $imagePaths,
-                'is_published'        => false,
-                'translations'        => $translations ?: null,
-                'whatsapp_link'       => $validated['whatsapp_link'] ?? null,
+                'product_image' => $imagePaths,
+                'is_published' => false,
+                'translations' => $translations ?: null,
+                'whatsapp_link' => $validated['whatsapp_link'] ?? null,
             ]);
 
             return redirect()->route('admin.products.index')
                 ->with('success', 'Product added successfully!');
         } catch (\Exception $e) {
             Log::error('Error creating product:', ['error' => $e->getMessage()]);
-            return back()->withErrors(['error' => 'Gagal: ' . $e->getMessage()])->withInput();
+
+            return back()->withErrors(['error' => 'Gagal: '.$e->getMessage()])->withInput();
         }
     }
 
     public function index()
     {
         $recentlyAdded = $this->productRepository->getUnpublished();
-        $archived      = $this->productRepository->getPublished();
+        $archived = $this->productRepository->getPublished();
         Log::info('Products count:', [
             'recently_added' => $recentlyAdded->count(),
-            'archived'       => $archived->count(),
+            'archived' => $archived->count(),
         ]);
+
         return view('admin.manage-product.product-list', compact('recentlyAdded', 'archived'));
     }
 
@@ -94,15 +96,15 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $validated = $request->validate([
-            'product_name'        => 'required|string|max:255',
+            'product_name' => 'required|string|max:255',
             'product_description' => 'nullable|string',
-            'product_price'       => 'required|numeric|min:0',
-            'ticket_quota'        => 'required|integer|min:1',
-            'departure_date'      => 'required|date',
+            'product_price' => 'required|numeric|min:0',
+            'ticket_quota' => 'required|integer|min:1',
+            'departure_date' => 'required|date',
             'departure_locations' => 'nullable|string',
-            'product_image.*'     => 'image|mimes:jpeg,png,jpg,svg|max:2048',
-            'delete_images'       => 'nullable|array',
-            'whatsapp_link'       => 'nullable|url',
+            'product_image.*' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
+            'delete_images' => 'nullable|array',
+            'whatsapp_link' => 'nullable|url',
         ]);
 
         try {
@@ -111,7 +113,7 @@ class ProductController extends Controller
             if ($request->has('delete_images')) {
                 foreach ($request->delete_images as $imagePath) {
                     $this->imageService->delete($imagePath);
-                    $existingImages = array_filter($existingImages, fn($img) => $img !== $imagePath);
+                    $existingImages = array_filter($existingImages, fn ($img) => $img !== $imagePath);
                 }
                 $existingImages = array_values($existingImages);
             }
@@ -123,43 +125,46 @@ class ProductController extends Controller
             }
 
             $translations = $this->deepLService->translateAll([
-                'product_name'        => $validated['product_name'],
+                'product_name' => $validated['product_name'],
                 'product_description' => $validated['product_description'] ?? '',
                 'departure_locations' => strip_tags($validated['departure_locations'] ?? ''),
             ]);
 
             $this->productRepository->update($product, [
-                'product_name'        => $validated['product_name'],
+                'product_name' => $validated['product_name'],
                 'product_description' => $validated['product_description'] ?? null,
-                'product_price'       => $validated['product_price'],
-                'ticket_quota'        => $validated['ticket_quota'],
-                'departure_date'      => $validated['departure_date'],
+                'product_price' => $validated['product_price'],
+                'ticket_quota' => $validated['ticket_quota'],
+                'departure_date' => $validated['departure_date'],
                 'departure_locations' => $validated['departure_locations'] ?? null,
-                'product_image'       => $existingImages,
-                'translations'        => $translations ?: $product->translations,
-                'whatsapp_link'       => $validated['whatsapp_link'] ?? $product->whatsapp_link,
+                'product_image' => $existingImages,
+                'translations' => $translations ?: $product->translations,
+                'whatsapp_link' => $validated['whatsapp_link'] ?? $product->whatsapp_link,
             ]);
 
             return redirect()->route('admin.products.index')
                 ->with('success', 'Product updated successfully!');
         } catch (\Exception $e) {
             Log::error('Error updating product:', ['error' => $e->getMessage()]);
-            return back()->withErrors(['error' => 'Gagal: ' . $e->getMessage()])->withInput();
+
+            return back()->withErrors(['error' => 'Gagal: '.$e->getMessage()])->withInput();
         }
     }
 
     public function publish($id)
     {
         $product = $this->productRepository->findById($id);
-        abort_if(!$product, 404);
+        abort_if(! $product, 404);
 
         $this->productRepository->update($product, ['is_published' => true]);
+
         return back()->with('success', 'Produk berhasil dipublish!');
     }
 
     public function togglePublish(Product $product)
     {
         $this->productRepository->togglePublish($product);
+
         return back()->with('success', 'Status produk berhasil diperbarui!');
     }
 
@@ -167,7 +172,7 @@ class ProductController extends Controller
     {
         try {
             $product = $this->productRepository->findById($id);
-            if (!$product) {
+            if (! $product) {
                 return response()->json(['success' => false, 'message' => 'Product not found'], 404);
             }
 
@@ -180,7 +185,7 @@ class ProductController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to delete product: ' . $e->getMessage(),
+                'message' => 'Failed to delete product: '.$e->getMessage(),
             ], 500);
         }
     }

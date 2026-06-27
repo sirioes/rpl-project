@@ -16,7 +16,7 @@ class CheckoutService
         return DB::transaction(function () use ($bookingData, $participants) {
             $product = Product::lockForUpdate()->findOrFail($bookingData['product_id']);
 
-            $reserved  = $this->bookingRepository->getReservedQuantity($product->id);
+            $reserved = $this->bookingRepository->getReservedQuantity($product->id);
             $available = $product->ticket_quota - $reserved;
 
             if ($bookingData['quantity'] > $available) {
@@ -27,7 +27,7 @@ class CheckoutService
 
             foreach ($participants as $participant) {
                 $booking->participants()->create([
-                    'name'     => $participant['name'],
+                    'name' => $participant['name'],
                     'category' => $participant['category'],
                 ]);
             }

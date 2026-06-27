@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\App;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -18,18 +16,18 @@ class UserSeeder extends Seeder
         // 1. BUAT AKUN ADMIN
         User::create([
             'name' => 'Mijn Amor Admin',
-            'email' => 'admin@gmail.com', 
+            'email' => 'admin@gmail.com',
             'status' => 'active',
-            'password' => Hash::make('admin123'), 
-            'role' => 'admin', 
+            'password' => Hash::make('admin123'),
+            'role' => 'admin',
         ]);
 
-        // 2. User Lama 
+        // 2. User Lama
         User::create([
             'name' => 'Risma',
             'email' => 'jagungbakar@gmail.com',
             'status' => 'active',
-            'password' => Hash::make('rismaCantik23'), 
+            'password' => Hash::make('rismaCantik23'),
             'role' => 'user',
         ]);
 
@@ -37,7 +35,7 @@ class UserSeeder extends Seeder
             'name' => 'Benedito',
             'email' => 'nidio.shop24@gmail.com',
             'status' => 'active',
-            'password' => Hash::make('beneditoCantik24'), 
+            'password' => Hash::make('beneditoCantik24'),
             'role' => 'user',
         ]);
     }

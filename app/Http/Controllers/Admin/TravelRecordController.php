@@ -35,25 +35,25 @@ class TravelRecordController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'city_name'           => 'required|string|max:255',
-            'description'         => 'required|string',
-            'year'                => 'required|integer',
-            'banner_image'        => 'required|image|mimes:svg,png,jpg|max:10480',
-            'items'               => 'required|array|min:1',
-            'items.*.title'       => 'required|string',
+            'city_name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'year' => 'required|integer',
+            'banner_image' => 'required|image|mimes:svg,png,jpg|max:10480',
+            'items' => 'required|array|min:1',
+            'items.*.title' => 'required|string',
             'items.*.description' => 'required|string',
-            'items.*.image'       => 'required|image|mimes:svg,png,jpg|max:10480',
+            'items.*.image' => 'required|image|mimes:svg,png,jpg|max:10480',
         ]);
 
         $recordTranslations = $this->deepLService->translateAll([
-            'city_name'   => $request->city_name,
+            'city_name' => $request->city_name,
             'description' => $request->description,
         ]);
 
         $itemTranslations = [];
         foreach ($request->items as $i => $item) {
             $itemTranslations[$i] = $this->deepLService->translateAll([
-                'title'       => $item['title'],
+                'title' => $item['title'],
                 'description' => $item['description'],
             ]);
         }
@@ -62,11 +62,11 @@ class TravelRecordController extends Controller
             $bannerPath = $this->imageService->store($request->file('banner_image'), 'travel-records/banners', 1600);
 
             $travelRecord = $this->trackRecordRepository->create([
-                'city_name'    => $request->city_name,
-                'description'  => $request->description,
-                'year'         => $request->year,
+                'city_name' => $request->city_name,
+                'description' => $request->description,
+                'year' => $request->year,
                 'banner_image' => $bannerPath,
-                'slug'         => Str::slug($request->city_name . '-' . $request->year . '-' . Str::random(5)),
+                'slug' => Str::slug($request->city_name.'-'.$request->year.'-'.Str::random(5)),
                 'translations' => $recordTranslations ?: null,
             ]);
 
@@ -74,9 +74,9 @@ class TravelRecordController extends Controller
                 $itemImagePath = $this->imageService->store($item['image'], 'travel-records/items', 900);
 
                 $this->trackRecordRepository->createItem($travelRecord, [
-                    'title'        => $item['title'],
-                    'description'  => $item['description'],
-                    'image'        => $itemImagePath,
+                    'title' => $item['title'],
+                    'description' => $item['description'],
+                    'image' => $itemImagePath,
                     'translations' => $itemTranslations[$i] ?: null,
                 ]);
             }
@@ -88,10 +88,11 @@ class TravelRecordController extends Controller
     public function edit($id)
     {
         $travelRecord = $this->trackRecordRepository->findWithItems($id);
-        abort_if(!$travelRecord, 404);
+        abort_if(! $travelRecord, 404);
 
         $travelRecord->items->transform(function ($item) {
             $item->image_url = Storage::url($item->image);
+
             return $item;
         });
 
@@ -101,28 +102,28 @@ class TravelRecordController extends Controller
     public function update(Request $request, $id)
     {
         $record = $this->trackRecordRepository->findWithItems($id);
-        abort_if(!$record, 404);
+        abort_if(! $record, 404);
 
         $request->validate([
-            'city_name'           => 'required|string|max:255',
-            'description'         => 'required|string',
-            'year'                => 'required|integer',
-            'banner_image'        => 'nullable|image|mimes:svg,png,jpg|max:20480',
-            'items'               => 'required|array|min:1',
-            'items.*.title'       => 'required|string|max:255',
+            'city_name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'year' => 'required|integer',
+            'banner_image' => 'nullable|image|mimes:svg,png,jpg|max:20480',
+            'items' => 'required|array|min:1',
+            'items.*.title' => 'required|string|max:255',
             'items.*.description' => 'required|string',
-            'items.*.image'       => 'nullable|image|mimes:svg,png,jpg|max:10480',
+            'items.*.image' => 'nullable|image|mimes:svg,png,jpg|max:10480',
         ]);
 
         $recordTranslations = $this->deepLService->translateAll([
-            'city_name'   => $request->city_name,
+            'city_name' => $request->city_name,
             'description' => $request->description,
         ]);
 
         $itemTranslations = [];
         foreach ($request->items as $i => $item) {
             $itemTranslations[$i] = $this->deepLService->translateAll([
-                'title'       => $item['title'],
+                'title' => $item['title'],
                 'description' => $item['description'],
             ]);
         }
@@ -132,7 +133,7 @@ class TravelRecordController extends Controller
 
             $keptImages = [];
             foreach ($request->items as $item) {
-                if (!empty($item['old_image'])) {
+                if (! empty($item['old_image'])) {
                     $keptImages[] = $item['old_image'];
                 }
             }
@@ -144,14 +145,14 @@ class TravelRecordController extends Controller
             }
 
             $dataToUpdate = [
-                'city_name'    => $request->city_name,
-                'description'  => $request->description,
-                'year'         => $request->year,
+                'city_name' => $request->city_name,
+                'description' => $request->description,
+                'year' => $request->year,
                 'translations' => $recordTranslations ?: $record->translations,
             ];
 
             if ($record->city_name !== $request->city_name || $record->year != $request->year) {
-                $dataToUpdate['slug'] = Str::slug($request->city_name . '-' . $request->year . '-' . Str::random(5));
+                $dataToUpdate['slug'] = Str::slug($request->city_name.'-'.$request->year.'-'.Str::random(5));
             }
 
             if ($request->hasFile('banner_image')) {
@@ -170,14 +171,14 @@ class TravelRecordController extends Controller
 
                 if ($request->hasFile("items.{$index}.image")) {
                     $imagePath = $this->imageService->store($request->file("items.{$index}.image"), 'travel-records/items', 900);
-                } elseif (!empty($itemData['old_image'])) {
+                } elseif (! empty($itemData['old_image'])) {
                     $imagePath = $itemData['old_image'];
                 }
 
                 $this->trackRecordRepository->createItem($record, [
-                    'title'        => $itemData['title'],
-                    'description'  => $itemData['description'],
-                    'image'        => $imagePath,
+                    'title' => $itemData['title'],
+                    'description' => $itemData['description'],
+                    'image' => $imagePath,
                     'translations' => $itemTranslations[$index] ?? null,
                 ]);
             }
@@ -189,7 +190,7 @@ class TravelRecordController extends Controller
     public function destroy($id)
     {
         $travelRecord = $this->trackRecordRepository->findWithItems($id);
-        abort_if(!$travelRecord, 404);
+        abort_if(! $travelRecord, 404);
 
         if ($travelRecord->banner_image && Storage::disk('public')->exists($travelRecord->banner_image)) {
             Storage::disk('public')->delete($travelRecord->banner_image);

@@ -13,7 +13,7 @@ class EloquentTrackRecordRepository implements TrackRecordRepositoryInterface
 
     public function getAll(?int $year): Collection
     {
-        return $this->model->when($year, fn($q) => $q->where('year', $year))
+        return $this->model->when($year, fn ($q) => $q->where('year', $year))
             ->latest()
             ->get();
     }

@@ -13,10 +13,10 @@ class BookingController extends Controller
 
     public function index()
     {
-        $bookings     = $this->bookingRepository->getAllWithRelations();
+        $bookings = $this->bookingRepository->getAllWithRelations();
         $totalRevenue = $this->bookingRepository->getTotalRevenue();
-        $totalPaid    = $this->bookingRepository->getTotalPaid();
-        $totalUnpaid  = $this->bookingRepository->getTotalUnpaid();
+        $totalPaid = $this->bookingRepository->getTotalPaid();
+        $totalUnpaid = $this->bookingRepository->getTotalUnpaid();
 
         return view('admin.bookings.index', compact('bookings', 'totalRevenue', 'totalPaid', 'totalUnpaid'));
     }

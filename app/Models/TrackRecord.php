@@ -23,8 +23,8 @@ class TrackRecord extends Model
     public function translate(string $field): string
     {
         $localeMap = ['en' => 'EN', 'id' => 'ID', 'nl' => 'NL', 'de' => 'DE', 'pt' => 'PT'];
-        $key       = $localeMap[app()->getLocale()] ?? 'EN';
-        $trans     = $this->translations ?? [];
+        $key = $localeMap[app()->getLocale()] ?? 'EN';
+        $trans = $this->translations ?? [];
 
         return $trans[$key][$field] ?? $trans['EN'][$field] ?? $this->$field ?? '';
     }

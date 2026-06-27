@@ -1,16 +1,21 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Admin\BookingController as AdminBookingController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MessageController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\TravelRecordController;
+use App\Http\Controllers\Admin\UserController as AdminUserController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StripeWebhookController;
+use App\Http\Controllers\UserController;
+use App\Models\Booking;
+use App\Models\TrackRecord;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/lang/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'id', 'nl', 'de', 'pt'])) {
@@ -31,7 +36,7 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function ()
 
     Route::resource('products', ProductController::class);
     Route::post('/products/{id}/publish', [ProductController::class, 'publish'])->name('products.publish');
-    Route::patch('/admin/products/{product}/toggle', [App\Http\Controllers\Admin\ProductController::class, 'togglePublish'])
+    Route::patch('/admin/products/{product}/toggle', [ProductController::class, 'togglePublish'])
         ->name('products.toggle');
 
     Route::resource('travel-records', TravelRecordController::class)->except('show');
@@ -45,7 +50,6 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function ()
     Route::patch('/bookings/{booking}', [AdminBookingController::class, 'update'])->name('bookings.update');
     Route::delete('/bookings/{booking}', [AdminBookingController::class, 'destroy'])->name('bookings.destroy');
 });
-
 
 // --- SEMUA ROUTE DI BAWAH INI WAJIB LOGIN ---
 Route::middleware(['auth'])->group(function () {
@@ -62,8 +66,8 @@ Route::middleware(['auth'])->group(function () {
         return view('front.contact');
     })->name('contact');
 
-    //Track Record
-    Route::get('/about', function (\Illuminate\Http\Request $request) {
+    // Track Record
+    Route::get('/about', function (Request $request) {
 
         // 1. Logika Penentuan Tahun Terpilih
         if ($request->has('year')) {
@@ -73,7 +77,7 @@ Route::middleware(['auth'])->group(function () {
         }
 
         // 2. Query Data
-        $query = App\Models\TrackRecord::query();
+        $query = TrackRecord::query();
 
         if ($selectedYear) {
             $query->where('year', $selectedYear);
@@ -90,7 +94,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/track-record/{slug}', function ($slug) {
 
-        $record = App\Models\TrackRecord::with('items')->where('slug', $slug)->firstOrFail();
+        $record = TrackRecord::with('items')->where('slug', $slug)->firstOrFail();
 
         return view('front.show', compact('record'));
     })->name('track-record.show');
@@ -119,9 +123,9 @@ Route::middleware(['auth'])->group(function () {
         return view('profile.booking', compact('activeBookings', 'unpaidBookings'));
     })->name('profile.booking');
 
-    Route::post('/profile/booking/{booking}/repay', [App\Http\Controllers\CheckoutController::class, 'repay'])->name('profile.booking.repay');
+    Route::post('/profile/booking/{booking}/repay', [CheckoutController::class, 'repay'])->name('profile.booking.repay');
 
-    Route::delete('/profile/booking/{booking}/cancel', function (\App\Models\Booking $booking) {
+    Route::delete('/profile/booking/{booking}/cancel', function (Booking $booking) {
         if ($booking->user_id !== auth()->id()) {
             abort(403);
         }
@@ -129,19 +133,20 @@ Route::middleware(['auth'])->group(function () {
             return back()->withErrors(['error' => 'Only unpaid bookings can be cancelled.']);
         }
         $booking->delete();
+
         return back()->with('success', 'Booking has been cancelled successfully.');
     })->name('profile.booking.cancel');
 
     // Checkout
-    Route::get('/checkout/{product}/details', [App\Http\Controllers\CheckoutController::class, 'details'])->name('checkout.details');
-    Route::post('/checkout/{product}', [App\Http\Controllers\CheckoutController::class, 'process'])->name('checkout.process');
-    Route::get('/checkout/success', [App\Http\Controllers\CheckoutController::class, 'success'])->name('checkout.success');
-    Route::get('/checkout/cancel', [App\Http\Controllers\CheckoutController::class, 'cancel'])->name('checkout.cancel');
+    Route::get('/checkout/{product}/details', [CheckoutController::class, 'details'])->name('checkout.details');
+    Route::post('/checkout/{product}', [CheckoutController::class, 'process'])->name('checkout.process');
+    Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout.success');
+    Route::get('/checkout/cancel', [CheckoutController::class, 'cancel'])->name('checkout.cancel');
 });
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 // Stripe Webhook
-Route::post('/stripe/webhook', [App\Http\Controllers\StripeWebhookController::class, 'handle'])->name('stripe.webhook');
+Route::post('/stripe/webhook', [StripeWebhookController::class, 'handle'])->name('stripe.webhook');
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';

@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->app->singleton(DeepLService::class, fn() => new DeepLService());
+        $this->app->singleton(DeepLService::class, fn () => new DeepLService());
     }
 
     public function boot(): void
