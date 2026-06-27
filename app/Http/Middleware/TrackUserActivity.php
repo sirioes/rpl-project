@@ -13,8 +13,8 @@ class TrackUserActivity
         if (Auth::check()) {
             Auth::user()->update([
                 'last_seen_at' => now(),
-                'last_page'    => $request->path(),
-                'last_ip'      => $request->ip(),
+                'last_page' => $request->path(),
+                'last_ip' => $request->ip(),
             ]);
         }
 

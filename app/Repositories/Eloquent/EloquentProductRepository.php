@@ -37,7 +37,7 @@ class EloquentProductRepository implements ProductRepositoryInterface
 
     public function togglePublish(Product $product): void
     {
-        $product->is_published = !$product->is_published;
+        $product->is_published = ! $product->is_published;
         $product->save();
     }
 

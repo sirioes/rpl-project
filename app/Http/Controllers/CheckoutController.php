@@ -6,6 +6,7 @@ use App\Events\BookingPaid;
 use App\Models\Booking;
 use App\Models\Product;
 use App\Services\CheckoutService;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Stripe\Checkout\Session;
@@ -22,25 +23,25 @@ class CheckoutController extends Controller
         }
 
         $request->validate([
-            'quantity'                   => 'required|integer|min:1',
-            'contact_email'              => 'required|email',
-            'contact_phone'              => 'required|string|max:20',
-            'participants'               => 'required|array',
-            'participants.*.name'        => 'required|string|max:255',
-            'participants.*.category'    => 'required|in:Adult,Child',
+            'quantity' => 'required|integer|min:1',
+            'contact_email' => 'required|email',
+            'contact_phone' => 'required|string|max:20',
+            'participants' => 'required|array',
+            'participants.*.name' => 'required|string|max:255',
+            'participants.*.category' => 'required|in:Adult,Child',
         ]);
 
         try {
             $booking = $this->checkoutService->createBooking(
                 bookingData: [
                     'booking_reference' => 'BKG-'.date('Ymd').'-'.strtoupper(uniqid()),
-                    'user_id'           => auth()->id(),
-                    'product_id'        => $product->id,
-                    'quantity'          => $request->quantity,
-                    'total_price'       => $product->product_price * $request->quantity,
-                    'status'            => 'unpaid',
-                    'contact_email'     => $request->contact_email,
-                    'contact_phone'     => $request->contact_phone,
+                    'user_id' => auth()->id(),
+                    'product_id' => $product->id,
+                    'quantity' => $request->quantity,
+                    'total_price' => $product->product_price * $request->quantity,
+                    'status' => 'unpaid',
+                    'contact_email' => $request->contact_email,
+                    'contact_phone' => $request->contact_phone,
                 ],
                 participants: $request->participants,
             );
@@ -49,20 +50,20 @@ class CheckoutController extends Controller
 
             $stripeSession = Session::create([
                 'payment_method_types' => ['card', 'ideal'],
-                'line_items'           => [[
+                'line_items' => [[
                     'price_data' => [
-                        'currency'     => 'eur',
+                        'currency' => 'eur',
                         'product_data' => [
-                            'name'        => $product->product_name,
-                            'description' => 'Tanggal Keberangkatan: '.\Carbon\Carbon::parse($product->departure_date)->format('d M Y, H:i'),
+                            'name' => $product->product_name,
+                            'description' => 'Tanggal Keberangkatan: '.Carbon::parse($product->departure_date)->format('d M Y, H:i'),
                         ],
                         'unit_amount' => intval($product->product_price * 100),
                     ],
                     'quantity' => $request->quantity,
                 ]],
-                'mode'        => 'payment',
+                'mode' => 'payment',
                 'success_url' => route('checkout.success').'?session_id={CHECKOUT_SESSION_ID}',
-                'cancel_url'  => route('checkout.cancel'),
+                'cancel_url' => route('checkout.cancel'),
             ]);
 
             $this->checkoutService->updateStripeSession($booking, $stripeSession->id);
@@ -99,8 +100,8 @@ class CheckoutController extends Controller
             abort(404);
         }
 
-            // Observer Pattern: fire event, listener SendBookingConfirmationMail otomatis handle email
-            BookingPaid::dispatch($booking);
+        // Observer Pattern: fire event, listener SendBookingConfirmationMail otomatis handle email
+        BookingPaid::dispatch($booking);
         if ($booking->wasChanged('status')) {
             try {
                 Mail::to($booking->contact_email)->send(new BookingConfirmationMail($booking));
@@ -127,20 +128,20 @@ class CheckoutController extends Controller
 
             $stripeSession = Session::create([
                 'payment_method_types' => ['card', 'ideal'],
-                'line_items'           => [[
+                'line_items' => [[
                     'price_data' => [
-                        'currency'     => 'eur',
+                        'currency' => 'eur',
                         'product_data' => [
-                            'name'        => $booking->product->product_name,
-                            'description' => 'Tanggal Keberangkatan: '.\Carbon\Carbon::parse($booking->product->departure_date)->format('d M Y, H:i'),
+                            'name' => $booking->product->product_name,
+                            'description' => 'Tanggal Keberangkatan: '.Carbon::parse($booking->product->departure_date)->format('d M Y, H:i'),
                         ],
                         'unit_amount' => intval($booking->product->product_price * 100),
                     ],
                     'quantity' => $booking->quantity,
                 ]],
-                'mode'        => 'payment',
+                'mode' => 'payment',
                 'success_url' => route('checkout.success').'?session_id={CHECKOUT_SESSION_ID}',
-                'cancel_url'  => route('checkout.cancel'),
+                'cancel_url' => route('checkout.cancel'),
             ]);
 
             $this->checkoutService->updateStripeSession($booking, $stripeSession->id);

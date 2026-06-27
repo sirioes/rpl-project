@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\Message; 
+use App\Models\Message;
 
 class MessageController extends Controller
 {
     public function index()
     {
         $messages = Message::latest()->get();
+
         return view('admin.message', compact('messages'));
     }
 
@@ -25,8 +25,8 @@ class MessageController extends Controller
     public function markAsRead($id)
     {
         $message = Message::findOrFail($id);
-        
-        if (!$message->is_read) {
+
+        if (! $message->is_read) {
             $message->update(['is_read' => true]);
         }
 

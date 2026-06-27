@@ -17,7 +17,7 @@ class Booking extends Model
         'total_price',
         'status',
         'stripe_session_id',
-        'contact_email', 
+        'contact_email',
         'contact_phone',
     ];
 
@@ -38,5 +38,4 @@ class Booking extends Model
     {
         return $this->hasMany(BookingParticipant::class);
     }
-
 }

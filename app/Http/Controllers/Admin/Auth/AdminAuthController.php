@@ -28,6 +28,7 @@ class AdminAuthController extends Controller
             }
 
             Auth::logout();
+
             return back()->withErrors([
                 'email' => 'You are not an admin. Please log in to the Users page.',
             ]);
@@ -43,6 +44,7 @@ class AdminAuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+
         return redirect()->route('admin.login');
     }
 }

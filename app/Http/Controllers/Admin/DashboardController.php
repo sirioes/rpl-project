@@ -13,18 +13,18 @@ class DashboardController extends Controller
     public function index()
     {
         $total_visited_places = TrackRecord::count();
-        $recent_messages      = Message::latest()->take(3)->get();
-        $recent_products      = Product::latest()->take(2)->get();
+        $recent_messages = Message::latest()->take(3)->get();
+        $recent_products = Product::latest()->take(2)->get();
 
-        $total_bookings       = Booking::count();
-        $total_paid           = Booking::where('status', 'paid')->count();
-        $total_unpaid         = Booking::where('status', 'unpaid')->count();
-        $total_revenue        = Booking::where('status', 'paid')->sum('total_price');
-        $recent_bookings      = Booking::with(['user', 'product'])
-                                    ->where('status', 'paid')
-                                    ->latest()
-                                    ->take(5)
-                                    ->get();
+        $total_bookings = Booking::count();
+        $total_paid = Booking::where('status', 'paid')->count();
+        $total_unpaid = Booking::where('status', 'unpaid')->count();
+        $total_revenue = Booking::where('status', 'paid')->sum('total_price');
+        $recent_bookings = Booking::with(['user', 'product'])
+            ->where('status', 'paid')
+            ->latest()
+            ->take(5)
+            ->get();
 
         return view('admin.dashboard', compact(
             'total_visited_places',

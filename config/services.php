@@ -36,12 +36,12 @@ return [
     ],
 
     'stripe' => [
-        'secret'         => env('STRIPE_SECRET'),
+        'secret' => env('STRIPE_SECRET'),
         'webhook_secret' => env('STRIPE_WEBHOOK_SECRET'),
     ],
 
     'deepl' => [
-        'key'  => env('DEEPL_API_KEY', ''),
+        'key' => env('DEEPL_API_KEY', ''),
         'free' => env('DEEPL_FREE_API', true),
     ],
 
