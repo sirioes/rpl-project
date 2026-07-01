@@ -1,58 +1,204 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Mijn Amor Tour and Travel Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi web pemesanan perjalanan wisata yang dibangun sebagai proyek UAS Rekayasa Perangkat Lunak 2025/2026. Sistem ini memungkinkan pengguna untuk melihat katalog produk wisata, melakukan pemesanan, dan pembayaran via Stripe. Admin dapat mengelola produk, track record, booking, dan memantau aktivitas pengguna.
 
-## About Laravel
+## Fitur Utama
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Registrasi & login pengguna dengan verifikasi email opsional
+- Katalog produk wisata dengan galeri gambar (WebP)
+- Proses checkout & pembayaran via Stripe
+- Konfirmasi booking otomatis via email (Observer Pattern)
+- Halaman MyBooking — riwayat & status pesanan
+- Track Record — dokumentasi perjalanan sebelumnya
+- Multi-bahasa: Indonesia, Inggris, Belanda, Jerman, Portugis (DeepL API)
+- Dashboard admin — kelola produk, booking, pesan, dan pengguna
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Teknologi
 
-## Learning Laravel
+| Kategori | Teknologi |
+|---|---|
+| Backend | Laravel 13 (PHP 8.3) |
+| Frontend | Blade + Alpine.js + Tailwind CSS |
+| Database | MySQL |
+| Payment | Stripe |
+| Terjemahan | DeepL API |
+| Image | Intervention Image (WebP) |
+| Linter | Laravel Pint |
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Cara Menjalankan Secara Lokal
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### Prasyarat
+- PHP >= 8.3
+- Composer
+- Node.js & NPM
+- MySQL
+- Akun Stripe (untuk payment)
 
-## Agentic Development
+### Langkah Instalasi
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
+**1. Clone repository**
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/nidioganteng/rpl-project.git
+cd rpl-project
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+**2. Install dependencies**
+```bash
+composer install
+npm install
+```
 
-## Contributing
+**3. Konfigurasi environment**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**4. Edit file `.env` — sesuaikan konfigurasi berikut:**
+```env
+APP_NAME="Mijn Amor Travel"
+APP_URL=http://localhost:8000
 
-## Code of Conduct
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=mijn_amor
+DB_USERNAME=root
+DB_PASSWORD=
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=your@email.com
+MAIL_PASSWORD=your_app_password
+MAIL_FROM_ADDRESS=your@email.com
+MAIL_FROM_NAME="Mijn Amor Travel"
 
-## Security Vulnerabilities
+STRIPE_SECRET=sk_test_xxxx
+STRIPE_WEBHOOK_SECRET=whsec_xxxx
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Opsional — jika dikonfigurasi, terjemahan otomatis aktif
+DEEPL_API_KEY=your_deepl_api_key
+DEEPL_FREE_API=true
+```
 
-## License
+**5. Migrasi & seed database**
+```bash
+php artisan migrate --seed
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**6. Build assets**
+```bash
+npm run build
+```
+
+**7. Jalankan server**
+```bash
+php artisan serve
+```
+
+Aplikasi berjalan di `http://localhost:8000`
+
+**8. (Opsional) Jalankan Stripe webhook listener untuk testing lokal**
+```bash
+stripe listen --forward-to http://localhost:8000/stripe/webhook
+```
+
+### Akun Default (Seeder)
+
+| Role | Email | Password |
+|---|---|---|
+| Admin | admin@mijnamor.com | password |
+| User | user@mijnamor.com | password |
+
+---
+
+## Arsitektur Sistem
+
+Sistem menggunakan **Layered Architecture** dengan pemisahan layer yang ketat:
+
+```
+Presentation Layer     →    Business Logic Layer    →    Data Access Layer    →    Database
+  (Controller)                   (Service)              (Repository + Model)       (MySQL)
+app/Http/Controllers/          app/Services/           app/Repositories/         migrations/
+```
+
+**Prinsip:**
+- Controller hanya menerima request dan mendelegasikan ke Service atau Repository
+- Service mengandung logika bisnis, tidak menyentuh database langsung
+- Repository diakses via Interface — implementasi bisa diganti tanpa mengubah layer atas
+- Model hanya merepresentasikan struktur tabel
+
+> Penjelasan lengkap arsitektur dan diagram tersedia di [`docs/architecture.md`](docs/architecture.md)
+
+### Class Diagram
+
+![Class Diagram](docs/diagrams/class-diagram.png)
+
+### Entity Relationship Diagram (ERD)
+
+![ERD](docs/diagrams/erd.png)
+
+### Sequence Diagram — Alur Checkout
+
+![Sequence Diagram](docs/diagrams/sequence-diagram.png)
+
+---
+
+## Design Patterns (GoF)
+
+### 1. Observer Pattern — `Behavioral`
+
+Digunakan untuk mengirim email konfirmasi booking secara otomatis setelah pembayaran Stripe berhasil, tanpa controller perlu mengetahui siapa yang bereaksi.
+
+| File | Keterangan |
+|---|---|
+| `app/Events/BookingPaid.php` | Event yang di-dispatch setelah payment sukses |
+| `app/Listeners/SendBookingConfirmationMail.php` | Listener — kirim email konfirmasi ke user |
+| `app/Providers/AppServiceProvider.php` | Registrasi event-listener |
+
+### 2. Singleton Pattern — `Creational`
+
+Digunakan agar `DeepLService` hanya diinstansiasi sekali per request lifecycle, menghindari pembuatan koneksi API yang berulang dan boros.
+
+| File | Keterangan |
+|---|---|
+| `app/Services/DeepLService.php` | Service terjemahan otomatis via DeepL API |
+| `app/Providers/AppServiceProvider.php` | Registrasi singleton di Laravel container |
+
+### 3. Factory Pattern — `Creational`
+
+Digunakan agar Controller dan Service tidak bergantung pada implementasi konkrit Repository. `RepositoryServiceProvider` bertindak sebagai factory yang menentukan binding interface ke implementasi.
+
+| File | Keterangan |
+|---|---|
+| `app/Repositories/Contracts/*RepositoryInterface.php` | Interface (kontrak abstrak) repository |
+| `app/Repositories/Eloquent/Eloquent*Repository.php` | Implementasi konkrit dengan Eloquent |
+| `app/Providers/RepositoryServiceProvider.php` | Factory — binding interface ke implementasi |
+
+---
+
+## Kontribusi Anggota Kelompok
+
+| Nama | NIM | Peran | Fitur yang Dikerjakan | Video |
+|---|---|---|---|---|
+| Benedito Nidio Da Rosa Maia Tilman | 42430032 | Repository Layer (User & Checkout), Observer Pattern | `EloquentUserRepository`, `EloquentBookingRepository`, `UserService`, `CheckoutService`, `BookingPaid` Event & Listener | [Link Video](#) |
+| Renald Kevin Azzaky | 42430029 | Repository Layer (Booking Admin), Singleton Pattern, README & Docs | `EloquentBookingRepository` (Admin), `DeepLService` Singleton, `README.md`, `docs/` | [Link Video](#) |
+| Ni Luh Risma Putri Wirdianthi | 42430001 | Repository Layer (Product & TrackRecord), Factory Pattern | `EloquentProductRepository`, `EloquentTrackRecordRepository`, `RepositoryServiceProvider` | [Link Video](#) |
+| Salsabila Nur Shafa | 42430040 | Repository Layer (Message), Linter Setup | `EloquentMessageRepository`, `pint.json`, code style enforcement | [Link Video](#) |
+
+---
+
+## Dokumentasi
+
+| Dokumen | Lokasi |
+|---|---|
+| Arsitektur & Design Patterns | [`docs/architecture.md`](docs/architecture.md) |
+| Class Diagram | [`docs/diagrams/class-diagram.png`](docs/diagrams/class-diagram.png) |
+| ERD | [`docs/diagrams/erd.png`](docs/diagrams/erd.png) |
+| Sequence Diagram (Checkout) | [`docs/diagrams/sequence-diagram.png`](docs/diagrams/sequence-diagram.png) |
+| Software Requirements Specification | [`Document/REKAYASAN PERANGKAT LUNAK.pdf`](../Document/REKAYASAN%20PERANGKAT%20LUNAK.pdf) |
