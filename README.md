@@ -186,10 +186,10 @@ Digunakan agar Controller dan Service tidak bergantung pada implementasi konkrit
 
 | Nama | NIM | Peran | Fitur yang Dikerjakan | Video |
 |---|---|---|---|---|
-| Benedito Nidio Da Rosa Maia Tilman | 42430032 | Repository Layer (User & Checkout), Observer Pattern | `EloquentUserRepository`, `EloquentBookingRepository`, `UserService`, `CheckoutService`, `BookingPaid` Event & Listener | [Link Video](#) |
-| Renald Kevin Azzaky | 42430029 | Repository Layer (Booking Admin), Singleton Pattern, README & Docs | `EloquentBookingRepository` (Admin), `DeepLService` Singleton, `README.md`, `docs/` | [Link Video](#) |
-| Ni Luh Risma Putri Wirdianthi | 42430001 | Repository Layer (Product & TrackRecord), Factory Pattern | `EloquentProductRepository`, `EloquentTrackRecordRepository`, `RepositoryServiceProvider` | [Link Video](#) |
-| Salsabila Nur Shafa | 42430040 | Repository Layer (Message), Linter Setup | `EloquentMessageRepository`, `pint.json`, code style enforcement | [Link Video](#) |
+| Benedito Nidio Da Rosa Maia Tilman | 42430032 | Repository Layer (User & Checkout), Observer Pattern | `EloquentUserRepository`, `EloquentBookingRepository`, `UserService`, `CheckoutService`, `BookingPaid` Event & Listener | [Link Video](https://youtu.be/liv9zogqdA0) |
+| Renald Kevin Azzaky | 42430029 | Repository Layer (Booking Admin), Singleton Pattern, README & Docs | `EloquentBookingRepository` (Admin), `DeepLService` Singleton, `README.md`, `docs/` | [Link Video](https://drive.google.com/drive/folders/1qJ27MQBf4yeOygc31vcc4l64kxZ5fswO) |
+| Ni Luh Risma Putri Wirdianthi | 42430001 | Repository Layer (Product & TrackRecord), Factory Pattern | `EloquentProductRepository`, `EloquentTrackRecordRepository`, `RepositoryServiceProvider` | [Link Video](https://youtu.be/b8P_BTPImq8?si=triaa7NuxFyZJ9TK) |
+| Salsabila Nur Shafa | 42430040 | Repository Layer (Message), Linter Setup | `EloquentMessageRepository`, `pint.json`, code style enforcement | [Link Video](https://youtu.be/Ab6qBJgmhMo?feature=shared) |
 
 ---
 
