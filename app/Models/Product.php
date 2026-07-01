@@ -23,12 +23,12 @@ class Product extends Model
     ];
 
     protected $casts = [
-        'product_price'    => 'decimal:2',
-        'ticket_quota'     => 'integer',
-        'departure_date'   => 'datetime',
-        'product_image'    => 'array',
-        'is_published'     => 'boolean',
-        'translations'     => 'array',
+        'product_price' => 'decimal:2',
+        'ticket_quota' => 'integer',
+        'departure_date' => 'datetime',
+        'product_image' => 'array',
+        'is_published' => 'boolean',
+        'translations' => 'array',
     ];
 
     public function isExpired(): bool
@@ -39,8 +39,8 @@ class Product extends Model
     public function translate(string $field): string
     {
         $localeMap = ['en' => 'EN', 'id' => 'ID', 'nl' => 'NL', 'de' => 'DE', 'pt' => 'PT'];
-        $key       = $localeMap[app()->getLocale()] ?? 'EN';
-        $trans     = $this->translations ?? [];
+        $key = $localeMap[app()->getLocale()] ?? 'EN';
+        $trans = $this->translations ?? [];
 
         return $trans[$key][$field] ?? $trans['EN'][$field] ?? $this->$field ?? '';
     }

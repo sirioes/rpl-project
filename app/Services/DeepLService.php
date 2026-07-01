@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Log;
 class DeepLService
 {
     private string $apiKey;
+
     private string $baseUrl;
 
     // DeepL language codes for each app locale
@@ -21,7 +22,7 @@ class DeepLService
 
     public function __construct()
     {
-        $this->apiKey  = config('services.deepl.key', '');
+        $this->apiKey = config('services.deepl.key', '');
         $this->baseUrl = config('services.deepl.free', true)
             ? 'https://api-free.deepl.com/v2'
             : 'https://api.deepl.com/v2';
@@ -35,19 +36,20 @@ class DeepLService
     {
         if (empty($this->apiKey)) {
             Log::warning('DeepL API key not configured.');
+
             return [];
         }
 
-        $texts  = array_values($fields);
-        $keys   = array_keys($fields);
+        $texts = array_values($fields);
+        $keys = array_keys($fields);
         $result = [];
 
         foreach ($this->localeMap as $locale => $deeplLang) {
             try {
                 $response = Http::withHeaders([
-                    'Authorization' => 'DeepL-Auth-Key ' . $this->apiKey,
-                ])->post($this->baseUrl . '/translate', [
-                    'text'        => $texts,
+                    'Authorization' => 'DeepL-Auth-Key '.$this->apiKey,
+                ])->post($this->baseUrl.'/translate', [
+                    'text' => $texts,
                     'target_lang' => $deeplLang,
                 ]);
 
